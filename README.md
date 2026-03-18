@@ -214,14 +214,6 @@ Then [open a PR](https://github.com/clihub-ai/clihub) adding it to the registry.
 
 <br>
 
-## Roadmap
-
-- [x] **Phase 1** — CLI core: search, install, info, list, doctor
-- [x] **Phase 1.5** — 104 tools, `convert` + `submit`, PyPI release
-- [ ] **Phase 2** — Registry API with semantic search (FastAPI + pgvector)
-- [ ] **Phase 3** — Web marketplace at [clihub.net](https://clihub.net)
-- [ ] **Phase 4** — AI-assisted tool creation: `clihub create "extract tables from PDFs"`
-
 ## Development
 
 ```bash
