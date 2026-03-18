@@ -32,63 +32,69 @@ result = subprocess.run(["jq", ".users[] | .name", "data.json"], capture_output=
 ---
 
 <p align="center">
-  <a href="#why">Why</a> &middot;
-  <a href="#how-it-works">How It Works</a> &middot;
-  <a href="#for-ai-agents">For AI Agents</a> &middot;
-  <a href="#whats-included">What's Included</a> &middot;
-  <a href="#add-your-tool">Add Your Tool</a>
+  <a href="#-the-problem">The Problem</a> &middot;
+  <a href="#-get-started">Get Started</a> &middot;
+  <a href="#-agent-integration">Agent Integration</a> &middot;
+  <a href="#-tool-catalog">Tool Catalog</a> &middot;
+  <a href="#-add-your-tool">Add Your Tool</a>
 </p>
 
-## Why
+## 🤖 The Problem
 
 Your AI agent needs to resize an image. It knows *how* — it's seen millions of shell examples in training. But it doesn't know what's installed on this machine, or what tool to use.
 
-**CliHub is the missing piece.** A curated registry of 104 CLI tools with structured metadata — descriptions, install methods, and agent-readable hints. Your agent queries the registry, picks the right tool, installs it, and runs it. Two commands. Zero configuration.
+**CliHub is the missing piece.** A curated registry of 104 CLI tools with structured metadata — descriptions, install methods, and agent-readable hints. Your agent queries the registry, picks the right tool, installs it, and runs it. Two commands. Zero config.
 
-**Why CLI tools instead of MCP?** Because MCP servers inject thousands of tokens into every prompt — even when unused. CLI tools cost **zero tokens** until the agent actually runs one. And LLMs are already trained on `jq`, `ffmpeg`, `curl`, and `grep` — they don't need a schema to use them.
+### Why CLI tools over MCP?
+
+MCP servers inject thousands of tokens into every prompt — even when unused. CLI tools cost **zero tokens** until the agent actually runs one. And LLMs already know how to use `jq`, `ffmpeg`, `curl`, and `grep` — no schema needed.
 
 |  | MCP Server | CLI via CliHub |
 |---|---|---|
-| **Idle cost** | 8,000+ tokens per prompt | **0 tokens** |
-| **Discovery** | Schemas dumped into every prompt | On demand via `clihub list --json` |
-| **LLM familiarity** | Must learn custom schemas | Already trained on shell commands |
-| **Composability** | One tool per call | Unix pipes: `curl \| jq \| grep` |
-| **Ecosystem** | Hundreds of servers | **Thousands of tools**, built over 50 years |
+| 💸 **Idle cost** | 8,000+ tokens per prompt | **0 tokens** |
+| 🔍 **Discovery** | Schemas dumped into every prompt | On demand via `clihub list --json` |
+| 🧠 **LLM familiarity** | Must learn custom schemas | Already trained on shell commands |
+| 🔗 **Composability** | One tool per call | Unix pipes: `curl \| jq \| grep` |
+| 🌍 **Ecosystem** | Hundreds of servers | **Thousands of tools**, built over 50 years |
 
 <br>
 
-## How It Works
+## ⚡ Get Started
+
+```bash
+pip install clihub-ai
+```
 
 **For humans** — search, install, use:
 
 ```bash
-clihub search "resize images"      # fuzzy search across 104 tools
-clihub install imagemagick          # auto-detects the right package manager
-clihub info jq                      # view metadata, examples, and --help output
-clihub list                         # browse all categories
-clihub doctor                       # check which package managers are available
+clihub search "resize images"      # 🔍 fuzzy search across 104 tools
+clihub install imagemagick          # 📦 auto-detects brew/pip/npm/cargo
+clihub info jq                      # 📖 metadata, examples, and --help output
+clihub list                         # 📋 browse all categories
+clihub doctor                       # 🩺 check available package managers
 ```
 
 **For agents** — add `--json` to any command:
 
 ```bash
-clihub list --json                  # full catalog: 104 tools with descriptions + agent_hints
-clihub install jq --json            # → {"status": "success", "message": "Installed jq@1.7.1 via brew"}
-clihub info ruff --json             # → full metadata, install method, example commands
+clihub list --json                  # full catalog with descriptions + agent_hints
+clihub install jq --json            # {"status": "success", "message": "Installed jq@1.7.1 via brew"}
+clihub info ruff --json             # full metadata, install method, example commands
 ```
 
-Every response is valid JSON. Every error goes to stderr. Exit codes: `0` success, `1` error, `2` not found.
+> ✅ Every response is valid JSON &nbsp; ✅ Errors go to stderr &nbsp; ✅ Exit codes: `0` success, `1` error, `2` not found
 
 <br>
 
-## For AI Agents
+## 🧩 Agent Integration
 
 The design is simple: **CliHub is a dumb pipe. The agent is the brain.**
 
-An agent doesn't need a search algorithm — it *is* one. CliHub gives it a structured catalog. The agent reads it, picks the right tool, and installs it. Two API calls:
+An agent doesn't need a search algorithm — it *is* one. CliHub gives it a structured catalog. The agent reads it, picks the right tool, and installs it:
 
 ```bash
-# Step 1: Read the catalog (87KB — fits in any context window)
+# 📥 Step 1: Read the catalog (87KB — fits in any context window)
 $ clihub list --json
 [
   {
@@ -104,68 +110,77 @@ $ clihub list --json
   ... 103 more tools
 ]
 
-# Step 2: Install what it needs
+# 📦 Step 2: Install what it needs
 $ clihub install jq --json
 {"status": "success", "message": "Installed jq@1.7.1 via brew"}
 
-# Done. Agent runs the tool.
+# 🚀 Step 3: Use it
 $ jq '.users[] | .name' data.json
 ```
 
-### Composable
+That's the entire integration. Two calls. Done.
+
+### 🔗 Composable with anything
 
 ```bash
+# Find all installed Python tools
 clihub list --installed --json | jq '[.[] | select(.categories[] == "python")]'
+
+# Get example commands for a tool
 clihub info ffmpeg --json | jq '.agent_hints.example_usage'
+
+# Check which package managers are missing
 clihub doctor --json | jq '[.[] | select(.ok == false) | .check]'
 ```
 
-### All Commands
+### 📚 All Commands
 
 | Command | What it Does |
 |---|---|
-| `clihub list [--json]` | Browse the full tool catalog (104 tools with metadata) |
-| `clihub search <query> [--json]` | Fuzzy-search tools by keyword |
-| `clihub install <tool> [--json]` | Install via auto-detected package manager |
-| `clihub info <tool> [--json]` | Show metadata, agent hints, and `--help` output |
-| `clihub doctor [--json]` | Check system readiness and available package managers |
-| `clihub convert <tool> [--json]` | Auto-generate a manifest from an installed tool |
-| `clihub submit <file> [--json]` | Validate a manifest for registry submission |
+| `clihub list [--json]` | 📋 Browse the full tool catalog (104 tools with metadata) |
+| `clihub search <query> [--json]` | 🔍 Fuzzy-search tools by keyword |
+| `clihub install <tool> [--json]` | 📦 Install via auto-detected package manager |
+| `clihub info <tool> [--json]` | 📖 Show metadata, agent hints, and `--help` output |
+| `clihub doctor [--json]` | 🩺 Check system readiness and available package managers |
+| `clihub convert <tool> [--json]` | ⚙️ Auto-generate a manifest from an installed tool |
+| `clihub submit <file> [--json]` | ✅ Validate a manifest for registry submission |
 
 <br>
 
-## What's Included
+## 📦 Tool Catalog
 
 **104 tools** across 17 categories — every one has `agent_hints` with natural-language descriptions and example commands.
 
 | Category | Tools | Use Case |
 |---|---|---|
-| **Data** | jq, yq, csvkit, xsv, dasel, gron, fx, jless | Parse JSON, transform YAML, query CSV |
-| **Database** | mycli, pgcli, litecli, iredis, usql | MySQL, Postgres, Redis, SQLite clients |
-| **Search & Files** | ripgrep, fd, fzf, bat, eza, lsd, broot, ranger, nnn | Find files, search code, browse directories |
-| **Network** | httpie, curl, wget, aria2, ngrok, mosh, nmap | HTTP requests, downloads, tunneling, scanning |
-| **Python** | ruff, black, mypy, uv, pipx, poetry | Lint, format, type-check, manage packages |
-| **JavaScript** | prettier, eslint, tsx, npm-check-updates | Format, lint, run TypeScript, update deps |
-| **Dev Tools** | gh, lazygit, gitui, tokei, hyperfine, just, grex, shellcheck | Git workflows, benchmarks, task running |
-| **Docker & Cloud** | lazydocker, k9s, dive, act, awscli, terraform | Containers, Kubernetes, CI, infrastructure |
-| **Media** | ffmpeg, imagemagick, yt-dlp, svgo, gifsicle, asciinema | Video, images, downloads, GIFs, recordings |
-| **Documents** | pandoc, glow | Convert Markdown/HTML/PDF, render in terminal |
-| **Text** | sd, choose, sad | Find-and-replace, cut columns, batch edits |
-| **Editors** | neovim, micro, helix | Terminal-based text editing |
-| **Productivity** | tmux, tldr, zoxide, starship, taskwarrior, watson, nb | Sessions, navigation, tasks, time tracking |
-| **Release** | semantic-release, release-it, commitizen, cookiecutter | Versioning, changelogs, project scaffolding |
-| **Security** | openssl, age, mkcert | TLS, encryption, local certificates |
-| **System** | htop, btop, procs, bandwhich, pv, ncdu, dust | Processes, bandwidth, disk usage, pipelines |
-| **Fun** | lolcat, fortune, cmatrix | Rainbow text, quotes, Matrix rain |
+| 📊 **Data** | jq, yq, csvkit, xsv, dasel, gron, fx, jless | Parse JSON, transform YAML, query CSV |
+| 🗄️ **Database** | mycli, pgcli, litecli, iredis, usql | MySQL, Postgres, Redis, SQLite clients |
+| 🔍 **Search & Files** | ripgrep, fd, fzf, bat, eza, lsd, broot, ranger, nnn | Find files, search code, browse directories |
+| 🌐 **Network** | httpie, curl, wget, aria2, ngrok, mosh, nmap | HTTP requests, downloads, tunneling, scanning |
+| 🐍 **Python** | ruff, black, mypy, uv, pipx, poetry | Lint, format, type-check, manage packages |
+| 💛 **JavaScript** | prettier, eslint, tsx, npm-check-updates | Format, lint, run TypeScript, update deps |
+| 🛠️ **Dev Tools** | gh, lazygit, gitui, tokei, hyperfine, just, grex, shellcheck | Git workflows, benchmarks, task running |
+| 🐳 **Docker & Cloud** | lazydocker, k9s, dive, act, awscli, terraform | Containers, Kubernetes, CI, infrastructure |
+| 🎬 **Media** | ffmpeg, imagemagick, yt-dlp, svgo, gifsicle, asciinema | Video, images, downloads, GIFs, recordings |
+| 📄 **Documents** | pandoc, glow | Convert Markdown/HTML/PDF, render in terminal |
+| ✂️ **Text** | sd, choose, sad | Find-and-replace, cut columns, batch edits |
+| ✏️ **Editors** | neovim, micro, helix | Terminal-based text editing |
+| ⏱️ **Productivity** | tmux, tldr, zoxide, starship, taskwarrior, watson, nb | Sessions, navigation, tasks, time tracking |
+| 🚀 **Release** | semantic-release, release-it, commitizen, cookiecutter | Versioning, changelogs, project scaffolding |
+| 🔒 **Security** | openssl, age, mkcert | TLS, encryption, local certificates |
+| 💻 **System** | htop, btop, procs, bandwhich, pv, ncdu, dust | Processes, bandwidth, disk usage, pipelines |
+| 🎉 **Fun** | lolcat, fortune, cmatrix | Rainbow text, quotes, Matrix rain |
 
 <br>
 
-## Add Your Tool
+## ➕ Add Your Tool
+
+Got a CLI tool? Add it to CliHub in 30 seconds:
 
 ```bash
-clihub convert mytool           # auto-detects version, description, license, homepage
-vim clihub.yaml                 # fill in categories, tags, agent_hints
-clihub submit clihub.yaml       # validates and prints PR-ready JSON
+clihub convert mytool           # ⚙️ auto-detects version, description, license, homepage
+vim clihub.yaml                 # ✏️ fill in categories, tags, agent_hints
+clihub submit clihub.yaml       # ✅ validates and prints PR-ready JSON
 ```
 
 `convert` pulls metadata from `--help`, `--version`, and package managers (brew, pip, npm, cargo). You fill in what makes your tool discoverable to agents — categories, tags, and `agent_hints.when_to_use`:
@@ -184,11 +199,11 @@ agent_hints:
     - "mytool input.txt --output result.json"
 ```
 
-Then [open a PR](https://github.com/clihub-ai/clihub).
+Then [open a PR](https://github.com/clihub-ai/clihub). 🎉
 
 <br>
 
-## Development
+## 🧑‍💻 Development
 
 ```bash
 git clone https://github.com/clihub-ai/clihub.git
@@ -198,10 +213,10 @@ pytest                      # unit tests
 ruff check src/ tests/      # lint
 ```
 
-## Contributing
+## 🤝 Contributing
 
 The easiest way to contribute: `clihub convert <tool>`, fill in the TODOs, [open a PR](https://github.com/clihub-ai/clihub/issues).
 
-## License
+## 📄 License
 
 MIT &copy; [CliHub](https://clihub.net)
