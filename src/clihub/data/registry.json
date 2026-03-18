@@ -838,5 +838,1773 @@
     "verified": true,
     "downloads": 8200,
     "rating": 4.4
+  },
+  {
+    "name": "mycli",
+    "version": "1.27.2",
+    "description": "MySQL/MariaDB client with auto-completion and syntax highlighting.",
+    "author": "Amjith Ramanujam",
+    "homepage": "https://www.mycli.net/",
+    "repository": "https://github.com/dbcli/mycli",
+    "license": "BSD-3-Clause",
+    "categories": ["database", "dev-tools"],
+    "tags": ["mysql", "mariadb", "sql", "autocomplete", "client"],
+    "install": {"method": "pip", "package": "mycli", "binary_name": "mycli"},
+    "permissions": ["network"],
+    "agent_hints": {
+      "when_to_use": "Connect to MySQL or MariaDB databases with autocomplete and syntax highlighting",
+      "example_usage": [
+        "mycli -h localhost -u root -D mydb",
+        "mycli mysql://user:pass@host/db",
+        "mycli -e 'SELECT * FROM users LIMIT 10' -D mydb"
+      ],
+      "input_formats": ["sql"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 18500,
+    "rating": 4.7
+  },
+  {
+    "name": "pgcli",
+    "version": "4.1.0",
+    "description": "PostgreSQL client with auto-completion and syntax highlighting.",
+    "author": "Amjith Ramanujam",
+    "homepage": "https://www.pgcli.com/",
+    "repository": "https://github.com/dbcli/pgcli",
+    "license": "BSD-3-Clause",
+    "categories": ["database", "dev-tools"],
+    "tags": ["postgres", "postgresql", "sql", "autocomplete", "client"],
+    "install": {"method": "pip", "package": "pgcli", "binary_name": "pgcli"},
+    "permissions": ["network"],
+    "agent_hints": {
+      "when_to_use": "Connect to PostgreSQL databases with autocomplete and syntax highlighting",
+      "example_usage": [
+        "pgcli -h localhost -U postgres -d mydb",
+        "pgcli postgresql://user:pass@host/db",
+        "pgcli -e 'SELECT COUNT(*) FROM orders' -d mydb"
+      ],
+      "input_formats": ["sql"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 22000,
+    "rating": 4.7
+  },
+  {
+    "name": "iredis",
+    "version": "1.14.1",
+    "description": "Interactive Redis client with autocompletion and syntax highlighting.",
+    "author": "laixintao",
+    "homepage": "https://iredis.xbin.io/",
+    "repository": "https://github.com/laixintao/iredis",
+    "license": "BSD-3-Clause",
+    "categories": ["database", "dev-tools"],
+    "tags": ["redis", "cache", "autocomplete", "client", "interactive"],
+    "install": {"method": "pip", "package": "iredis", "binary_name": "iredis"},
+    "permissions": ["network"],
+    "agent_hints": {
+      "when_to_use": "Connect to Redis with autocomplete, syntax highlighting, and help for commands",
+      "example_usage": [
+        "iredis -h localhost -p 6379",
+        "iredis --url redis://user:pass@host:6379/0",
+        "iredis -h localhost -n 1 --raw"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 8500,
+    "rating": 4.5
+  },
+  {
+    "name": "usql",
+    "version": "0.19.3",
+    "description": "Universal command-line SQL client. Supports Postgres, MySQL, SQLite, and 40+ databases.",
+    "author": "Kenneth Shaw",
+    "homepage": "https://github.com/xo/usql",
+    "repository": "https://github.com/xo/usql",
+    "license": "MIT",
+    "categories": ["database", "dev-tools"],
+    "tags": ["sql", "database", "universal", "postgres", "mysql", "sqlite"],
+    "install": {"method": "brew", "package": "usql", "binary_name": "usql"},
+    "permissions": ["network", "local-read"],
+    "agent_hints": {
+      "when_to_use": "Connect to any SQL database with a single tool — Postgres, MySQL, SQLite, and more",
+      "example_usage": [
+        "usql postgres://user:pass@localhost/mydb",
+        "usql sqlite:///path/to/data.db",
+        "usql mysql://root@localhost/test -c 'SELECT * FROM users'"
+      ],
+      "input_formats": ["sql"],
+      "output_formats": ["text", "csv", "json"]
+    },
+    "verified": true,
+    "downloads": 7200,
+    "rating": 4.5
+  },
+  {
+    "name": "litecli",
+    "version": "1.12.3",
+    "description": "SQLite client with auto-completion and syntax highlighting.",
+    "author": "Amjith Ramanujam",
+    "homepage": "https://litecli.com/",
+    "repository": "https://github.com/dbcli/litecli",
+    "license": "BSD-3-Clause",
+    "categories": ["database", "dev-tools"],
+    "tags": ["sqlite", "sql", "autocomplete", "client", "interactive"],
+    "install": {"method": "pip", "package": "litecli", "binary_name": "litecli"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Query and manage SQLite databases with autocomplete and syntax highlighting",
+      "example_usage": [
+        "litecli mydb.sqlite",
+        "litecli -e 'SELECT * FROM users' mydb.sqlite",
+        "litecli :memory:"
+      ],
+      "input_formats": ["sql"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 9800,
+    "rating": 4.6
+  },
+  {
+    "name": "just",
+    "version": "1.38.0",
+    "description": "A handy command runner, a modern alternative to make.",
+    "author": "Casey Rodarmor",
+    "homepage": "https://just.systems/",
+    "repository": "https://github.com/casey/just",
+    "license": "CC0-1.0",
+    "categories": ["dev-tools", "productivity"],
+    "tags": ["make", "task-runner", "automation", "build", "rust"],
+    "install": {"method": "brew", "package": "just", "binary_name": "just"},
+    "permissions": ["local-read", "local-write", "system"],
+    "agent_hints": {
+      "when_to_use": "Define and run project-specific commands via a justfile, like a modern Makefile",
+      "example_usage": [
+        "just --list",
+        "just build",
+        "just test --verbose"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 24000,
+    "rating": 4.7
+  },
+  {
+    "name": "grex",
+    "version": "1.4.5",
+    "description": "Generate regular expressions from user-provided test cases.",
+    "author": "Peter M. Stahl",
+    "homepage": "https://github.com/pemistahl/grex",
+    "repository": "https://github.com/pemistahl/grex",
+    "license": "Apache-2.0",
+    "categories": ["dev-tools", "utilities"],
+    "tags": ["regex", "generate", "pattern", "text", "rust"],
+    "install": {"method": "brew", "package": "grex", "binary_name": "grex"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Generate a regex pattern automatically from example strings",
+      "example_usage": [
+        "grex 'foo' 'bar' 'baz'",
+        "grex -d '2023-01-15' '2024-06-30' '2025-12-01'",
+        "grex --repetitions 'abc123' 'def456'"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 9500,
+    "rating": 4.5
+  },
+  {
+    "name": "micro",
+    "version": "2.0.14",
+    "description": "A modern and intuitive terminal-based text editor.",
+    "author": "Zachary Yedidia",
+    "homepage": "https://micro-editor.github.io/",
+    "repository": "https://github.com/zyedidia/micro",
+    "license": "MIT",
+    "categories": ["dev-tools", "productivity"],
+    "tags": ["editor", "terminal", "text", "intuitive", "simple"],
+    "install": {"method": "brew", "package": "micro", "binary_name": "micro"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Edit files in the terminal with familiar keybindings (Ctrl+S, Ctrl+C, etc.)",
+      "example_usage": [
+        "micro file.txt",
+        "micro -ruler false config.yaml",
+        "micro +15 src/main.py"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 18000,
+    "rating": 4.6
+  },
+  {
+    "name": "helix",
+    "version": "24.7",
+    "description": "A post-modern modal text editor with built-in LSP support.",
+    "author": "Helix contributors",
+    "homepage": "https://helix-editor.com/",
+    "repository": "https://github.com/helix-editor/helix",
+    "license": "MPL-2.0",
+    "categories": ["dev-tools", "productivity"],
+    "tags": ["editor", "modal", "lsp", "terminal", "rust"],
+    "install": {"method": "brew", "package": "helix", "binary_name": "hx"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Edit code in the terminal with Kakoune-style modal editing and built-in LSP",
+      "example_usage": [
+        "hx file.rs",
+        "hx src/",
+        "hx --health python"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 21000,
+    "rating": 4.7
+  },
+  {
+    "name": "neovim",
+    "version": "0.10.3",
+    "description": "Hyperextensible Vim-based text editor focused on extensibility and usability.",
+    "author": "Neovim contributors",
+    "homepage": "https://neovim.io/",
+    "repository": "https://github.com/neovim/neovim",
+    "license": "Apache-2.0",
+    "categories": ["dev-tools", "productivity"],
+    "tags": ["editor", "vim", "lua", "extensible", "lsp", "terminal"],
+    "install": {"method": "brew", "package": "neovim", "binary_name": "nvim"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Edit code with Vim-style keybindings and Lua-based plugin ecosystem",
+      "example_usage": [
+        "nvim file.py",
+        "nvim +42 src/main.rs",
+        "nvim -d file1.txt file2.txt"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 78000,
+    "rating": 4.9
+  },
+  {
+    "name": "git-extras",
+    "version": "7.2.0",
+    "description": "Useful extra git commands like git-summary, git-changelog, git-effort.",
+    "author": "TJ Holowaychuk",
+    "homepage": "https://github.com/tj/git-extras",
+    "repository": "https://github.com/tj/git-extras",
+    "license": "MIT",
+    "categories": ["dev-tools", "git"],
+    "tags": ["git", "commands", "summary", "changelog", "extras"],
+    "install": {"method": "brew", "package": "git-extras", "binary_name": "git-extras"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Use extra git commands for summaries, changelogs, author stats, and more",
+      "example_usage": [
+        "git summary",
+        "git changelog",
+        "git effort --above 10"
+      ],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 15000,
+    "rating": 4.5
+  },
+  {
+    "name": "gitui",
+    "version": "0.26.3",
+    "description": "Blazing fast terminal UI for git written in Rust.",
+    "author": "Stephan Dilly",
+    "homepage": "https://github.com/extrawurst/gitui",
+    "repository": "https://github.com/extrawurst/gitui",
+    "license": "MIT",
+    "categories": ["dev-tools", "git"],
+    "tags": ["git", "tui", "interactive", "fast", "rust"],
+    "install": {"method": "brew", "package": "gitui", "binary_name": "gitui"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Fast terminal UI for git — stage, commit, branch, and browse history",
+      "example_usage": [
+        "gitui",
+        "gitui -d /path/to/repo",
+        "gitui --logging"
+      ],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 16000,
+    "rating": 4.6
+  },
+  {
+    "name": "cookiecutter",
+    "version": "2.6.0",
+    "description": "Create projects from project templates (cookiecutters).",
+    "author": "Audrey Roy Greenfeld",
+    "homepage": "https://www.cookiecutter.io/",
+    "repository": "https://github.com/cookiecutter/cookiecutter",
+    "license": "BSD-3-Clause",
+    "categories": ["dev-tools", "productivity"],
+    "tags": ["template", "scaffold", "project", "generator", "python"],
+    "install": {"method": "pip", "package": "cookiecutter", "binary_name": "cookiecutter"},
+    "permissions": ["network", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Scaffold a new project from a template — Python packages, Flask apps, etc.",
+      "example_usage": [
+        "cookiecutter gh:audreyfeldroy/cookiecutter-pypackage",
+        "cookiecutter https://github.com/cookiecutter/cookiecutter-django",
+        "cookiecutter --no-input gh:user/template project_name=myapp"
+      ],
+      "input_formats": ["json"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 26000,
+    "rating": 4.6
+  },
+  {
+    "name": "bats-core",
+    "version": "1.11.1",
+    "description": "Bash Automated Testing System — TAP-compliant testing for Bash scripts.",
+    "author": "bats-core contributors",
+    "homepage": "https://bats-core.readthedocs.io/",
+    "repository": "https://github.com/bats-core/bats-core",
+    "license": "MIT",
+    "categories": ["dev-tools", "shell"],
+    "tags": ["bash", "testing", "tap", "shell", "automation"],
+    "install": {"method": "brew", "package": "bats-core", "binary_name": "bats"},
+    "permissions": ["local-read", "system"],
+    "agent_hints": {
+      "when_to_use": "Write and run automated tests for Bash scripts and shell commands",
+      "example_usage": [
+        "bats test/",
+        "bats test/my_script.bats",
+        "bats --tap test/ | tee results.tap"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 12000,
+    "rating": 4.5
+  },
+  {
+    "name": "shellcheck",
+    "version": "0.10.0",
+    "description": "Static analysis tool for shell scripts — finds bugs and suggests improvements.",
+    "author": "Vidar Holen",
+    "homepage": "https://www.shellcheck.net/",
+    "repository": "https://github.com/koalaman/shellcheck",
+    "license": "GPL-3.0",
+    "categories": ["dev-tools", "shell"],
+    "tags": ["shell", "bash", "lint", "static-analysis", "haskell"],
+    "install": {"method": "brew", "package": "shellcheck", "binary_name": "shellcheck"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Lint shell scripts to find bugs, syntax issues, and bad practices",
+      "example_usage": [
+        "shellcheck script.sh",
+        "shellcheck -x -e SC2086 deploy.sh",
+        "shellcheck --format=json script.sh"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text", "json"]
+    },
+    "verified": true,
+    "downloads": 35000,
+    "rating": 4.8
+  },
+  {
+    "name": "shfmt",
+    "version": "3.10.0",
+    "description": "Shell script formatter — supports bash, mksh, and POSIX shell.",
+    "author": "Daniel Marti",
+    "homepage": "https://github.com/mvdan/sh",
+    "repository": "https://github.com/mvdan/sh",
+    "license": "BSD-3-Clause",
+    "categories": ["dev-tools", "shell"],
+    "tags": ["shell", "bash", "formatter", "format", "posix"],
+    "install": {"method": "brew", "package": "shfmt", "binary_name": "shfmt"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Auto-format shell scripts to a consistent style",
+      "example_usage": [
+        "shfmt -w script.sh",
+        "shfmt -d script.sh",
+        "shfmt -i 2 -ci -w *.sh"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 19000,
+    "rating": 4.6
+  },
+  {
+    "name": "ruff",
+    "version": "0.8.6",
+    "description": "Extremely fast Python linter and formatter, written in Rust.",
+    "author": "Astral",
+    "homepage": "https://docs.astral.sh/ruff/",
+    "repository": "https://github.com/astral-sh/ruff",
+    "license": "MIT",
+    "categories": ["python", "dev-tools"],
+    "tags": ["python", "linter", "formatter", "fast", "rust"],
+    "install": {"method": "pip", "package": "ruff", "binary_name": "ruff"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Lint and format Python code extremely fast — replaces flake8, isort, black, and more",
+      "example_usage": [
+        "ruff check src/",
+        "ruff format src/",
+        "ruff check --fix src/"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text", "json"]
+    },
+    "verified": true,
+    "downloads": 52000,
+    "rating": 4.9
+  },
+  {
+    "name": "black",
+    "version": "24.10.0",
+    "description": "The uncompromising Python code formatter.",
+    "author": "Lukasz Langa",
+    "homepage": "https://black.readthedocs.io/",
+    "repository": "https://github.com/psf/black",
+    "license": "MIT",
+    "categories": ["python", "dev-tools"],
+    "tags": ["python", "formatter", "code-style", "opinionated"],
+    "install": {"method": "pip", "package": "black", "binary_name": "black"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Auto-format Python code to a consistent style with zero configuration",
+      "example_usage": [
+        "black src/",
+        "black --check --diff src/",
+        "black --line-length 100 myfile.py"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 68000,
+    "rating": 4.8
+  },
+  {
+    "name": "mypy",
+    "version": "1.14.1",
+    "description": "Static type checker for Python — catch type errors before runtime.",
+    "author": "Jukka Lehtosalo",
+    "homepage": "https://mypy-lang.org/",
+    "repository": "https://github.com/python/mypy",
+    "license": "MIT",
+    "categories": ["python", "dev-tools"],
+    "tags": ["python", "type-checking", "static-analysis", "types"],
+    "install": {"method": "pip", "package": "mypy", "binary_name": "mypy"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Check Python code for type errors using type annotations",
+      "example_usage": [
+        "mypy src/",
+        "mypy --strict main.py",
+        "mypy --ignore-missing-imports project/"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 55000,
+    "rating": 4.7
+  },
+  {
+    "name": "uv",
+    "version": "0.5.14",
+    "description": "Extremely fast Python package installer and resolver, written in Rust.",
+    "author": "Astral",
+    "homepage": "https://docs.astral.sh/uv/",
+    "repository": "https://github.com/astral-sh/uv",
+    "license": "Apache-2.0",
+    "categories": ["python", "dev-tools"],
+    "tags": ["python", "package-manager", "pip", "fast", "rust", "venv"],
+    "install": {"method": "brew", "package": "uv", "binary_name": "uv"},
+    "permissions": ["network", "local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Install Python packages extremely fast, manage virtualenvs, or run Python scripts",
+      "example_usage": [
+        "uv pip install requests",
+        "uv venv && source .venv/bin/activate",
+        "uv run python script.py"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 48000,
+    "rating": 4.9
+  },
+  {
+    "name": "pipx",
+    "version": "1.7.1",
+    "description": "Install and run Python CLI tools in isolated environments.",
+    "author": "Chad Smith",
+    "homepage": "https://pipx.pypa.io/",
+    "repository": "https://github.com/pypa/pipx",
+    "license": "MIT",
+    "categories": ["python", "dev-tools"],
+    "tags": ["python", "cli", "install", "isolated", "venv"],
+    "install": {"method": "pip", "package": "pipx", "binary_name": "pipx"},
+    "permissions": ["network", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Install Python CLI tools globally in isolated environments to avoid conflicts",
+      "example_usage": [
+        "pipx install black",
+        "pipx run cowsay hello",
+        "pipx list"
+      ],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 32000,
+    "rating": 4.7
+  },
+  {
+    "name": "poetry",
+    "version": "1.8.5",
+    "description": "Python dependency management and packaging made easy.",
+    "author": "Sebastien Eustace",
+    "homepage": "https://python-poetry.org/",
+    "repository": "https://github.com/python-poetry/poetry",
+    "license": "MIT",
+    "categories": ["python", "dev-tools"],
+    "tags": ["python", "dependency", "packaging", "virtualenv", "lock"],
+    "install": {"method": "pip", "package": "poetry", "binary_name": "poetry"},
+    "permissions": ["network", "local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Manage Python project dependencies, build packages, and publish to PyPI",
+      "example_usage": [
+        "poetry init",
+        "poetry add requests",
+        "poetry install && poetry run pytest"
+      ],
+      "input_formats": ["toml"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 58000,
+    "rating": 4.7
+  },
+  {
+    "name": "prettier",
+    "version": "3.4.2",
+    "description": "Opinionated code formatter for JS, TS, CSS, HTML, JSON, Markdown, and more.",
+    "author": "Prettier",
+    "homepage": "https://prettier.io/",
+    "repository": "https://github.com/prettier/prettier",
+    "license": "MIT",
+    "categories": ["javascript", "dev-tools"],
+    "tags": ["formatter", "javascript", "typescript", "css", "html", "json"],
+    "install": {"method": "npm", "package": "prettier", "binary_name": "prettier"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Auto-format JavaScript, TypeScript, CSS, HTML, JSON, and Markdown files",
+      "example_usage": [
+        "prettier --write src/",
+        "prettier --check '**/*.{js,ts,css}'",
+        "prettier --single-quote --trailing-comma all --write ."
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 95000,
+    "rating": 4.8
+  },
+  {
+    "name": "eslint",
+    "version": "9.17.0",
+    "description": "Pluggable linting utility for JavaScript and TypeScript.",
+    "author": "Nicholas C. Zakas",
+    "homepage": "https://eslint.org/",
+    "repository": "https://github.com/eslint/eslint",
+    "license": "MIT",
+    "categories": ["javascript", "dev-tools"],
+    "tags": ["linter", "javascript", "typescript", "code-quality", "pluggable"],
+    "install": {"method": "npm", "package": "eslint", "binary_name": "eslint"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Lint JavaScript and TypeScript code to find problems and enforce code style",
+      "example_usage": [
+        "eslint src/",
+        "eslint --fix src/**/*.js",
+        "eslint --format json src/"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text", "json"]
+    },
+    "verified": true,
+    "downloads": 110000,
+    "rating": 4.7
+  },
+  {
+    "name": "tsx",
+    "version": "4.19.2",
+    "description": "TypeScript execute — run TypeScript files directly with Node.js.",
+    "author": "Hiroki Osame",
+    "homepage": "https://tsx.is/",
+    "repository": "https://github.com/privatenumber/tsx",
+    "license": "MIT",
+    "categories": ["javascript", "dev-tools"],
+    "tags": ["typescript", "node", "execute", "runner", "esm"],
+    "install": {"method": "npm", "package": "tsx", "binary_name": "tsx"},
+    "permissions": ["local-read", "local-write", "network"],
+    "agent_hints": {
+      "when_to_use": "Run TypeScript files directly without a build step, like ts-node but faster",
+      "example_usage": [
+        "tsx script.ts",
+        "tsx watch server.ts",
+        "tsx --env-file .env script.ts"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 38000,
+    "rating": 4.7
+  },
+  {
+    "name": "npm-check-updates",
+    "version": "17.1.13",
+    "description": "Find newer versions of package.json dependencies.",
+    "author": "Raine Revere",
+    "homepage": "https://github.com/raineorshine/npm-check-updates",
+    "repository": "https://github.com/raineorshine/npm-check-updates",
+    "license": "Apache-2.0",
+    "categories": ["javascript", "dev-tools"],
+    "tags": ["npm", "dependencies", "update", "outdated", "package"],
+    "install": {"method": "npm", "package": "npm-check-updates", "binary_name": "ncu"},
+    "permissions": ["network", "local-read"],
+    "agent_hints": {
+      "when_to_use": "Check for newer versions of npm dependencies and update package.json",
+      "example_usage": [
+        "ncu",
+        "ncu -u",
+        "ncu --target minor"
+      ],
+      "input_formats": ["json"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 42000,
+    "rating": 4.6
+  },
+  {
+    "name": "lazydocker",
+    "version": "0.23.3",
+    "description": "Simple terminal UI for docker and docker-compose.",
+    "author": "Jesse Duffield",
+    "homepage": "https://github.com/jesseduffield/lazydocker",
+    "repository": "https://github.com/jesseduffield/lazydocker",
+    "license": "MIT",
+    "categories": ["docker", "devops"],
+    "tags": ["docker", "docker-compose", "tui", "containers", "interactive"],
+    "install": {"method": "brew", "package": "lazydocker", "binary_name": "lazydocker"},
+    "permissions": ["system"],
+    "agent_hints": {
+      "when_to_use": "Manage Docker containers, images, and volumes with an interactive TUI",
+      "example_usage": [
+        "lazydocker",
+        "lazydocker --filter 'my-project'",
+        "DOCKER_HOST=ssh://user@host lazydocker"
+      ],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 28000,
+    "rating": 4.8
+  },
+  {
+    "name": "ctop",
+    "version": "0.7.7",
+    "description": "Top-like interface for container metrics and management.",
+    "author": "Bradley Cicenas",
+    "homepage": "https://ctop.sh/",
+    "repository": "https://github.com/bcicen/ctop",
+    "license": "MIT",
+    "categories": ["docker", "monitoring"],
+    "tags": ["docker", "containers", "monitor", "metrics", "top"],
+    "install": {"method": "brew", "package": "ctop", "binary_name": "ctop"},
+    "permissions": ["system"],
+    "agent_hints": {
+      "when_to_use": "Monitor Docker container CPU, memory, network, and I/O in real-time",
+      "example_usage": [
+        "ctop",
+        "ctop -f running",
+        "ctop -s cpu"
+      ],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 14000,
+    "rating": 4.5
+  },
+  {
+    "name": "k9s",
+    "version": "0.32.7",
+    "description": "Kubernetes cluster manager TUI — manage pods, deployments, and services.",
+    "author": "Fernand Galiana",
+    "homepage": "https://k9scli.io/",
+    "repository": "https://github.com/derailed/k9s",
+    "license": "Apache-2.0",
+    "categories": ["devops", "monitoring"],
+    "tags": ["kubernetes", "k8s", "tui", "pods", "cluster", "management"],
+    "install": {"method": "brew", "package": "k9s", "binary_name": "k9s"},
+    "permissions": ["network", "system"],
+    "agent_hints": {
+      "when_to_use": "Manage and monitor Kubernetes clusters with an interactive terminal UI",
+      "example_usage": [
+        "k9s",
+        "k9s -n my-namespace",
+        "k9s --context my-cluster"
+      ],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 38000,
+    "rating": 4.8
+  },
+  {
+    "name": "dive",
+    "version": "0.12.0",
+    "description": "Explore each layer in a Docker image to find ways to shrink image size.",
+    "author": "Alex Goodman",
+    "homepage": "https://github.com/wagoodman/dive",
+    "repository": "https://github.com/wagoodman/dive",
+    "license": "MIT",
+    "categories": ["docker", "dev-tools"],
+    "tags": ["docker", "image", "layers", "optimize", "size"],
+    "install": {"method": "brew", "package": "dive", "binary_name": "dive"},
+    "permissions": ["system"],
+    "agent_hints": {
+      "when_to_use": "Analyze Docker image layers to find wasted space and optimize image size",
+      "example_usage": [
+        "dive my-image:latest",
+        "dive build -t my-image .",
+        "CI=true dive my-image:latest"
+      ],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 25000,
+    "rating": 4.7
+  },
+  {
+    "name": "act",
+    "version": "0.2.72",
+    "description": "Run GitHub Actions locally using Docker.",
+    "author": "Nektos",
+    "homepage": "https://nektosact.com/",
+    "repository": "https://github.com/nektos/act",
+    "license": "MIT",
+    "categories": ["devops", "dev-tools"],
+    "tags": ["github-actions", "ci", "local", "docker", "testing"],
+    "install": {"method": "brew", "package": "act", "binary_name": "act"},
+    "permissions": ["system", "local-read"],
+    "agent_hints": {
+      "when_to_use": "Test and run GitHub Actions workflows locally before pushing",
+      "example_usage": [
+        "act",
+        "act -j build",
+        "act push --secret-file .secrets"
+      ],
+      "input_formats": ["yaml"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 22000,
+    "rating": 4.6
+  },
+  {
+    "name": "awscli",
+    "version": "2.22.18",
+    "description": "Official Amazon Web Services command-line interface.",
+    "author": "Amazon Web Services",
+    "homepage": "https://aws.amazon.com/cli/",
+    "repository": "https://github.com/aws/aws-cli",
+    "license": "Apache-2.0",
+    "categories": ["cloud", "devops"],
+    "tags": ["aws", "cloud", "s3", "ec2", "lambda", "infrastructure"],
+    "install": {"method": "pip", "package": "awscli", "binary_name": "aws"},
+    "permissions": ["network"],
+    "agent_hints": {
+      "when_to_use": "Manage AWS resources — S3 buckets, EC2 instances, Lambda functions, and more",
+      "example_usage": [
+        "aws s3 ls",
+        "aws ec2 describe-instances --output table",
+        "aws lambda invoke --function-name my-func output.json"
+      ],
+      "input_formats": ["json"],
+      "output_formats": ["json", "text"]
+    },
+    "verified": true,
+    "downloads": 92000,
+    "rating": 4.7
+  },
+  {
+    "name": "terraform",
+    "version": "1.10.3",
+    "description": "Infrastructure as Code tool for building and managing cloud resources.",
+    "author": "HashiCorp",
+    "homepage": "https://www.terraform.io/",
+    "repository": "https://github.com/hashicorp/terraform",
+    "license": "BUSL-1.1",
+    "categories": ["cloud", "devops"],
+    "tags": ["infrastructure", "iac", "cloud", "provisioning", "hcl"],
+    "install": {"method": "brew", "package": "terraform", "binary_name": "terraform"},
+    "permissions": ["network", "local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Define and provision cloud infrastructure using declarative configuration files",
+      "example_usage": [
+        "terraform init",
+        "terraform plan",
+        "terraform apply -auto-approve"
+      ],
+      "input_formats": ["hcl", "json"],
+      "output_formats": ["text", "json"]
+    },
+    "verified": true,
+    "downloads": 75000,
+    "rating": 4.8
+  },
+  {
+    "name": "lsd",
+    "version": "1.1.5",
+    "description": "Next-gen ls command with icons, colors, and Git integration.",
+    "author": "Peltoche",
+    "homepage": "https://github.com/lsd-rs/lsd",
+    "repository": "https://github.com/lsd-rs/lsd",
+    "license": "Apache-2.0",
+    "categories": ["files", "productivity"],
+    "tags": ["ls", "icons", "colors", "git", "rust"],
+    "install": {"method": "brew", "package": "lsd", "binary_name": "lsd"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "List files with icons, colors, and git status — a modern ls replacement",
+      "example_usage": [
+        "lsd -la",
+        "lsd --tree --depth 2",
+        "lsd --group-dirs first"
+      ],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 22000,
+    "rating": 4.6
+  },
+  {
+    "name": "broot",
+    "version": "1.44.2",
+    "description": "Interactive tree view with fuzzy search, file preview, and navigation.",
+    "author": "Canop",
+    "homepage": "https://dystroy.org/broot/",
+    "repository": "https://github.com/Canop/broot",
+    "license": "MIT",
+    "categories": ["files", "search"],
+    "tags": ["tree", "fuzzy", "navigate", "preview", "rust"],
+    "install": {"method": "brew", "package": "broot", "binary_name": "broot"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Navigate large directory trees interactively with fuzzy search and preview",
+      "example_usage": [
+        "broot",
+        "broot -s /var/log",
+        "broot --sizes"
+      ],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 14000,
+    "rating": 4.6
+  },
+  {
+    "name": "ranger",
+    "version": "1.9.4",
+    "description": "Console file manager with vi keybindings and file preview.",
+    "author": "Roman Zimbelmann",
+    "homepage": "https://ranger.github.io/",
+    "repository": "https://github.com/ranger/ranger",
+    "license": "GPL-3.0",
+    "categories": ["files", "productivity"],
+    "tags": ["file-manager", "vi", "preview", "terminal", "python"],
+    "install": {"method": "pip", "package": "ranger-fm", "binary_name": "ranger"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Browse and manage files in a terminal file manager with vi-style navigation",
+      "example_usage": [
+        "ranger",
+        "ranger /var/log",
+        "ranger --choosefile=/tmp/picked"
+      ],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 25000,
+    "rating": 4.6
+  },
+  {
+    "name": "nnn",
+    "version": "5.0",
+    "description": "Blazing fast terminal file manager with minimal resource usage.",
+    "author": "Arun Prakash Jana",
+    "homepage": "https://github.com/jarun/nnn",
+    "repository": "https://github.com/jarun/nnn",
+    "license": "BSD-2-Clause",
+    "categories": ["files", "productivity"],
+    "tags": ["file-manager", "fast", "minimal", "terminal", "c"],
+    "install": {"method": "brew", "package": "nnn", "binary_name": "nnn"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Navigate and manage files in a blazing fast, minimal terminal file manager",
+      "example_usage": [
+        "nnn",
+        "nnn -d /var/log",
+        "nnn -e"
+      ],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 18000,
+    "rating": 4.6
+  },
+  {
+    "name": "trash-cli",
+    "version": "5.0.0",
+    "description": "Move files to the trash instead of permanently deleting them.",
+    "author": "Sindre Sorhus",
+    "homepage": "https://github.com/sindresorhus/trash-cli",
+    "repository": "https://github.com/sindresorhus/trash-cli",
+    "license": "MIT",
+    "categories": ["files", "utilities"],
+    "tags": ["trash", "delete", "safe", "recycle", "rm"],
+    "install": {"method": "npm", "package": "trash-cli", "binary_name": "trash"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Safely delete files by moving them to the system trash instead of using rm",
+      "example_usage": [
+        "trash file.txt",
+        "trash *.log",
+        "trash old-dir/"
+      ],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 15000,
+    "rating": 4.5
+  },
+  {
+    "name": "ngrok",
+    "version": "3.19.0",
+    "description": "Expose local servers to the internet with secure tunnels.",
+    "author": "ngrok Inc.",
+    "homepage": "https://ngrok.com/",
+    "repository": "https://github.com/ngrok/ngrok",
+    "license": "Proprietary",
+    "categories": ["network", "dev-tools"],
+    "tags": ["tunnel", "localhost", "expose", "webhook", "https"],
+    "install": {"method": "brew", "package": "ngrok", "binary_name": "ngrok"},
+    "permissions": ["network", "system"],
+    "agent_hints": {
+      "when_to_use": "Expose a local web server to the internet for testing, demos, or webhooks",
+      "example_usage": [
+        "ngrok http 3000",
+        "ngrok http --domain=myapp.ngrok.dev 8080",
+        "ngrok tcp 22"
+      ],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 52000,
+    "rating": 4.7
+  },
+  {
+    "name": "mosh",
+    "version": "1.4.0",
+    "description": "Mobile shell — persistent SSH that survives disconnects and roaming.",
+    "author": "Keith Winstein",
+    "homepage": "https://mosh.org/",
+    "repository": "https://github.com/mobile-shell/mosh",
+    "license": "GPL-3.0",
+    "categories": ["network", "productivity"],
+    "tags": ["ssh", "mobile", "persistent", "remote", "udp"],
+    "install": {"method": "brew", "package": "mosh", "binary_name": "mosh"},
+    "permissions": ["network"],
+    "agent_hints": {
+      "when_to_use": "Connect to remote servers with persistent SSH that survives network changes",
+      "example_usage": [
+        "mosh user@host",
+        "mosh --ssh='ssh -p 2222' user@host",
+        "mosh user@host -- tmux attach"
+      ],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 28000,
+    "rating": 4.6
+  },
+  {
+    "name": "nmap",
+    "version": "7.95",
+    "description": "Network exploration tool and security scanner.",
+    "author": "Gordon Lyon",
+    "homepage": "https://nmap.org/",
+    "repository": "https://github.com/nmap/nmap",
+    "license": "NPSL",
+    "categories": ["network", "security"],
+    "tags": ["scan", "ports", "security", "discovery", "audit"],
+    "install": {"method": "brew", "package": "nmap", "binary_name": "nmap"},
+    "permissions": ["network", "system"],
+    "agent_hints": {
+      "when_to_use": "Scan networks to discover hosts, open ports, and running services",
+      "example_usage": [
+        "nmap -sV 192.168.1.0/24",
+        "nmap -p 80,443 example.com",
+        "nmap -A -T4 target.com"
+      ],
+      "input_formats": [],
+      "output_formats": ["text", "xml"]
+    },
+    "verified": true,
+    "downloads": 65000,
+    "rating": 4.8
+  },
+  {
+    "name": "speedtest-cli",
+    "version": "2.1.3",
+    "description": "Test internet bandwidth speed from the command line.",
+    "author": "Matt Martz",
+    "homepage": "https://github.com/sivel/speedtest-cli",
+    "repository": "https://github.com/sivel/speedtest-cli",
+    "license": "Apache-2.0",
+    "categories": ["network", "utilities"],
+    "tags": ["speed", "bandwidth", "internet", "test", "latency"],
+    "install": {"method": "pip", "package": "speedtest-cli", "binary_name": "speedtest-cli"},
+    "permissions": ["network"],
+    "agent_hints": {
+      "when_to_use": "Test internet download and upload speed from the terminal",
+      "example_usage": [
+        "speedtest-cli",
+        "speedtest-cli --simple",
+        "speedtest-cli --json"
+      ],
+      "input_formats": [],
+      "output_formats": ["text", "json"]
+    },
+    "verified": true,
+    "downloads": 35000,
+    "rating": 4.5
+  },
+  {
+    "name": "sd",
+    "version": "1.0.0",
+    "description": "Intuitive find-and-replace CLI tool, a simpler alternative to sed.",
+    "author": "Gregory Oakes",
+    "homepage": "https://github.com/chmln/sd",
+    "repository": "https://github.com/chmln/sd",
+    "license": "MIT",
+    "categories": ["text-processing", "utilities"],
+    "tags": ["sed", "replace", "find", "regex", "rust"],
+    "install": {"method": "brew", "package": "sd", "binary_name": "sd"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Find and replace text in files or piped input — easier syntax than sed",
+      "example_usage": [
+        "sd 'old_text' 'new_text' file.txt",
+        "echo 'hello world' | sd 'world' 'there'",
+        "sd -F 'exact.match' 'replacement' *.py"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 11000,
+    "rating": 4.5
+  },
+  {
+    "name": "choose",
+    "version": "1.3.4",
+    "description": "A human-friendly alternative to cut and awk for field selection.",
+    "author": "Ryan Geary",
+    "homepage": "https://github.com/theryangeary/choose",
+    "repository": "https://github.com/theryangeary/choose",
+    "license": "GPL-3.0",
+    "categories": ["text-processing", "utilities"],
+    "tags": ["cut", "awk", "fields", "columns", "rust"],
+    "install": {"method": "brew", "package": "choose-rust", "binary_name": "choose"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Select fields or columns from text input — simpler than cut or awk",
+      "example_usage": [
+        "echo 'one two three' | choose 1",
+        "ls -l | choose 4 8",
+        "cat data.csv | choose -f ',' 0 2"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 5200,
+    "rating": 4.4
+  },
+  {
+    "name": "sad",
+    "version": "0.4.31",
+    "description": "Search And Displace — CLI for batch find-and-replace with diff preview.",
+    "author": "ms-jpq",
+    "homepage": "https://github.com/ms-jpq/sad",
+    "repository": "https://github.com/ms-jpq/sad",
+    "license": "MIT",
+    "categories": ["text-processing", "dev-tools"],
+    "tags": ["search", "replace", "batch", "diff", "preview", "rust"],
+    "install": {"method": "brew", "package": "sad", "binary_name": "sad"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Batch find-and-replace across files with a diff preview before applying",
+      "example_usage": [
+        "fd -e py | sad 'old_func' 'new_func'",
+        "rg -l 'TODO' | sad 'TODO' 'DONE'",
+        "fd -e js | sad --exact 'var ' 'const '"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 6800,
+    "rating": 4.4
+  },
+  {
+    "name": "svgo",
+    "version": "3.3.2",
+    "description": "Node.js tool for optimizing SVG files by removing unnecessary metadata.",
+    "author": "Kir Belevich",
+    "homepage": "https://svgo.dev/",
+    "repository": "https://github.com/svg/svgo",
+    "license": "MIT",
+    "categories": ["media", "image"],
+    "tags": ["svg", "optimize", "compress", "web", "icons"],
+    "install": {"method": "npm", "package": "svgo", "binary_name": "svgo"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Optimize and minify SVG files to reduce file size",
+      "example_usage": [
+        "svgo icon.svg",
+        "svgo -f ./icons/ -o ./icons-optimized/",
+        "svgo --multipass icon.svg -o icon.min.svg"
+      ],
+      "input_formats": ["svg"],
+      "output_formats": ["svg"]
+    },
+    "verified": true,
+    "downloads": 28000,
+    "rating": 4.6
+  },
+  {
+    "name": "gifsicle",
+    "version": "1.95",
+    "description": "Create, edit, and optimize GIF images and animations.",
+    "author": "Eddie Kohler",
+    "homepage": "https://www.lcdf.org/gifsicle/",
+    "repository": "https://github.com/kohler/gifsicle",
+    "license": "GPL-2.0",
+    "categories": ["media", "image"],
+    "tags": ["gif", "optimize", "animation", "resize", "compress"],
+    "install": {"method": "brew", "package": "gifsicle", "binary_name": "gifsicle"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Optimize, resize, or manipulate GIF animations from the command line",
+      "example_usage": [
+        "gifsicle -O3 --lossy=80 input.gif -o output.gif",
+        "gifsicle --resize 320x240 input.gif -o small.gif",
+        "gifsicle --delay=10 frame*.gif > animation.gif"
+      ],
+      "input_formats": ["gif"],
+      "output_formats": ["gif"]
+    },
+    "verified": true,
+    "downloads": 15000,
+    "rating": 4.5
+  },
+  {
+    "name": "asciinema",
+    "version": "2.4.0",
+    "description": "Record and share terminal sessions as lightweight text-based screencasts.",
+    "author": "Marcin Kulik",
+    "homepage": "https://asciinema.org/",
+    "repository": "https://github.com/asciinema/asciinema",
+    "license": "GPL-3.0",
+    "categories": ["productivity", "media"],
+    "tags": ["terminal", "record", "screencast", "share", "demo"],
+    "install": {"method": "pip", "package": "asciinema", "binary_name": "asciinema"},
+    "permissions": ["system", "network"],
+    "agent_hints": {
+      "when_to_use": "Record terminal sessions to share as lightweight text-based screencasts",
+      "example_usage": [
+        "asciinema rec demo.cast",
+        "asciinema play demo.cast",
+        "asciinema upload demo.cast"
+      ],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 22000,
+    "rating": 4.6
+  },
+  {
+    "name": "pastel",
+    "version": "0.9.0",
+    "description": "Generate, analyze, convert, and manipulate colors from the terminal.",
+    "author": "David Peter",
+    "homepage": "https://github.com/sharkdp/pastel",
+    "repository": "https://github.com/sharkdp/pastel",
+    "license": "Apache-2.0",
+    "categories": ["dev-tools", "utilities"],
+    "tags": ["color", "hex", "rgb", "hsl", "convert", "rust"],
+    "install": {"method": "brew", "package": "pastel", "binary_name": "pastel"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Generate, convert, and explore colors — hex, RGB, HSL, and more",
+      "example_usage": [
+        "pastel color '#ff6600'",
+        "pastel mix red blue",
+        "pastel format hex 'rgb(255, 100, 0)'"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 7500,
+    "rating": 4.4
+  },
+  {
+    "name": "cmatrix",
+    "version": "2.0",
+    "description": "Matrix-style falling characters terminal animation.",
+    "author": "Chris Allegretta",
+    "homepage": "https://github.com/abishekvashok/cmatrix",
+    "repository": "https://github.com/abishekvashok/cmatrix",
+    "license": "GPL-3.0",
+    "categories": ["fun", "utilities"],
+    "tags": ["matrix", "animation", "terminal", "screensaver", "fun"],
+    "install": {"method": "brew", "package": "cmatrix", "binary_name": "cmatrix"},
+    "permissions": [],
+    "agent_hints": {
+      "when_to_use": "Display a Matrix-style falling characters animation in the terminal",
+      "example_usage": [
+        "cmatrix",
+        "cmatrix -C red",
+        "cmatrix -s -b"
+      ],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 18000,
+    "rating": 4.3
+  },
+  {
+    "name": "taskwarrior",
+    "version": "3.1.0",
+    "description": "Command-line task management — organize, filter, and track your TODOs.",
+    "author": "Taskwarrior Team",
+    "homepage": "https://taskwarrior.org/",
+    "repository": "https://github.com/GothenburgBitFactory/taskwarrior",
+    "license": "MIT",
+    "categories": ["productivity", "utilities"],
+    "tags": ["tasks", "todo", "management", "tracking", "gtd"],
+    "install": {"method": "brew", "package": "task", "binary_name": "task"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Manage tasks and TODOs from the command line with powerful filtering",
+      "example_usage": [
+        "task add Buy groceries due:tomorrow",
+        "task list project:work",
+        "task 5 done"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text", "json"]
+    },
+    "verified": true,
+    "downloads": 19000,
+    "rating": 4.6
+  },
+  {
+    "name": "watson",
+    "version": "2.1.0",
+    "description": "Time tracking from the command line — start, stop, and report.",
+    "author": "TailorDev",
+    "homepage": "https://tailordev.github.io/Watson/",
+    "repository": "https://github.com/TailorDev/Watson",
+    "license": "MIT",
+    "categories": ["productivity", "utilities"],
+    "tags": ["time-tracking", "timer", "report", "projects", "work"],
+    "install": {"method": "pip", "package": "td-watson", "binary_name": "watson"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Track time spent on projects and tasks from the command line",
+      "example_usage": [
+        "watson start myproject +coding",
+        "watson stop",
+        "watson report --week"
+      ],
+      "input_formats": [],
+      "output_formats": ["text", "json"]
+    },
+    "verified": true,
+    "downloads": 8500,
+    "rating": 4.5
+  },
+  {
+    "name": "nb",
+    "version": "7.14.4",
+    "description": "CLI note-taking, bookmarking, archiving, and knowledge base app.",
+    "author": "William Melody",
+    "homepage": "https://xwmx.github.io/nb/",
+    "repository": "https://github.com/xwmx/nb",
+    "license": "AGPL-3.0",
+    "categories": ["productivity", "utilities"],
+    "tags": ["notes", "bookmarks", "knowledge", "markdown", "git"],
+    "install": {"method": "brew", "package": "nb", "binary_name": "nb"},
+    "permissions": ["local-read", "local-write", "network"],
+    "agent_hints": {
+      "when_to_use": "Take notes, save bookmarks, and manage a knowledge base from the terminal",
+      "example_usage": [
+        "nb add 'Meeting notes for today'",
+        "nb bookmark https://example.com",
+        "nb search 'kubernetes'"
+      ],
+      "input_formats": ["text", "markdown"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 9200,
+    "rating": 4.5
+  },
+  {
+    "name": "calcurse",
+    "version": "4.8.1",
+    "description": "Calendar and scheduling application for the terminal.",
+    "author": "Frederic Culot",
+    "homepage": "https://calcurse.org/",
+    "repository": "https://github.com/lfos/calcurse",
+    "license": "BSD-2-Clause",
+    "categories": ["productivity", "utilities"],
+    "tags": ["calendar", "scheduling", "appointments", "todo", "terminal"],
+    "install": {"method": "brew", "package": "calcurse", "binary_name": "calcurse"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Manage calendar events, appointments, and TODOs in the terminal",
+      "example_usage": [
+        "calcurse",
+        "calcurse -a",
+        "calcurse --export > calendar.ics"
+      ],
+      "input_formats": ["ical"],
+      "output_formats": ["text", "ical"]
+    },
+    "verified": true,
+    "downloads": 7000,
+    "rating": 4.4
+  },
+  {
+    "name": "glow",
+    "version": "2.0.0",
+    "description": "Render Markdown on the CLI with glamour and style.",
+    "author": "Charmbracelet",
+    "homepage": "https://github.com/charmbracelet/glow",
+    "repository": "https://github.com/charmbracelet/glow",
+    "license": "MIT",
+    "categories": ["productivity", "documents"],
+    "tags": ["markdown", "render", "preview", "terminal", "charm"],
+    "install": {"method": "brew", "package": "glow", "binary_name": "glow"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Read and preview Markdown files beautifully rendered in the terminal",
+      "example_usage": [
+        "glow README.md",
+        "glow -p README.md",
+        "glow -s dark docs/"
+      ],
+      "input_formats": ["markdown"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 21000,
+    "rating": 4.7
+  },
+  {
+    "name": "semantic-release",
+    "version": "24.2.1",
+    "description": "Fully automated version management and package publishing.",
+    "author": "semantic-release contributors",
+    "homepage": "https://semantic-release.gitbook.io/",
+    "repository": "https://github.com/semantic-release/semantic-release",
+    "license": "MIT",
+    "categories": ["release", "devops"],
+    "tags": ["version", "release", "semver", "changelog", "ci"],
+    "install": {"method": "npm", "package": "semantic-release", "binary_name": "semantic-release"},
+    "permissions": ["network", "local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Automate versioning and changelog generation based on commit messages",
+      "example_usage": [
+        "npx semantic-release",
+        "npx semantic-release --dry-run",
+        "npx semantic-release --branches main"
+      ],
+      "input_formats": ["json"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 52000,
+    "rating": 4.7
+  },
+  {
+    "name": "release-it",
+    "version": "17.10.0",
+    "description": "Automate versioning and package releasing with changelog generation.",
+    "author": "Lars Kappert",
+    "homepage": "https://github.com/release-it/release-it",
+    "repository": "https://github.com/release-it/release-it",
+    "license": "MIT",
+    "categories": ["release", "devops"],
+    "tags": ["version", "release", "npm", "changelog", "github"],
+    "install": {"method": "npm", "package": "release-it", "binary_name": "release-it"},
+    "permissions": ["network", "local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Automate version bumps, git tags, GitHub releases, and npm publishing",
+      "example_usage": [
+        "npx release-it",
+        "npx release-it --dry-run",
+        "npx release-it minor --ci"
+      ],
+      "input_formats": ["json"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 32000,
+    "rating": 4.6
+  },
+  {
+    "name": "commitizen",
+    "version": "3.31.0",
+    "description": "Create standardized commit messages following conventional commits.",
+    "author": "Wei Lee",
+    "homepage": "https://commitizen-tools.github.io/commitizen/",
+    "repository": "https://github.com/commitizen-tools/commitizen",
+    "license": "MIT",
+    "categories": ["release", "dev-tools"],
+    "tags": ["commit", "conventional", "changelog", "version", "git"],
+    "install": {"method": "pip", "package": "commitizen", "binary_name": "cz"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Create standardized commit messages and automate version bumping",
+      "example_usage": [
+        "cz commit",
+        "cz bump",
+        "cz changelog"
+      ],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 24000,
+    "rating": 4.6
+  },
+  {
+    "name": "openssl",
+    "version": "3.4.0",
+    "description": "TLS/SSL toolkit for cryptography, certificates, and secure communication.",
+    "author": "OpenSSL Project",
+    "homepage": "https://www.openssl.org/",
+    "repository": "https://github.com/openssl/openssl",
+    "license": "Apache-2.0",
+    "categories": ["security", "utilities"],
+    "tags": ["tls", "ssl", "crypto", "certificates", "encryption"],
+    "install": {"method": "brew", "package": "openssl", "binary_name": "openssl"},
+    "permissions": ["local-read", "local-write", "network"],
+    "agent_hints": {
+      "when_to_use": "Generate certificates, encrypt/decrypt files, or inspect TLS connections",
+      "example_usage": [
+        "openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes",
+        "openssl s_client -connect example.com:443",
+        "openssl enc -aes-256-cbc -salt -in file.txt -out file.enc"
+      ],
+      "input_formats": ["text", "binary"],
+      "output_formats": ["text", "binary"]
+    },
+    "verified": true,
+    "downloads": 85000,
+    "rating": 4.7
+  },
+  {
+    "name": "jless",
+    "version": "0.9.0",
+    "description": "Command-line JSON viewer with interactive navigation and folding.",
+    "author": "Paul Julius Martinez",
+    "homepage": "https://jless.io/",
+    "repository": "https://github.com/PaulJuliusMartinez/jless",
+    "license": "MIT",
+    "categories": ["data", "json"],
+    "tags": ["json", "viewer", "interactive", "navigate", "rust"],
+    "install": {"method": "brew", "package": "jless", "binary_name": "jless"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Interactively browse and explore large JSON files in the terminal",
+      "example_usage": [
+        "jless data.json",
+        "curl -s https://api.example.com | jless",
+        "jless --yaml config.yaml"
+      ],
+      "input_formats": ["json", "yaml"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 10000,
+    "rating": 4.5
+  },
+  {
+    "name": "fx",
+    "version": "35.0.0",
+    "description": "Terminal JSON viewer and processor with interactive and scripting modes.",
+    "author": "Anton Medvedev",
+    "homepage": "https://fx.wtf/",
+    "repository": "https://github.com/antonmedv/fx",
+    "license": "MIT",
+    "categories": ["data", "json"],
+    "tags": ["json", "viewer", "processor", "interactive", "javascript"],
+    "install": {"method": "brew", "package": "fx", "binary_name": "fx"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "View and process JSON interactively or with JavaScript expressions",
+      "example_usage": [
+        "cat data.json | fx",
+        "fx data.json '.users.length'",
+        "curl -s https://api.example.com | fx '.items[0].name'"
+      ],
+      "input_formats": ["json"],
+      "output_formats": ["json", "text"]
+    },
+    "verified": true,
+    "downloads": 12000,
+    "rating": 4.5
+  },
+  {
+    "name": "age",
+    "version": "1.2.0",
+    "description": "Simple, modern, and secure file encryption tool.",
+    "author": "Filippo Valsorda",
+    "homepage": "https://age-encryption.org/",
+    "repository": "https://github.com/FiloSottile/age",
+    "license": "BSD-3-Clause",
+    "categories": ["security", "utilities"],
+    "tags": ["encryption", "decrypt", "secure", "keys", "modern"],
+    "install": {"method": "brew", "package": "age", "binary_name": "age"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Encrypt and decrypt files with a simple, modern tool — easier than GPG",
+      "example_usage": [
+        "age -r age1... secret.txt -o secret.txt.age",
+        "age -d -i key.txt secret.txt.age -o secret.txt",
+        "age-keygen -o key.txt"
+      ],
+      "input_formats": ["binary", "text"],
+      "output_formats": ["binary"]
+    },
+    "verified": true,
+    "downloads": 15000,
+    "rating": 4.6
+  },
+  {
+    "name": "mkcert",
+    "version": "1.4.4",
+    "description": "Make locally-trusted development certificates with zero configuration.",
+    "author": "Filippo Valsorda",
+    "homepage": "https://github.com/FiloSottile/mkcert",
+    "repository": "https://github.com/FiloSottile/mkcert",
+    "license": "BSD-3-Clause",
+    "categories": ["security", "dev-tools"],
+    "tags": ["certificates", "https", "localhost", "tls", "development"],
+    "install": {"method": "brew", "package": "mkcert", "binary_name": "mkcert"},
+    "permissions": ["local-write", "system"],
+    "agent_hints": {
+      "when_to_use": "Create locally-trusted HTTPS certificates for development servers",
+      "example_usage": [
+        "mkcert -install",
+        "mkcert localhost 127.0.0.1 ::1",
+        "mkcert myapp.local '*.myapp.local'"
+      ],
+      "input_formats": [],
+      "output_formats": ["binary"]
+    },
+    "verified": true,
+    "downloads": 28000,
+    "rating": 4.7
+  },
+  {
+    "name": "entr",
+    "version": "5.6",
+    "description": "Run arbitrary commands when files change — simple file watcher.",
+    "author": "Eric Radman",
+    "homepage": "https://eradman.com/entrproject/",
+    "repository": "https://github.com/eradman/entr",
+    "license": "ISC",
+    "categories": ["dev-tools", "utilities"],
+    "tags": ["watch", "files", "reload", "automation", "trigger"],
+    "install": {"method": "brew", "package": "entr", "binary_name": "entr"},
+    "permissions": ["local-read", "system"],
+    "agent_hints": {
+      "when_to_use": "Re-run commands automatically when source files change",
+      "example_usage": [
+        "ls *.py | entr pytest",
+        "find src/ -name '*.rs' | entr cargo build",
+        "echo main.go | entr -r go run main.go"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 18000,
+    "rating": 4.6
+  },
+  {
+    "name": "watchexec",
+    "version": "2.2.1",
+    "description": "Execute commands when watched files change — powerful file watcher.",
+    "author": "Felix Saparelli",
+    "homepage": "https://watchexec.github.io/",
+    "repository": "https://github.com/watchexec/watchexec",
+    "license": "Apache-2.0",
+    "categories": ["dev-tools", "utilities"],
+    "tags": ["watch", "files", "reload", "execute", "rust"],
+    "install": {"method": "brew", "package": "watchexec", "binary_name": "watchexec"},
+    "permissions": ["local-read", "system"],
+    "agent_hints": {
+      "when_to_use": "Watch for file changes and re-run commands — supports filtering by extension",
+      "example_usage": [
+        "watchexec -e py -- pytest",
+        "watchexec -e rs -- cargo build",
+        "watchexec -w src/ -w tests/ -- make test"
+      ],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 16000,
+    "rating": 4.6
+  },
+  {
+    "name": "pv",
+    "version": "1.8.14",
+    "description": "Pipe viewer — monitor the progress of data through a pipeline.",
+    "author": "Andrew Wood",
+    "homepage": "https://www.ivarch.com/programs/pv.shtml",
+    "repository": "https://github.com/a-j-wood/pv",
+    "license": "Artistic-2.0",
+    "categories": ["utilities", "system"],
+    "tags": ["pipe", "progress", "monitor", "throughput", "transfer"],
+    "install": {"method": "brew", "package": "pv", "binary_name": "pv"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Add a progress bar to long-running pipe operations",
+      "example_usage": [
+        "pv large-file.tar.gz | tar xzf -",
+        "dd if=/dev/urandom bs=1M count=100 | pv > /dev/null",
+        "pv backup.sql | mysql -u root mydb"
+      ],
+      "input_formats": ["binary"],
+      "output_formats": ["binary"]
+    },
+    "verified": true,
+    "downloads": 22000,
+    "rating": 4.5
+  },
+  {
+    "name": "lolcat",
+    "version": "100.0.1",
+    "description": "Rainbow coloring for terminal output — make any text fabulous.",
+    "author": "busyloop",
+    "homepage": "https://github.com/busyloop/lolcat",
+    "repository": "https://github.com/busyloop/lolcat",
+    "license": "BSD-3-Clause",
+    "categories": ["fun", "utilities"],
+    "tags": ["rainbow", "color", "terminal", "fun", "pipe"],
+    "install": {"method": "brew", "package": "lolcat", "binary_name": "lolcat"},
+    "permissions": [],
+    "agent_hints": {
+      "when_to_use": "Add rainbow colors to any terminal output for fun",
+      "example_usage": [
+        "echo 'Hello World' | lolcat",
+        "figlet 'Welcome' | lolcat",
+        "cat README.md | lolcat"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 20000,
+    "rating": 4.3
+  },
+  {
+    "name": "fortune",
+    "version": "9708",
+    "description": "Display random quotes, proverbs, and humorous sayings.",
+    "author": "Various",
+    "homepage": "https://github.com/shlomif/fortune-mod",
+    "repository": "https://github.com/shlomif/fortune-mod",
+    "license": "BSD-4-Clause",
+    "categories": ["fun", "utilities"],
+    "tags": ["quotes", "random", "fun", "terminal", "sayings"],
+    "install": {"method": "brew", "package": "fortune", "binary_name": "fortune"},
+    "permissions": [],
+    "agent_hints": {
+      "when_to_use": "Display a random quote or fortune in the terminal",
+      "example_usage": [
+        "fortune",
+        "fortune -s",
+        "fortune | lolcat"
+      ],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 25000,
+    "rating": 4.2
   }
 ]

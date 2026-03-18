@@ -10,7 +10,7 @@
   <sub>Discover, install, and manage CLI tools. Add yours in 30 seconds.</sub>
   <br>
   <br>
-  <a href="https://pypi.org/project/clihub"><img alt="PyPI" src="https://img.shields.io/pypi/v/clihub?style=flat-square&color=00ff88&labelColor=1a1a2e"></a>
+  <a href="https://pypi.org/project/clihub-ai"><img alt="PyPI" src="https://img.shields.io/pypi/v/clihub-ai?style=flat-square&color=00ff88&labelColor=1a1a2e"></a>
   <a href="https://github.com/clihub-ai/clihub/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue?style=flat-square&labelColor=1a1a2e"></a>
   <a href="https://www.python.org/downloads/"><img alt="Python 3.10+" src="https://img.shields.io/badge/python-3.10+-blue?style=flat-square&labelColor=1a1a2e"></a>
   <a href="https://github.com/clihub-ai/clihub/actions"><img alt="Tests" src="https://img.shields.io/github/actions/workflow/status/clihub-ai/clihub/ci.yml?style=flat-square&labelColor=1a1a2e&label=tests"></a>
@@ -52,7 +52,7 @@ $ clihub install imagemagick
 | | Feature | Description |
 |---|---|---|
 | **0** | **Zero ambient cost** | No schemas injected into context. Tools are discovered on demand via `--help`. |
-| **35+** | **Curated tools** | jq, ripgrep, ffmpeg, pandoc, httpie, and more — each with agent-ready hints. |
+| **100+** | **Curated tools** | jq, ripgrep, ffmpeg, ruff, k9s, pgcli, and more — each with agent-ready hints. |
 | **4** | **Package managers** | Auto-detects pip, npm, brew, or cargo. One command to install anything. |
 | **`--json`** | **Agent-native** | Every command outputs structured JSON. Exit codes 0/1/2 for success/error/not-found. |
 | **`convert`** | **Add your tool** | Auto-detect metadata and generate a manifest in 30 seconds. |
@@ -62,7 +62,7 @@ $ clihub install imagemagick
 ## Quick Start
 
 ```bash
-pip install clihub          # or: pipx install clihub
+pip install clihub-ai       # or: pipx install clihub-ai
 ```
 
 > [!NOTE]
@@ -247,18 +247,27 @@ agent_hints:
 
 ## Registry
 
-CliHub ships with **35+ curated, battle-tested CLI tools:**
+CliHub ships with **100+ curated, battle-tested CLI tools:**
 
 | Category | Tools |
 |---|---|
-| **Data** | jq, yq, csvkit, xsv, dasel, gron |
-| **Search & Files** | ripgrep, fd, fzf, bat, eza, tree, ncdu, dust |
-| **Network** | httpie, curl, wget, aria2, dog |
-| **Dev Tools** | gh, lazygit, delta, tokei, hyperfine |
-| **Media** | ffmpeg, imagemagick, yt-dlp |
-| **Documents** | pandoc |
-| **Productivity** | tmux, tldr, zoxide, starship |
-| **System** | htop, btop, procs, bandwhich |
+| **Data** | jq, yq, csvkit, xsv, dasel, gron, fx, jless |
+| **Database** | mycli, pgcli, litecli, iredis, usql |
+| **Search & Files** | ripgrep, fd, fzf, bat, eza, lsd, tree, broot, ranger, nnn, ncdu, dust |
+| **Network** | httpie, curl, wget, aria2, dog, ngrok, mosh, nmap, speedtest-cli |
+| **Python Dev** | ruff, black, mypy, uv, pipx, poetry |
+| **JavaScript Dev** | prettier, eslint, tsx, npm-check-updates |
+| **Dev Tools** | gh, lazygit, delta, gitui, tokei, hyperfine, just, grex, shellcheck, shfmt, entr, watchexec |
+| **Docker & Cloud** | lazydocker, ctop, k9s, dive, act, awscli, terraform |
+| **Media** | ffmpeg, imagemagick, yt-dlp, svgo, gifsicle, asciinema, pastel |
+| **Documents** | pandoc, glow |
+| **Text Processing** | sd, choose, sad |
+| **Editors** | neovim, micro, helix |
+| **Productivity** | tmux, tldr, zoxide, starship, taskwarrior, watson, nb, calcurse |
+| **Release & CI** | semantic-release, release-it, commitizen, bats-core, cookiecutter |
+| **Security** | openssl, age, mkcert |
+| **System** | htop, btop, procs, bandwhich, pv |
+| **Fun** | lolcat, fortune, cmatrix |
 
 <br>
 
