@@ -1,0 +1,842 @@
+[
+  {
+    "name": "jq",
+    "version": "1.7.1",
+    "description": "Lightweight command-line JSON processor. Slice, filter, map, and transform structured data.",
+    "author": "Stephen Dolan",
+    "homepage": "https://jqlang.github.io/jq/",
+    "repository": "https://github.com/jqlang/jq",
+    "license": "MIT",
+    "categories": ["data", "json"],
+    "tags": ["json", "filter", "transform", "query", "parse"],
+    "install": {"method": "brew", "package": "jq", "binary_name": "jq"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Parse, filter, or transform JSON data from files or piped input",
+      "example_usage": [
+        "cat data.json | jq '.users[] | select(.age > 30)'",
+        "jq -r '.items[].name' inventory.json",
+        "curl -s https://api.example.com/data | jq '.results | length'"
+      ],
+      "input_formats": ["json"],
+      "output_formats": ["json", "text"]
+    },
+    "verified": true,
+    "downloads": 89200,
+    "rating": 4.9
+  },
+  {
+    "name": "yq",
+    "version": "4.44.1",
+    "description": "Lightweight and portable command-line YAML processor. Like jq but for YAML, JSON, XML, CSV, and TOML.",
+    "author": "Mike Farah",
+    "homepage": "https://mikefarah.gitbook.io/yq/",
+    "repository": "https://github.com/mikefarah/yq",
+    "license": "MIT",
+    "categories": ["data", "yaml"],
+    "tags": ["yaml", "json", "xml", "csv", "toml", "transform"],
+    "install": {"method": "brew", "package": "yq", "binary_name": "yq"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Parse, filter, or transform YAML, XML, CSV, or TOML files",
+      "example_usage": [
+        "yq '.spec.containers[0].image' deployment.yaml",
+        "yq -i '.version = \"2.0\"' config.yaml",
+        "yq -o=json config.yaml"
+      ],
+      "input_formats": ["yaml", "json", "xml", "csv", "toml"],
+      "output_formats": ["yaml", "json", "xml", "csv", "toml"]
+    },
+    "verified": true,
+    "downloads": 34500,
+    "rating": 4.7
+  },
+  {
+    "name": "csvkit",
+    "version": "2.0.1",
+    "description": "A suite of command-line tools for converting to and working with CSV files.",
+    "author": "Christopher Groskopf",
+    "homepage": "https://csvkit.readthedocs.io/",
+    "repository": "https://github.com/wireservice/csvkit",
+    "license": "MIT",
+    "categories": ["data", "csv"],
+    "tags": ["csv", "data", "convert", "sql", "excel"],
+    "install": {"method": "pip", "package": "csvkit", "binary_name": "csvlook"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Convert, analyze, or query CSV files from the command line",
+      "example_usage": [
+        "csvlook data.csv",
+        "csvstat data.csv",
+        "csvsql --query 'SELECT name, COUNT(*) FROM data GROUP BY name' data.csv"
+      ],
+      "input_formats": ["csv", "xls", "xlsx", "json"],
+      "output_formats": ["csv", "json", "text"]
+    },
+    "verified": true,
+    "downloads": 18300,
+    "rating": 4.5
+  },
+  {
+    "name": "xsv",
+    "version": "0.13.0",
+    "description": "A fast CSV command line toolkit written in Rust.",
+    "author": "Andrew Gallant",
+    "homepage": "https://github.com/BurntSushi/xsv",
+    "repository": "https://github.com/BurntSushi/xsv",
+    "license": "MIT",
+    "categories": ["data", "csv"],
+    "tags": ["csv", "fast", "search", "statistics", "rust"],
+    "install": {"method": "cargo", "package": "xsv", "binary_name": "xsv"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "High-performance CSV processing: search, slice, join, aggregate",
+      "example_usage": [
+        "xsv stats data.csv",
+        "xsv search -s name 'John' data.csv",
+        "xsv select name,age data.csv | xsv sort -s age"
+      ],
+      "input_formats": ["csv"],
+      "output_formats": ["csv", "text"]
+    },
+    "verified": true,
+    "downloads": 15200,
+    "rating": 4.6
+  },
+  {
+    "name": "dasel",
+    "version": "2.8.1",
+    "description": "Query and modify data structures from the command line. Supports JSON, YAML, TOML, XML, CSV.",
+    "author": "Tom Wright",
+    "homepage": "https://daseldocs.tomwright.me/",
+    "repository": "https://github.com/TomWright/dasel",
+    "license": "MIT",
+    "categories": ["data", "utilities"],
+    "tags": ["json", "yaml", "toml", "xml", "csv", "query", "modify"],
+    "install": {"method": "brew", "package": "dasel", "binary_name": "dasel"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Query or modify structured data files in-place across multiple formats",
+      "example_usage": [
+        "dasel -f config.json '.database.host'",
+        "dasel put -f config.yaml '.port' -v 8080",
+        "echo '{\"name\": \"Tom\"}' | dasel -r json '.name'"
+      ],
+      "input_formats": ["json", "yaml", "toml", "xml", "csv"],
+      "output_formats": ["json", "yaml", "toml", "xml", "csv"]
+    },
+    "verified": true,
+    "downloads": 8900,
+    "rating": 4.4
+  },
+  {
+    "name": "gron",
+    "version": "0.7.1",
+    "description": "Make JSON greppable! Transforms JSON into discrete assignments to make it easier to grep.",
+    "author": "Tom Hudson",
+    "homepage": "https://github.com/tomnomnom/gron",
+    "repository": "https://github.com/tomnomnom/gron",
+    "license": "MIT",
+    "categories": ["data", "json"],
+    "tags": ["json", "grep", "flatten", "search"],
+    "install": {"method": "brew", "package": "gron", "binary_name": "gron"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Make JSON greppable by flattening it into assignment statements",
+      "example_usage": [
+        "gron data.json | grep 'email'",
+        "curl -s https://api.example.com | gron | grep 'name'",
+        "gron data.json | grep 'users' | gron --ungron"
+      ],
+      "input_formats": ["json"],
+      "output_formats": ["text", "json"]
+    },
+    "verified": true,
+    "downloads": 12100,
+    "rating": 4.5
+  },
+  {
+    "name": "ripgrep",
+    "version": "14.1.1",
+    "description": "Blazingly fast recursive search tool that respects .gitignore. A modern replacement for grep.",
+    "author": "Andrew Gallant",
+    "homepage": "https://github.com/BurntSushi/ripgrep",
+    "repository": "https://github.com/BurntSushi/ripgrep",
+    "license": "MIT",
+    "categories": ["search", "dev-tools"],
+    "tags": ["search", "grep", "regex", "fast", "code", "rust"],
+    "install": {"method": "brew", "package": "ripgrep", "binary_name": "rg"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Search file contents recursively with regex, much faster than grep",
+      "example_usage": [
+        "rg 'TODO|FIXME' --type py",
+        "rg 'function\\s+\\w+' --type js -l",
+        "rg -i 'error' /var/log/ --glob '*.log'"
+      ],
+      "input_formats": ["text"],
+      "output_formats": ["text", "json"]
+    },
+    "verified": true,
+    "downloads": 52000,
+    "rating": 4.9
+  },
+  {
+    "name": "fd",
+    "version": "10.2.0",
+    "description": "A simple, fast, and user-friendly alternative to find. Respects .gitignore by default.",
+    "author": "David Peter",
+    "homepage": "https://github.com/sharkdp/fd",
+    "repository": "https://github.com/sharkdp/fd",
+    "license": "MIT",
+    "categories": ["search", "files"],
+    "tags": ["find", "search", "files", "fast", "regex", "rust"],
+    "install": {"method": "brew", "package": "fd", "binary_name": "fd"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Find files and directories by name or pattern, faster than find",
+      "example_usage": ["fd '\\.py$'", "fd -e json -e yaml config", "fd -t d node_modules --exec rm -rf {}"],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 41000,
+    "rating": 4.9
+  },
+  {
+    "name": "fzf",
+    "version": "0.57.0",
+    "description": "A general-purpose command-line fuzzy finder. Interactive filtering for any list.",
+    "author": "Junegunn Choi",
+    "homepage": "https://junegunn.github.io/fzf/",
+    "repository": "https://github.com/junegunn/fzf",
+    "license": "MIT",
+    "categories": ["search", "productivity"],
+    "tags": ["fuzzy", "filter", "interactive", "search"],
+    "install": {"method": "brew", "package": "fzf", "binary_name": "fzf"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Interactively filter and select from any list of items",
+      "example_usage": ["find . -type f | fzf", "git branch | fzf | xargs git checkout", "cat ~/.bash_history | fzf"],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 65000,
+    "rating": 4.9
+  },
+  {
+    "name": "bat",
+    "version": "0.24.0",
+    "description": "A cat clone with syntax highlighting and Git integration. Like cat but better.",
+    "author": "David Peter",
+    "homepage": "https://github.com/sharkdp/bat",
+    "repository": "https://github.com/sharkdp/bat",
+    "license": "Apache-2.0",
+    "categories": ["files", "dev-tools"],
+    "tags": ["cat", "syntax-highlighting", "git", "pager", "rust"],
+    "install": {"method": "brew", "package": "bat", "binary_name": "bat"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Display file contents with syntax highlighting",
+      "example_usage": ["bat src/main.py", "bat --diff file1.py file2.py", "bat -l json data.json"],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 48000,
+    "rating": 4.8
+  },
+  {
+    "name": "eza",
+    "version": "0.20.10",
+    "description": "A modern replacement for ls with colors, icons, Git integration, and tree view.",
+    "author": "eza-community",
+    "homepage": "https://eza.rocks/",
+    "repository": "https://github.com/eza-community/eza",
+    "license": "MIT",
+    "categories": ["files", "productivity"],
+    "tags": ["ls", "files", "tree", "git", "icons", "rust"],
+    "install": {"method": "brew", "package": "eza", "binary_name": "eza"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "List files with details, icons, git status, and tree view",
+      "example_usage": ["eza --long --git", "eza --tree --level=2", "eza -la --icons"],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 29000,
+    "rating": 4.7
+  },
+  {
+    "name": "tree",
+    "version": "2.1.3",
+    "description": "Display directory structure as an indented tree of files.",
+    "author": "Steve Baker",
+    "homepage": "https://oldmanprogrammer.net/source.php?dir=projects/tree",
+    "repository": "https://github.com/Old-Man-Programmer/tree",
+    "license": "GPL-2.0",
+    "categories": ["files", "utilities"],
+    "tags": ["directory", "tree", "files", "structure"],
+    "install": {"method": "brew", "package": "tree", "binary_name": "tree"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Visualize directory structure as an indented tree",
+      "example_usage": ["tree -L 2", "tree -I 'node_modules|.git'", "tree --dirsfirst -a"],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 55000,
+    "rating": 4.6
+  },
+  {
+    "name": "ncdu",
+    "version": "2.7",
+    "description": "NCurses-based disk usage analyzer. Find what's eating your disk space.",
+    "author": "Benjamin Sago",
+    "homepage": "https://dev.yorhel.nl/ncdu",
+    "repository": "https://code.blicky.net/yorhel/ncdu",
+    "license": "MIT",
+    "categories": ["system", "files"],
+    "tags": ["disk", "usage", "space", "ncurses", "interactive"],
+    "install": {"method": "brew", "package": "ncdu", "binary_name": "ncdu"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Analyze disk usage interactively to find large files and directories",
+      "example_usage": ["ncdu /", "ncdu --exclude .git .", "ncdu -o report.json . && ncdu -f report.json"],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 31000,
+    "rating": 4.7
+  },
+  {
+    "name": "dust",
+    "version": "1.1.1",
+    "description": "A more intuitive version of du in Rust. Visualizes disk usage with a bar chart.",
+    "author": "Andy Boot",
+    "homepage": "https://github.com/bootandy/dust",
+    "repository": "https://github.com/bootandy/dust",
+    "license": "Apache-2.0",
+    "categories": ["system", "files"],
+    "tags": ["disk", "usage", "du", "visualization", "rust"],
+    "install": {"method": "brew", "package": "dust", "binary_name": "dust"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Quickly see which directories use the most disk space with visual bars",
+      "example_usage": ["dust", "dust -n 20 /home", "dust -d 2 ."],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 14500,
+    "rating": 4.6
+  },
+  {
+    "name": "httpie",
+    "version": "3.2.4",
+    "description": "Human-friendly HTTP client for the API era. Colorized output, JSON support, sessions.",
+    "author": "Jakub Roztocil",
+    "homepage": "https://httpie.io/",
+    "repository": "https://github.com/httpie/cli",
+    "license": "BSD-3-Clause",
+    "categories": ["network", "api"],
+    "tags": ["http", "api", "rest", "curl", "json"],
+    "install": {"method": "pip", "package": "httpie", "binary_name": "http"},
+    "permissions": ["network"],
+    "agent_hints": {
+      "when_to_use": "Make HTTP requests with a human-friendly syntax, good for API testing",
+      "example_usage": [
+        "http GET https://api.github.com/repos/jqlang/jq",
+        "http POST https://api.example.com/users name=John age:=30",
+        "http --json https://api.example.com/data"
+      ],
+      "input_formats": ["json", "form"],
+      "output_formats": ["json", "text"]
+    },
+    "verified": true,
+    "downloads": 38000,
+    "rating": 4.8
+  },
+  {
+    "name": "curl",
+    "version": "8.11.1",
+    "description": "Command-line tool for transferring data with URLs. Supports HTTP, FTP, and many more protocols.",
+    "author": "Daniel Stenberg",
+    "homepage": "https://curl.se/",
+    "repository": "https://github.com/curl/curl",
+    "license": "MIT",
+    "categories": ["network", "utilities"],
+    "tags": ["http", "download", "upload", "api", "transfer"],
+    "install": {"method": "brew", "package": "curl", "binary_name": "curl"},
+    "permissions": ["network"],
+    "agent_hints": {
+      "when_to_use": "Transfer data to/from URLs, make HTTP requests, download files",
+      "example_usage": [
+        "curl -s https://api.example.com/data | jq .",
+        "curl -X POST -H 'Content-Type: application/json' -d '{\"key\": \"val\"}' https://api.example.com",
+        "curl -L -o file.zip https://example.com/file.zip"
+      ],
+      "input_formats": [],
+      "output_formats": ["text", "binary"]
+    },
+    "verified": true,
+    "downloads": 120000,
+    "rating": 4.9
+  },
+  {
+    "name": "wget",
+    "version": "1.25.0",
+    "description": "Non-interactive network downloader. Download files from the web, supports recursive downloads.",
+    "author": "GNU Project",
+    "homepage": "https://www.gnu.org/software/wget/",
+    "repository": "https://git.savannah.gnu.org/git/wget.git",
+    "license": "GPL-3.0",
+    "categories": ["network", "utilities"],
+    "tags": ["download", "http", "ftp", "recursive", "mirror"],
+    "install": {"method": "brew", "package": "wget", "binary_name": "wget"},
+    "permissions": ["network", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Download files from the web, mirror websites, resume interrupted downloads",
+      "example_usage": ["wget https://example.com/file.tar.gz", "wget -r -l 2 https://example.com/docs/", "wget -c https://example.com/large-file.iso"],
+      "input_formats": [],
+      "output_formats": ["binary"]
+    },
+    "verified": true,
+    "downloads": 85000,
+    "rating": 4.7
+  },
+  {
+    "name": "aria2",
+    "version": "1.37.0",
+    "description": "Lightweight multi-protocol multi-source download utility. Supports HTTP, FTP, BitTorrent.",
+    "author": "Tatsuhiro Tsujikawa",
+    "homepage": "https://aria2.github.io/",
+    "repository": "https://github.com/aria2/aria2",
+    "license": "GPL-2.0",
+    "categories": ["network", "utilities"],
+    "tags": ["download", "torrent", "multi-source", "parallel", "fast"],
+    "install": {"method": "brew", "package": "aria2", "binary_name": "aria2c"},
+    "permissions": ["network", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Download files with multiple connections for faster speed, or download torrents",
+      "example_usage": ["aria2c -x 16 https://example.com/large-file.iso", "aria2c -i urls.txt", "aria2c --bt-metadata-only --bt-save-metadata file.torrent"],
+      "input_formats": ["text", "torrent"],
+      "output_formats": ["binary"]
+    },
+    "verified": true,
+    "downloads": 22000,
+    "rating": 4.6
+  },
+  {
+    "name": "dog",
+    "version": "0.1.0",
+    "description": "A command-line DNS client like dig but with colorful output and DNS-over-HTTPS support.",
+    "author": "Benjamin Sago",
+    "homepage": "https://dns.lookup.dog/",
+    "repository": "https://github.com/ogham/dog",
+    "license": "EUPL-1.2",
+    "categories": ["network", "dns"],
+    "tags": ["dns", "dig", "lookup", "doh", "rust"],
+    "install": {"method": "brew", "package": "dog", "binary_name": "dog"},
+    "permissions": ["network"],
+    "agent_hints": {
+      "when_to_use": "Look up DNS records with colorful output and DoH/DoT support",
+      "example_usage": ["dog example.com A", "dog example.com MX AAAA", "dog example.com --https @cloudflare"],
+      "input_formats": [],
+      "output_formats": ["text", "json"]
+    },
+    "verified": true,
+    "downloads": 9500,
+    "rating": 4.4
+  },
+  {
+    "name": "gh",
+    "version": "2.65.0",
+    "description": "GitHub's official command-line tool. Manage repos, PRs, issues, releases from the terminal.",
+    "author": "GitHub",
+    "homepage": "https://cli.github.com/",
+    "repository": "https://github.com/cli/cli",
+    "license": "MIT",
+    "categories": ["dev-tools", "git"],
+    "tags": ["github", "git", "pr", "issues", "releases", "ci"],
+    "install": {"method": "brew", "package": "gh", "binary_name": "gh"},
+    "permissions": ["network", "local-read"],
+    "agent_hints": {
+      "when_to_use": "Interact with GitHub: create PRs, manage issues, view CI status, manage releases",
+      "example_usage": ["gh pr create --title 'Fix bug' --body 'Description'", "gh issue list --label bug", "gh run list --limit 5"],
+      "input_formats": [],
+      "output_formats": ["text", "json"]
+    },
+    "verified": true,
+    "downloads": 72000,
+    "rating": 4.8
+  },
+  {
+    "name": "lazygit",
+    "version": "0.44.1",
+    "description": "Simple terminal UI for git commands. Interactive staging, branching, and rebasing.",
+    "author": "Jesse Duffield",
+    "homepage": "https://github.com/jesseduffield/lazygit",
+    "repository": "https://github.com/jesseduffield/lazygit",
+    "license": "MIT",
+    "categories": ["dev-tools", "git"],
+    "tags": ["git", "tui", "interactive", "staging", "rebase"],
+    "install": {"method": "brew", "package": "lazygit", "binary_name": "lazygit"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Interactive terminal UI for git operations like staging, committing, rebasing",
+      "example_usage": ["lazygit", "lazygit -p /path/to/repo", "lazygit log"],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 35000,
+    "rating": 4.8
+  },
+  {
+    "name": "delta",
+    "version": "0.18.2",
+    "description": "A syntax-highlighting pager for git, diff, and grep output.",
+    "author": "Dan Davison",
+    "homepage": "https://dandavison.github.io/delta/",
+    "repository": "https://github.com/dandavison/delta",
+    "license": "MIT",
+    "categories": ["dev-tools", "git"],
+    "tags": ["git", "diff", "pager", "syntax-highlighting", "rust"],
+    "install": {"method": "brew", "package": "git-delta", "binary_name": "delta"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "View git diffs with syntax highlighting and side-by-side comparison",
+      "example_usage": ["git diff | delta", "delta file1.py file2.py", "git log -p | delta"],
+      "input_formats": ["text"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 27000,
+    "rating": 4.7
+  },
+  {
+    "name": "tokei",
+    "version": "13.0.0-alpha.5",
+    "description": "Count lines of code quickly. Supports 200+ languages.",
+    "author": "Aaronepower",
+    "homepage": "https://github.com/XAMPPRocky/tokei",
+    "repository": "https://github.com/XAMPPRocky/tokei",
+    "license": "Apache-2.0",
+    "categories": ["dev-tools", "utilities"],
+    "tags": ["loc", "lines-of-code", "statistics", "languages", "rust"],
+    "install": {"method": "brew", "package": "tokei", "binary_name": "tokei"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Count lines of code, comments, and blanks across a codebase",
+      "example_usage": ["tokei .", "tokei src/ --type Python Rust", "tokei --output json ."],
+      "input_formats": [],
+      "output_formats": ["text", "json"]
+    },
+    "verified": true,
+    "downloads": 19000,
+    "rating": 4.6
+  },
+  {
+    "name": "hyperfine",
+    "version": "1.19.0",
+    "description": "A command-line benchmarking tool. Statistical analysis of command execution times.",
+    "author": "David Peter",
+    "homepage": "https://github.com/sharkdp/hyperfine",
+    "repository": "https://github.com/sharkdp/hyperfine",
+    "license": "Apache-2.0",
+    "categories": ["dev-tools", "utilities"],
+    "tags": ["benchmark", "performance", "timing", "comparison", "rust"],
+    "install": {"method": "brew", "package": "hyperfine", "binary_name": "hyperfine"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Benchmark and compare the execution time of commands",
+      "example_usage": ["hyperfine 'sleep 0.3'", "hyperfine 'fd -e py' 'find . -name \"*.py\"'", "hyperfine --warmup 3 --export-json results.json './my-program'"],
+      "input_formats": [],
+      "output_formats": ["text", "json", "csv"]
+    },
+    "verified": true,
+    "downloads": 23000,
+    "rating": 4.8
+  },
+  {
+    "name": "ffmpeg",
+    "version": "7.1",
+    "description": "The Swiss Army knife of multimedia. Convert, process, and stream audio and video.",
+    "author": "FFmpeg team",
+    "homepage": "https://ffmpeg.org/",
+    "repository": "https://github.com/FFmpeg/FFmpeg",
+    "license": "LGPL-2.1",
+    "categories": ["media", "video", "audio"],
+    "tags": ["video", "audio", "convert", "stream", "encode", "decode"],
+    "install": {"method": "brew", "package": "ffmpeg", "binary_name": "ffmpeg"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Convert, process, or stream audio and video files",
+      "example_usage": [
+        "ffmpeg -i input.mp4 -vcodec h264 -acodec aac output.mp4",
+        "ffmpeg -i video.mp4 -ss 00:01:00 -t 00:00:30 clip.mp4",
+        "ffmpeg -i input.wav -ab 192k output.mp3"
+      ],
+      "input_formats": ["mp4", "avi", "mkv", "mov", "wav", "mp3", "flac"],
+      "output_formats": ["mp4", "avi", "mkv", "wav", "mp3", "gif"]
+    },
+    "verified": true,
+    "downloads": 67000,
+    "rating": 4.8
+  },
+  {
+    "name": "imagemagick",
+    "version": "7.1.1",
+    "description": "Create, edit, compose, or convert digital images. Supports 200+ image formats.",
+    "author": "ImageMagick Studio",
+    "homepage": "https://imagemagick.org/",
+    "repository": "https://github.com/ImageMagick/ImageMagick",
+    "license": "Apache-2.0",
+    "categories": ["media", "image"],
+    "tags": ["image", "convert", "resize", "crop", "transform"],
+    "install": {"method": "brew", "package": "imagemagick", "binary_name": "magick"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Resize, convert, crop, or transform images from the command line",
+      "example_usage": [
+        "magick input.png -resize 800x600 output.png",
+        "magick convert input.jpg -quality 80 output.webp",
+        "magick montage *.jpg -geometry +2+2 mosaic.png"
+      ],
+      "input_formats": ["png", "jpg", "gif", "bmp", "tiff", "webp", "svg"],
+      "output_formats": ["png", "jpg", "gif", "webp", "pdf"]
+    },
+    "verified": true,
+    "downloads": 58000,
+    "rating": 4.7
+  },
+  {
+    "name": "yt-dlp",
+    "version": "2024.12.23",
+    "description": "Feature-rich command-line audio/video downloader. Supports 1000+ sites.",
+    "author": "yt-dlp",
+    "homepage": "https://github.com/yt-dlp/yt-dlp",
+    "repository": "https://github.com/yt-dlp/yt-dlp",
+    "license": "Unlicense",
+    "categories": ["media", "network"],
+    "tags": ["video", "download", "youtube", "audio", "streaming"],
+    "install": {"method": "pip", "package": "yt-dlp", "binary_name": "yt-dlp"},
+    "permissions": ["network", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Download videos or audio from YouTube and 1000+ other sites",
+      "example_usage": [
+        "yt-dlp https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "yt-dlp -x --audio-format mp3 https://www.youtube.com/watch?v=...",
+        "yt-dlp --list-formats https://www.youtube.com/watch?v=..."
+      ],
+      "input_formats": ["url"],
+      "output_formats": ["mp4", "webm", "mp3", "m4a"]
+    },
+    "verified": true,
+    "downloads": 45000,
+    "rating": 4.8
+  },
+  {
+    "name": "pandoc",
+    "version": "3.6.1",
+    "description": "Universal document converter. Markdown, LaTeX, HTML, DOCX, PDF, and 40+ formats.",
+    "author": "John MacFarlane",
+    "homepage": "https://pandoc.org/",
+    "repository": "https://github.com/jgm/pandoc",
+    "license": "GPL-2.0",
+    "categories": ["documents", "convert"],
+    "tags": ["markdown", "latex", "html", "docx", "pdf", "convert"],
+    "install": {"method": "brew", "package": "pandoc", "binary_name": "pandoc"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Convert documents between formats: Markdown, HTML, LaTeX, DOCX, PDF",
+      "example_usage": ["pandoc README.md -o README.html", "pandoc input.docx -t markdown -o output.md", "pandoc paper.md --pdf-engine=xelatex -o paper.pdf"],
+      "input_formats": ["markdown", "html", "latex", "docx", "rst", "org"],
+      "output_formats": ["html", "pdf", "docx", "latex", "epub", "markdown"]
+    },
+    "verified": true,
+    "downloads": 41000,
+    "rating": 4.7
+  },
+  {
+    "name": "tmux",
+    "version": "3.5a",
+    "description": "Terminal multiplexer. Manage multiple terminal sessions within a single window.",
+    "author": "Nicholas Marriott",
+    "homepage": "https://tmux.github.io/",
+    "repository": "https://github.com/tmux/tmux",
+    "license": "ISC",
+    "categories": ["productivity", "system"],
+    "tags": ["terminal", "multiplexer", "session", "split", "detach"],
+    "install": {"method": "brew", "package": "tmux", "binary_name": "tmux"},
+    "permissions": ["system"],
+    "agent_hints": {
+      "when_to_use": "Manage multiple terminal sessions, split panes, detach and reattach",
+      "example_usage": ["tmux new -s work", "tmux attach -t work", "tmux split-window -h"],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 62000,
+    "rating": 4.8
+  },
+  {
+    "name": "tldr",
+    "version": "3.3.0",
+    "description": "Simplified and community-driven man pages. Quick reference for common commands.",
+    "author": "tldr-pages",
+    "homepage": "https://tldr.sh/",
+    "repository": "https://github.com/tldr-pages/tldr",
+    "license": "MIT",
+    "categories": ["productivity", "utilities"],
+    "tags": ["man", "help", "documentation", "reference", "cheatsheet"],
+    "install": {"method": "pip", "package": "tldr", "binary_name": "tldr"},
+    "permissions": ["network"],
+    "agent_hints": {
+      "when_to_use": "Get quick, practical examples for command-line tools instead of reading full man pages",
+      "example_usage": ["tldr tar", "tldr git-rebase", "tldr ffmpeg"],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 42000,
+    "rating": 4.7
+  },
+  {
+    "name": "zoxide",
+    "version": "0.9.6",
+    "description": "A smarter cd command. Learns your habits and lets you jump to directories fast.",
+    "author": "Ajeet D'Souza",
+    "homepage": "https://github.com/ajeetdsouza/zoxide",
+    "repository": "https://github.com/ajeetdsouza/zoxide",
+    "license": "MIT",
+    "categories": ["productivity", "files"],
+    "tags": ["cd", "directory", "jump", "navigate", "frecency", "rust"],
+    "install": {"method": "brew", "package": "zoxide", "binary_name": "zoxide"},
+    "permissions": ["local-read", "local-write"],
+    "agent_hints": {
+      "when_to_use": "Quickly jump to frequently used directories without typing full paths",
+      "example_usage": ["z projects", "zi", "zoxide query -l"],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 28000,
+    "rating": 4.7
+  },
+  {
+    "name": "starship",
+    "version": "1.22.1",
+    "description": "The minimal, blazing-fast, and customizable prompt for any shell.",
+    "author": "Starship Contributors",
+    "homepage": "https://starship.rs/",
+    "repository": "https://github.com/starship/starship",
+    "license": "ISC",
+    "categories": ["productivity", "shell"],
+    "tags": ["prompt", "shell", "customization", "cross-platform", "rust"],
+    "install": {"method": "brew", "package": "starship", "binary_name": "starship"},
+    "permissions": ["local-read"],
+    "agent_hints": {
+      "when_to_use": "Customize your shell prompt with git status, language versions, and more",
+      "example_usage": ["eval \"$(starship init bash)\"", "starship preset nerd-font-symbols -o ~/.config/starship.toml", "starship explain"],
+      "input_formats": ["toml"],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 38000,
+    "rating": 4.8
+  },
+  {
+    "name": "htop",
+    "version": "3.3.0",
+    "description": "An interactive process viewer. A better, more colorful top.",
+    "author": "htop-dev",
+    "homepage": "https://htop.dev/",
+    "repository": "https://github.com/htop-dev/htop",
+    "license": "GPL-2.0",
+    "categories": ["system", "monitoring"],
+    "tags": ["process", "monitor", "cpu", "memory", "interactive"],
+    "install": {"method": "brew", "package": "htop", "binary_name": "htop"},
+    "permissions": ["system"],
+    "agent_hints": {
+      "when_to_use": "Monitor system processes, CPU, and memory usage interactively",
+      "example_usage": ["htop", "htop -u $(whoami)", "htop -p $(pgrep python | tr '\\n' ',')"],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 71000,
+    "rating": 4.7
+  },
+  {
+    "name": "btop",
+    "version": "1.4.0",
+    "description": "Resource monitor with a beautiful TUI. Shows CPU, memory, disks, network, and processes.",
+    "author": "Jakob Lind",
+    "homepage": "https://github.com/aristocratos/btop",
+    "repository": "https://github.com/aristocratos/btop",
+    "license": "Apache-2.0",
+    "categories": ["system", "monitoring"],
+    "tags": ["monitor", "cpu", "memory", "network", "tui", "beautiful"],
+    "install": {"method": "brew", "package": "btop", "binary_name": "btop"},
+    "permissions": ["system"],
+    "agent_hints": {
+      "when_to_use": "Monitor system resources with a beautiful terminal interface",
+      "example_usage": ["btop", "btop --utf-force", "btop -t"],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 25000,
+    "rating": 4.8
+  },
+  {
+    "name": "procs",
+    "version": "0.14.8",
+    "description": "A modern replacement for ps written in Rust. Colorful, searchable, tree view.",
+    "author": "dalance",
+    "homepage": "https://github.com/dalance/procs",
+    "repository": "https://github.com/dalance/procs",
+    "license": "MIT",
+    "categories": ["system", "monitoring"],
+    "tags": ["ps", "process", "list", "tree", "rust"],
+    "install": {"method": "brew", "package": "procs", "binary_name": "procs"},
+    "permissions": ["system"],
+    "agent_hints": {
+      "when_to_use": "List and search running processes with colorful output and tree view",
+      "example_usage": ["procs", "procs --tree", "procs python"],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 11000,
+    "rating": 4.5
+  },
+  {
+    "name": "bandwhich",
+    "version": "0.23.1",
+    "description": "Terminal bandwidth utilization tool. Shows which processes use network bandwidth.",
+    "author": "Aram Drevekenin",
+    "homepage": "https://github.com/imsnif/bandwhich",
+    "repository": "https://github.com/imsnif/bandwhich",
+    "license": "MIT",
+    "categories": ["system", "network"],
+    "tags": ["bandwidth", "network", "monitor", "traffic", "rust"],
+    "install": {"method": "brew", "package": "bandwhich", "binary_name": "bandwhich"},
+    "permissions": ["system", "network"],
+    "agent_hints": {
+      "when_to_use": "Monitor which processes and connections are using network bandwidth",
+      "example_usage": ["sudo bandwhich", "bandwhich --raw", "bandwhich -i en0"],
+      "input_formats": [],
+      "output_formats": ["text"]
+    },
+    "verified": true,
+    "downloads": 8200,
+    "rating": 4.4
+  }
+]
