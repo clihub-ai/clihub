@@ -5,9 +5,7 @@
   </a>
   <br>
   <br>
-  <strong>The App Store for AI Agents</strong>
-  <br>
-  <sub>Discover, install, and manage CLI tools. Add yours in 30 seconds.</sub>
+  <strong>The package manager for CLI tools — built for AI agents.</strong>
   <br>
   <br>
   <a href="https://pypi.org/project/clihub-ai"><img alt="PyPI" src="https://img.shields.io/pypi/v/clihub-ai?style=flat-square&color=00ff88&labelColor=1a1a2e"></a>
@@ -17,269 +15,212 @@
 </p>
 
 <p align="center">
-  <a href="https://clihub.net">Website</a> &middot;
-  <a href="#quick-start">Quick Start</a> &middot;
-  <a href="#for-ai-agents">For AI Agents</a> &middot;
-  <a href="#add-your-tool">Add Your Tool</a> &middot;
-  <a href="#roadmap">Roadmap</a>
+  <a href="#get-started">Get Started</a> &middot;
+  <a href="#how-agents-use-it">How Agents Use It</a> &middot;
+  <a href="#all-commands">All Commands</a> &middot;
+  <a href="#add-your-tool">Add Your Tool</a>
 </p>
 
 ---
 
-> Every CLI tool is a superpower your agent can wield. MCP dumps full schemas into every prompt — one server with 20 tools adds **8,000+ tokens**. CLI tools load **nothing** until the agent runs `--help`.
+Your AI agent needs to resize an image. Or parse JSON. Or deploy to S3.
 
-<br>
+It knows *how* — it's seen millions of shell examples in training. But it doesn't know *what's installed* on this machine, or *what tools exist* for the job.
+
+**CliHub solves this.** 100+ curated CLI tools, each with agent-readable metadata. Two commands and your agent goes from "I need to process JSON" to running `jq`.
 
 ```
-$ clihub search "resize images"
-
- #   Name          Description                           Rating   Category
- 1   imagemagick   Create, edit, compose, or convert…    ★ 4.7    media, image
- 2   ffmpeg        The Swiss Army knife of multimedi…    ★ 4.8    media, video
-
-$ clihub install imagemagick
- ✓ Installed imagemagick@7.1.1 via brew
-
- Try it:
-  $ magick input.png -resize 800x600 output.png
-  $ magick convert input.jpg -quality 80 output.webp
+Agent: "I need to parse and filter JSON data"
+  ↓
+$ clihub list --json          → agent reads 100+ tool descriptions, picks jq
+$ clihub install jq           → installed via brew in 3 seconds
+$ jq '.users[] | .name' data.json
+  ↓
+Done. No MCP server. No schema. No tokens wasted.
 ```
 
 <br>
 
-## Highlights
+## Why Not MCP?
 
-| | Feature | Description |
+MCP tools inject **thousands of tokens into every prompt** — even when the agent doesn't use them. A single MCP server with 20 tools adds 8,000–15,000 tokens of schema to every request.
+
+CLI tools cost **zero tokens** until the agent actually runs one.
+
+|  | MCP Server | CLI via CliHub |
 |---|---|---|
-| **0** | **Zero ambient cost** | No schemas injected into context. Tools are discovered on demand via `--help`. |
-| **100+** | **Curated tools** | jq, ripgrep, ffmpeg, ruff, k9s, pgcli, and more — each with agent-ready hints. |
-| **4** | **Package managers** | Auto-detects pip, npm, brew, or cargo. One command to install anything. |
-| **`--json`** | **Agent-native** | Every command outputs structured JSON. Exit codes 0/1/2 for success/error/not-found. |
-| **`convert`** | **Add your tool** | Auto-detect metadata and generate a manifest in 30 seconds. |
+| **Idle cost** | 8,000+ tokens per prompt | 0 tokens |
+| **Discovery** | Schemas dumped into context | `clihub list --json` on demand |
+| **LLM familiarity** | Must learn custom schemas | Trained on billions of shell examples |
+| **Composability** | One tool per call | Unix pipes: `curl \| jq \| grep` |
+| **Ecosystem** | Hundreds of MCP servers | Thousands of CLI tools, built over 50 years |
+
+> [!TIP]
+> LLMs are *already* trained on CLI tools. Your agent knows how to use `jq`, `ffmpeg`, `curl`, and `grep` — it just needs to discover and install them. That's what CliHub does.
 
 <br>
 
-## Quick Start
+## Get Started
 
 ```bash
-pip install clihub-ai       # or: pipx install clihub-ai
+pip install clihub-ai
+```
+
+That's it. Now your agent (or you) can discover, install, and use 100+ tools:
+
+```bash
+clihub list --json              # browse everything (the agent's primary workflow)
+clihub search "resize images"   # fuzzy search for humans
+clihub install imagemagick      # auto-detects brew/pip/npm/cargo
+clihub info jq --json           # full metadata + help text
+clihub doctor                   # check which package managers are available
 ```
 
 > [!NOTE]
-> Requires Python 3.10+
+> Requires Python 3.10+. The CLI entry point is `clihub`.
+
+<br>
+
+## How Agents Use It
+
+The design philosophy is simple: **CliHub is a dumb pipe. The agent is the brain.**
+
+An agent doesn't need a smart search algorithm — it *is* a search algorithm. It just needs the data. CliHub gives it a structured catalog with descriptions, categories, tags, and usage hints. The agent decides what fits.
+
+### The Two-Step Workflow
 
 ```bash
-clihub search "json processing"    # find tools
-clihub install jq                  # install with auto-detected package manager
-clihub info ripgrep                # view metadata + help text
-clihub list                        # browse the full registry
-clihub doctor                      # check system readiness
+# Step 1: Agent reads the catalog
+$ clihub list --json
+[
+  {
+    "name": "jq",
+    "description": "Lightweight command-line JSON processor.",
+    "categories": ["data", "json"],
+    "agent_hints": {
+      "when_to_use": "Parse, filter, or transform JSON data",
+      "example_usage": ["jq '.users[] | select(.age > 30)' data.json"]
+    },
+    "install": {"method": "brew", "package": "jq"}
+  },
+  ... 103 more tools
+]
+
+# Step 2: Agent installs what it needs
+$ clihub install jq --json
+{"status": "success", "message": "Installed jq@1.7.1 via brew"}
+```
+
+That's the entire integration. Two calls. The full catalog is ~87KB — fits in any context window with room to spare.
+
+### Every Output is Machine-Readable
+
+Pass `--json` to any command. Every response is valid JSON. Every error goes to stderr. Exit codes are predictable: `0` success, `1` error, `2` not found.
+
+```bash
+# All of these return clean, parseable JSON:
+clihub list --json                      # full catalog
+clihub list --category database --json  # slice by category
+clihub list --installed --json          # what's on PATH
+clihub info ruff --json                 # single tool detail
+clihub search "kubernetes" --json       # fuzzy search results
+clihub doctor --json                    # system readiness
+```
+
+### Composable with Any Tool
+
+```bash
+# Find all installed Python tools
+clihub list --installed --json | jq '[.[] | select(.categories[] == "python")]'
+
+# Get example commands for a tool
+clihub info ffmpeg --json | jq '.agent_hints.example_usage'
+
+# Check which package managers are missing
+clihub doctor --json | jq '[.[] | select(.ok == false) | .check]'
 ```
 
 <br>
 
-## Commands
+## What's in the Registry
 
-### `search` — Find tools with natural language
+**104 tools** across 17 categories. Every tool has `agent_hints` with natural-language descriptions and example commands.
 
-```bash
-clihub search "json processing"
-clihub search "pdf" --category documents
-clihub search "video" --limit 5
-```
-
-### `install` — One command, auto-detected package manager
-
-```bash
-clihub install jq            # → brew install jq
-clihub install httpie         # → pip install httpie
-clihub install ripgrep --via cargo   # force a specific installer
-```
-
-### `info` — Full metadata + help text
-
-```bash
-clihub info jq
-```
-
-```
-╭─────────────────────────────── jq ───────────────────────────────╮
-│                                                                  │
-│  jq v1.7.1                                                       │
-│  Lightweight command-line JSON processor.                        │
-│                                                                  │
-│  Author:  Stephen Dolan                                          │
-│  Home:    https://jqlang.github.io/jq/                           │
-│  License: MIT                                                    │
-│                                                                  │
-│  Install: brew install jq                                        │
-│                                                                  │
-│  When to use: Parse, filter, or transform JSON data              │
-│  Examples:                                                       │
-│    $ cat data.json | jq '.users[] | select(.age > 30)'           │
-│    $ jq -r '.items[].name' inventory.json                        │
-│                                                                  │
-╰──────────────────────────────────────────────────────────────────╯
-```
-
-### `list` — Browse the registry
-
-```bash
-clihub list                    # show all categories
-clihub list --category data    # tools in a category
-clihub list --installed        # what's on your PATH
-```
-
-### `doctor` — System readiness check
-
-```bash
-clihub doctor
-```
-
-```
-              System Check
-┏━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
-┃      ┃ Check          ┃ Detail        ┃
-┡━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
-│ ✓    │ Python >= 3.10 │ Python 3.11.4 │
-│ ✓    │ pip            │ pip           │
-│ ✓    │ npm            │ npm           │
-│ ✓    │ brew           │ brew          │
-│ ✓    │ cargo          │ cargo         │
-└──────┴────────────────┴───────────────┘
-```
-
-### `convert` — Auto-generate a tool manifest
-
-```bash
-clihub convert jq                     # detect metadata → clihub.yaml
-clihub convert rg --package ripgrep   # binary differs from package name
-clihub convert myapp --via pip        # specify the package manager
-```
-
-### `submit` — Validate and prepare for submission
-
-```bash
-clihub submit clihub.yaml             # validate + print PR-ready JSON
-clihub submit --validate-only         # just check, don't output
-```
-
-<br>
-
-## For AI Agents
-
-CliHub is built for agents to use directly. Pass `--json` to any command for structured output:
-
-```bash
-# Agent discovers tools (the primary workflow)
-clihub list --json                              # full catalog with agent_hints
-clihub list --category data --json              # slice by category
-
-# Agent installs what it needs
-clihub install jq
-
-# Agent learns the tool
-jq --help
-```
-
-> [!TIP]
-> **Best practice for agents:** Use `clihub list --json` (not `search`) as the discovery command. The agent's LLM is better at matching tasks to tools than any search algorithm.
-
-### Why CLI over MCP?
-
-| | MCP | CLI (CliHub) |
+| Category | Tools | Example Use Case |
 |---|---|---|
-| **Context cost** | 8,000–15,000 tokens per server | 0 tokens until `--help` |
-| **Discovery** | Schema dumped into every prompt | On-demand via `list --json` |
-| **LLM familiarity** | Needs schema learning | Trained on billions of shell examples |
-| **Composability** | Single-tool calls | Unix pipes: `curl \| jq \| csv` |
-| **Error handling** | Custom error formats | Exit codes + stderr |
+| **Data** | jq, yq, csvkit, xsv, dasel, gron, fx, jless | Parse JSON, transform YAML, query CSV |
+| **Database** | mycli, pgcli, litecli, iredis, usql | Connect to MySQL, Postgres, Redis, SQLite |
+| **Search & Files** | ripgrep, fd, fzf, bat, eza, lsd, broot, ranger, nnn | Find files, search code, browse directories |
+| **Network** | httpie, curl, wget, aria2, ngrok, mosh, nmap | HTTP requests, downloads, tunneling, scanning |
+| **Python** | ruff, black, mypy, uv, pipx, poetry | Lint, format, type-check, manage packages |
+| **JavaScript** | prettier, eslint, tsx, npm-check-updates | Format, lint, run TypeScript, update deps |
+| **Dev Tools** | gh, lazygit, gitui, tokei, hyperfine, just, grex, shellcheck | Git workflows, benchmarks, task running, linting |
+| **Docker & Cloud** | lazydocker, k9s, dive, act, awscli, terraform | Containers, Kubernetes, CI, infrastructure |
+| **Media** | ffmpeg, imagemagick, yt-dlp, svgo, gifsicle, asciinema | Video, images, downloads, GIFs, recordings |
+| **Documents** | pandoc, glow | Convert Markdown/HTML/PDF, render in terminal |
+| **Text** | sd, choose, sad | Find-and-replace, cut columns, batch edits |
+| **Editors** | neovim, micro, helix | Terminal-based text editing |
+| **Productivity** | tmux, tldr, zoxide, starship, taskwarrior, watson, nb | Sessions, docs, navigation, tasks, time tracking |
+| **Release** | semantic-release, release-it, commitizen, cookiecutter | Versioning, changelogs, project scaffolding |
+| **Security** | openssl, age, mkcert | TLS, encryption, local certificates |
+| **System** | htop, btop, procs, bandwhich, pv, ncdu, dust | Processes, bandwidth, disk usage, pipelines |
+| **Fun** | lolcat, fortune, cmatrix | Rainbow text, quotes, Matrix rain |
+
+<br>
+
+## All Commands
+
+| Command | What it Does | Agent Flag |
+|---|---|---|
+| `clihub list` | Browse the full tool catalog | `--json` returns all 104 tools with metadata |
+| `clihub search <query>` | Fuzzy-search by keyword | `--json` returns matching tools |
+| `clihub install <tool>` | Install via auto-detected package manager | `--json` returns status |
+| `clihub info <tool>` | Show metadata, hints, and `--help` output | `--json` returns full detail |
+| `clihub doctor` | Check system readiness | `--json` returns check results |
+| `clihub convert <tool>` | Auto-generate a manifest from installed tool | `--json` returns Tool object |
+| `clihub submit <file>` | Validate manifest for registry submission | `--json` returns validation |
 
 <br>
 
 ## Add Your Tool
 
-> [!IMPORTANT]
-> **Got a CLI tool? Add it to CliHub in 30 seconds.**
+Got a CLI tool? Add it to CliHub in 30 seconds:
 
 ```bash
-clihub convert mytool                 # auto-detects name, version, description, license, install method
-# → generates clihub.yaml with detected fields + TODO placeholders
-
-# Edit clihub.yaml — fill in categories, tags, agent_hints
-vim clihub.yaml
-
-clihub submit clihub.yaml             # validates and prints PR-ready JSON
-# → paste into registry.json, open a PR
+clihub convert mytool           # auto-detects version, description, license, homepage
+vim clihub.yaml                 # fill in categories, tags, agent_hints
+clihub submit clihub.yaml       # validates and prints PR-ready JSON
 ```
 
-**What `convert` auto-detects:**
-- Binary location and version (`--version`, `-V`)
-- Description from `--help` output
-- Package metadata from brew, pip, npm, or cargo
-- Homepage, license, author
-
-**What you fill in:**
-- `categories` and `tags`
-- `agent_hints.when_to_use` — when should an AI agent reach for this tool?
-- `agent_hints.example_usage` — 2-3 example commands
-
-The generated manifest:
+`convert` detects metadata from `--help`, `--version`, and package managers (brew, pip, npm, cargo). You fill in what it can't detect: categories, tags, and `agent_hints.when_to_use` — the natural-language description that tells an AI agent *when to reach for your tool*.
 
 ```yaml
-name: jq
-version: "1.7.1"
-description: "Lightweight command-line JSON processor"
-homepage: "https://jqlang.github.io/jq/"
-license: "MIT"
-categories: [data, json]           # ← you add these
-tags: [json, filter, transform]    # ← you add these
+name: mytool
+version: "2.1.0"
+description: "Do something useful from the terminal"
+categories: [utilities]
+tags: [useful, fast]
 install:
   method: brew
-  package: jq
+  package: mytool
 agent_hints:
-  when_to_use: "Parse, filter, or transform JSON data"    # ← you add this
+  when_to_use: "When you need to do something useful quickly"
   example_usage:
-    - "jq '.key' file.json"        # ← you add these
+    - "mytool input.txt --output result.json"
+    - "cat data.csv | mytool --format json"
 ```
 
-<br>
-
-## Registry
-
-CliHub ships with **100+ curated, battle-tested CLI tools:**
-
-| Category | Tools |
-|---|---|
-| **Data** | jq, yq, csvkit, xsv, dasel, gron, fx, jless |
-| **Database** | mycli, pgcli, litecli, iredis, usql |
-| **Search & Files** | ripgrep, fd, fzf, bat, eza, lsd, tree, broot, ranger, nnn, ncdu, dust |
-| **Network** | httpie, curl, wget, aria2, dog, ngrok, mosh, nmap, speedtest-cli |
-| **Python Dev** | ruff, black, mypy, uv, pipx, poetry |
-| **JavaScript Dev** | prettier, eslint, tsx, npm-check-updates |
-| **Dev Tools** | gh, lazygit, delta, gitui, tokei, hyperfine, just, grex, shellcheck, shfmt, entr, watchexec |
-| **Docker & Cloud** | lazydocker, ctop, k9s, dive, act, awscli, terraform |
-| **Media** | ffmpeg, imagemagick, yt-dlp, svgo, gifsicle, asciinema, pastel |
-| **Documents** | pandoc, glow |
-| **Text Processing** | sd, choose, sad |
-| **Editors** | neovim, micro, helix |
-| **Productivity** | tmux, tldr, zoxide, starship, taskwarrior, watson, nb, calcurse |
-| **Release & CI** | semantic-release, release-it, commitizen, bats-core, cookiecutter |
-| **Security** | openssl, age, mkcert |
-| **System** | htop, btop, procs, bandwhich, pv |
-| **Fun** | lolcat, fortune, cmatrix |
+Then [open a PR](https://github.com/clihub-ai/clihub) adding it to the registry.
 
 <br>
 
 ## Roadmap
 
 - [x] **Phase 1** — CLI core: search, install, info, list, doctor
-- [x] **Phase 1.5** — `convert` + `submit`: add any tool in 30 seconds
-- [ ] **Phase 2** — Registry API: remote search, `clihub publish`, semantic discovery
+- [x] **Phase 1.5** — 104 tools, `convert` + `submit`, PyPI release
+- [ ] **Phase 2** — Registry API with semantic search (FastAPI + pgvector)
 - [ ] **Phase 3** — Web marketplace at [clihub.net](https://clihub.net)
 - [ ] **Phase 4** — AI-assisted tool creation: `clihub create "extract tables from PDFs"`
-
-<br>
 
 ## Development
 
@@ -293,22 +234,7 @@ ruff check src/ tests/      # lint
 
 ## Contributing
 
-> [!TIP]
-> The easiest way to contribute is to add a tool: `clihub convert <tool>`, fill in the TODOs, and open a PR.
-
-Other ways to help:
-
-1. **Improve search** — Better fuzzy matching in `src/clihub/registry/search.py`
-2. **Add installers** — New package manager support in `src/clihub/installer/`
-3. **Fix bugs** — Check [issues](https://github.com/clihub-ai/clihub/issues)
-
-```bash
-git checkout -b feature/your-feature
-# make changes
-pytest
-git commit -m "feat: your feature"
-git push origin feature/your-feature
-```
+The easiest way to contribute: `clihub convert <tool>`, fill in the TODOs, [open a PR](https://github.com/clihub-ai/clihub/issues).
 
 ## License
 
