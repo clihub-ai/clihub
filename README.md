@@ -1,13 +1,14 @@
 <p align="center">
   <br>
   <a href="https://clihub.net">
-    <img src="assets/readme-banner-transparent.svg" alt="clihub" width="500">
+    <img src="assets/readme-banner-transparent.png" alt="clihub" width="400">
   </a>
   <br>
   <br>
   <strong>Discover, install, and manage 100+ CLI tools. Built for AI agents.</strong>
   <br>
   <br>
+  <a href="https://clihub.net"><img alt="Website" src="https://img.shields.io/badge/clihub.net-00ff88?style=flat-square&labelColor=1a1a2e&logo=safari&logoColor=white"></a>
   <a href="https://pypi.org/project/clihub-ai"><img alt="PyPI" src="https://img.shields.io/pypi/v/clihub-ai?style=flat-square&color=00ff88&labelColor=1a1a2e"></a>
   <a href="https://github.com/clihub-ai/clihub/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue?style=flat-square&labelColor=1a1a2e"></a>
   <a href="https://www.python.org/downloads/"><img alt="Python 3.10+" src="https://img.shields.io/badge/python-3.10+-blue?style=flat-square&labelColor=1a1a2e"></a>
@@ -32,6 +33,7 @@ result = subprocess.run(["jq", ".users[] | .name", "data.json"], capture_output=
 ---
 
 <p align="center">
+  <a href="https://clihub.net">🌐 Website</a> &middot;
   <a href="#-the-problem">The Problem</a> &middot;
   <a href="#-get-started">Get Started</a> &middot;
   <a href="#-agent-integration">Agent Integration</a> &middot;
@@ -43,7 +45,7 @@ result = subprocess.run(["jq", ".users[] | .name", "data.json"], capture_output=
 
 Your AI agent needs to resize an image. It knows *how* — it's seen millions of shell examples in training. But it doesn't know what's installed on this machine, or what tool to use.
 
-**CliHub is the missing piece.** A curated registry of 104 CLI tools with structured metadata — descriptions, install methods, and agent-readable hints. Your agent queries the registry, picks the right tool, installs it, and runs it. Two commands. Zero config.
+**[CliHub](https://clihub.net) is the missing piece.** A curated registry of 104 CLI tools with structured metadata — descriptions, install methods, and agent-readable hints. Your agent queries the registry, picks the right tool, installs it, and runs it. Two commands. Zero config.
 
 ### Why CLI tools over MCP?
 
@@ -220,3 +222,11 @@ The easiest way to contribute: `clihub convert <tool>`, fill in the TODOs, [open
 ## 📄 License
 
 MIT &copy; [CliHub](https://clihub.net)
+
+---
+
+<p align="center">
+  <a href="https://clihub.net"><strong>clihub.net</strong></a> &middot;
+  <a href="https://pypi.org/project/clihub-ai">PyPI</a> &middot;
+  <a href="https://github.com/clihub-ai/clihub/issues">Issues</a>
+</p>
