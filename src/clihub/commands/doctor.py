@@ -7,7 +7,7 @@ from pathlib import Path
 import click
 from rich.table import Table
 
-from clihub.output import console, is_json
+from clihub.output import console, is_json, json_option
 
 
 CHECKS = [
@@ -23,13 +23,17 @@ CHECKS = [
 
 
 @click.command()
+@json_option
 @click.pass_context
 def doctor(ctx: click.Context) -> None:
-    """Check system readiness.
+    """Check system readiness and available package managers.
 
     \b
-    Verifies that required package managers and
-    dependencies are available on your system.
+    Agent usage:
+      clihub doctor --json            # returns [{check, ok, detail}, ...]
+
+    \b
+    Checks: Python, pip, npm, brew, cargo, docker, git, config dir.
     """
     results: list[dict] = []
     for label, check_fn, detail in CHECKS:

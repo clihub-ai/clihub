@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json as json_lib
+from functools import wraps
 
 import click
 from rich.console import Console
@@ -22,6 +23,18 @@ def is_json(ctx: click.Context) -> bool:
 
 def is_quiet(ctx: click.Context) -> bool:
     return ctx.obj.get("quiet", False)
+
+
+def json_option(f):
+    """Decorator that adds --json to a subcommand and merges with the global flag."""
+    @click.option("--json", "json_output", is_flag=True, help="Structured JSON output (for AI agents)")
+    @wraps(f)
+    def wrapper(*args, json_output=False, **kwargs):
+        ctx = click.get_current_context()
+        if json_output:
+            ctx.obj["json"] = True
+        return f(*args, **kwargs)
+    return wrapper
 
 
 def print_tools_table(tools: list[Tool], ctx: click.Context) -> None:

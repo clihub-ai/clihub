@@ -2,20 +2,29 @@ import click
 
 from clihub.registry.local import get_tool
 from clihub.installer.resolver import resolve_installer
-from clihub.output import print_success, print_error, print_warning, console
+from clihub.output import print_success, print_error, print_warning, console, json_option
 
 
 @click.command()
 @click.argument("tool_name")
 @click.option("--via", default=None, help="Force a specific package manager (pip, npm, brew, cargo)")
+@json_option
 @click.pass_context
 def install(ctx: click.Context, tool_name: str, via: str | None) -> None:
-    """Install a CLI tool.
+    """Install a CLI tool by name.
 
     \b
-    Examples:
-      clihub install jq
-      clihub install httpie --via pip
+    Looks up the tool in the registry, auto-detects the best
+    package manager, and installs it. Use --via to override.
+    Skips if already installed.
+
+    \b
+    Agent usage:
+      clihub install jq --json        # returns {"status": "success", ...}
+      clihub install httpie --via pip --json
+
+    \b
+    Exit codes: 0 = success/already installed, 1 = error, 2 = not found.
     """
     tool = get_tool(tool_name)
     if tool is None:
