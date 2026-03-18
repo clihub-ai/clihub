@@ -33,3 +33,6 @@ Thumbs.db
 
 # Internal docs
 implement-doc-claude/
+
+# Claude Code
+.claude/

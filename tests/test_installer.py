@@ -1,9 +1,8 @@
 """Tests for installer resolver."""
 
 import pytest
-from clihub.installer.resolver import resolve_installer, get_installer, INSTALLERS
+from clihub.installer.resolver import resolve_installer, get_installer
 from clihub.installer.pip import PipInstaller
-from clihub.installer.brew import BrewInstaller
 from clihub.registry.models import Tool, InstallMethod
 
 
