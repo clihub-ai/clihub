@@ -14,12 +14,19 @@
   <a href="https://github.com/clihub-ai/clihub/actions"><img alt="Tests" src="https://img.shields.io/github/actions/workflow/status/clihub-ai/clihub/ci.yml?style=flat-square&labelColor=1a1a2e&label=tests"></a>
 </p>
 
-```bash
-pip install clihub-ai
+```python
+# pip install clihub-ai
 
-clihub search "convert pdf"       # find the right tool
-clihub install pandoc              # install it (auto-detects brew/pip/npm/cargo)
-pandoc README.md -o README.pdf     # use it
+import subprocess, json
+
+# Step 1: Agent reads the full tool catalog (104 tools, ~87KB)
+catalog = json.loads(subprocess.run(["clihub", "list", "--json"], capture_output=True, text=True).stdout)
+
+# Step 2: Agent picks the right tool and installs it
+subprocess.run(["clihub", "install", "jq"])
+
+# Step 3: Agent uses it — zero tokens wasted on schemas
+result = subprocess.run(["jq", ".users[] | .name", "data.json"], capture_output=True, text=True)
 ```
 
 ---
