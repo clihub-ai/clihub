@@ -52,7 +52,7 @@ def tool_to_yaml(tool: Tool) -> str:
     for key in ("verified", "downloads", "rating", "long_description"):
         data.pop(key, None)
 
-    raw = yaml.dump(data, default_flow_style=False, sort_keys=False, allow_unicode=True)
+    raw = yaml.safe_dump(data, default_flow_style=False, sort_keys=False, allow_unicode=True)
 
     # Add TODO comments for placeholder fields
     lines = []
@@ -63,8 +63,14 @@ def tool_to_yaml(tool: Tool) -> str:
     return "\n".join(lines) + "\n"
 
 
+_MAX_MANIFEST_SIZE = 1_000_000  # 1 MB
+
+
 def yaml_to_tool(path: str | Path) -> Tool:
     """Load a YAML manifest file and validate it as a Tool."""
-    text = Path(path).read_text(encoding="utf-8")
+    p = Path(path)
+    if p.stat().st_size > _MAX_MANIFEST_SIZE:
+        raise ValueError(f"Manifest file too large ({p.stat().st_size} bytes, max {_MAX_MANIFEST_SIZE})")
+    text = p.read_text(encoding="utf-8")
     data = yaml.safe_load(text)
     return Tool.model_validate(data)

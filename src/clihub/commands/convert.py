@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import shutil
+from pathlib import Path
 
 import click
 
@@ -36,13 +37,22 @@ def convert(ctx: click.Context, tool: str, package: str | None, via: str | None,
       clihub convert jq                  # generates clihub.yaml
       clihub convert rg --package ripgrep --via brew
     """
+    # Validate output path doesn't escape CWD
+    out_path = Path(output).resolve()
+    cwd = Path.cwd().resolve()
+    if not str(out_path).startswith(str(cwd)):
+        print_error("Output path must be within the current directory.", ctx)
+        ctx.exit(1)
+        return
+
     # Check if tool exists on PATH
-    if not shutil.which(tool):
+    resolved_bin = shutil.which(tool)
+    if not resolved_bin:
         print_error(f"'{tool}' not found on PATH. Install it first, or check the name.", ctx)
         ctx.exit(1)
         return
 
-    meta = run_detection(tool, package=package, via=via)
+    meta = run_detection(resolved_bin, package=package or tool, via=via)
     tool_model = metadata_to_tool(meta)
 
     if is_json(ctx):

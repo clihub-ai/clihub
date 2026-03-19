@@ -9,6 +9,7 @@ from clihub.registry.local import get_tool
 from clihub.registry.models import Tool
 
 _NAME_RE = re.compile(r"^[a-z0-9][a-z0-9_-]*$")
+_PACKAGE_RE = re.compile(r"^[a-zA-Z0-9][a-zA-Z0-9._@/\[\]-]*$")
 _VALID_METHODS = {"pip", "npm", "brew", "cargo", "binary", "docker"}
 
 
@@ -34,6 +35,19 @@ def validate_tool(tool: Tool) -> ValidationResult:
         result.errors.append(
             f"install.method '{tool.install.method}' must be one of: {', '.join(sorted(_VALID_METHODS))}"
         )
+
+    # Package name format
+    if not _PACKAGE_RE.match(tool.install.package):
+        result.errors.append(
+            f"install.package '{tool.install.package}' contains invalid characters"
+        )
+
+    # Binary name safety
+    if tool.install.binary_name:
+        if "/" in tool.install.binary_name or ".." in tool.install.binary_name:
+            result.errors.append(
+                f"install.binary_name '{tool.install.binary_name}' must not contain paths"
+            )
 
     # Description length
     if len(tool.description) < 10:

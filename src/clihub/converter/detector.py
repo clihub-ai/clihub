@@ -72,7 +72,7 @@ def detect_help(tool: str) -> DetectedMetadata:
     out = _run_cmd([tool, "--help"])
     if not out:
         return meta
-    meta.help_text = out
+    meta.help_text = out[:10000]  # Truncate to prevent memory abuse
     # Try to extract a short description from the first non-empty, non-usage line
     for line in out.splitlines():
         line = line.strip()

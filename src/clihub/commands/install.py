@@ -9,7 +9,8 @@ from clihub.output import print_success, print_error, console, is_json, json_opt
 
 @click.command()
 @click.argument("tool_name")
-@click.option("--via", default=None, help="Force a specific package manager (pip, npm, brew, cargo)")
+@click.option("--via", default=None, type=click.Choice(["pip", "npm", "brew", "cargo"]),
+              help="Force a specific package manager")
 @json_option
 @click.pass_context
 def install(ctx: click.Context, tool_name: str, via: str | None) -> None:
