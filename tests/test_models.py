@@ -48,7 +48,7 @@ class TestTool:
         t = make_tool()
         assert t.name == "test-tool"
         assert t.verified is False
-        assert t.downloads == 0
+        assert t.source is None
         assert t.categories == []
 
     def test_full(self):
@@ -56,23 +56,29 @@ class TestTool:
             categories=["data"],
             tags=["json"],
             verified=True,
-            downloads=1000,
-            rating=4.5,
+            source={
+                "github": "https://github.com/example/tool",
+                "github_stars_url": "https://api.github.com/repos/example/tool",
+                "github_issues_url": "https://github.com/example/tool/issues",
+            },
             agent_hints={
                 "when_to_use": "test",
                 "example_usage": ["cmd --help"],
             },
         )
         assert t.verified is True
-        assert t.rating == 4.5
+        assert t.source.github == "https://github.com/example/tool"
         assert t.agent_hints.when_to_use == "test"
 
     def test_json_roundtrip(self):
-        t = make_tool(categories=["data"], rating=4.2)
+        t = make_tool(
+            categories=["data"],
+            source={"github": "https://github.com/example/tool"},
+        )
         dumped = t.model_dump_json()
         restored = Tool.model_validate_json(dumped)
         assert restored.name == t.name
-        assert restored.rating == t.rating
+        assert restored.source.github == t.source.github
 
     def test_invalid_missing_required(self):
         with pytest.raises(Exception):

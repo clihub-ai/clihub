@@ -50,14 +50,14 @@ def print_tools_table(tools: list[Tool], ctx: click.Context) -> None:
     table.add_column("#", style="dim", width=3)
     table.add_column("Name", style="bold")
     table.add_column("Description", max_width=50)
-    table.add_column("Rating", justify="right", width=6)
+    table.add_column("Source", style="dim")
     table.add_column("Category", style="dim")
 
     for i, tool in enumerate(tools, 1):
-        rating = f"★ {tool.rating}" if tool.rating else "—"
+        source = tool.source.github if tool.source and tool.source.github else "—"
         desc = tool.description[:50] + "…" if len(tool.description) > 50 else tool.description
         cats = ", ".join(tool.categories[:2]) if tool.categories else "—"
-        table.add_row(str(i), tool.name, desc, rating, cats)
+        table.add_row(str(i), tool.name, desc, source, cats)
 
     console.print(table)
 

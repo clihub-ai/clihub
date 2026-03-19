@@ -49,7 +49,7 @@ def tool_to_yaml(tool: Tool) -> str:
     data = tool.model_dump(exclude_none=True, exclude_defaults=False)
 
     # Remove fields that are always defaulted and not useful in a manifest
-    for key in ("verified", "downloads", "rating", "long_description"):
+    for key in ("verified", "source", "long_description"):
         data.pop(key, None)
 
     raw = yaml.safe_dump(data, default_flow_style=False, sort_keys=False, allow_unicode=True)

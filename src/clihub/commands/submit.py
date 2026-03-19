@@ -79,7 +79,7 @@ def submit(ctx: click.Context, manifest: str, validate_only: bool) -> None:
     # Generate PR-ready JSON
     entry = tool.model_dump(exclude_none=True)
     # Remove fields not needed in registry.json
-    for key in ("verified", "downloads", "rating"):
+    for key in ("verified", "source"):
         entry.pop(key, None)
 
     json_str = json_lib.dumps(entry, indent=2)

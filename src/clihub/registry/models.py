@@ -43,6 +43,17 @@ class AgentHints(BaseModel):
     output_formats: list[str] = Field(default_factory=list)
 
 
+class Source(BaseModel):
+    """Live-queryable links so agents can check current stats instead of stale numbers."""
+    github: Optional[str] = Field(None, description="GitHub repo URL, e.g. https://github.com/jqlang/jq")
+    github_stars_url: Optional[str] = Field(
+        None, description="GitHub API endpoint to get current star count"
+    )
+    github_issues_url: Optional[str] = Field(
+        None, description="GitHub issues URL for the project"
+    )
+
+
 class Tool(BaseModel):
     name: str
     version: str
@@ -57,6 +68,5 @@ class Tool(BaseModel):
     install: InstallMethod
     permissions: list[str] = Field(default_factory=list)
     agent_hints: Optional[AgentHints] = None
+    source: Optional[Source] = None
     verified: bool = False
-    downloads: int = 0
-    rating: Optional[float] = None

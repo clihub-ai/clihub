@@ -42,8 +42,11 @@
       ]
     },
     "verified": true,
-    "downloads": 89200,
-    "rating": 4.9
+    "source": {
+      "github": "https://github.com/jqlang/jq",
+      "github_stars_url": "https://api.github.com/repos/jqlang/jq",
+      "github_issues_url": "https://github.com/jqlang/jq/issues"
+    }
   },
   {
     "name": "yq",
@@ -96,8 +99,11 @@
       ]
     },
     "verified": true,
-    "downloads": 34500,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/mikefarah/yq",
+      "github_stars_url": "https://api.github.com/repos/mikefarah/yq",
+      "github_issues_url": "https://github.com/mikefarah/yq/issues"
+    }
   },
   {
     "name": "csvkit",
@@ -146,8 +152,11 @@
       ]
     },
     "verified": true,
-    "downloads": 18300,
-    "rating": 4.5
+    "source": {
+      "github": "https://github.com/wireservice/csvkit",
+      "github_stars_url": "https://api.github.com/repos/wireservice/csvkit",
+      "github_issues_url": "https://github.com/wireservice/csvkit/issues"
+    }
   },
   {
     "name": "xsv",
@@ -192,8 +201,11 @@
       ]
     },
     "verified": true,
-    "downloads": 15200,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/BurntSushi/xsv",
+      "github_stars_url": "https://api.github.com/repos/BurntSushi/xsv",
+      "github_issues_url": "https://github.com/BurntSushi/xsv/issues"
+    }
   },
   {
     "name": "dasel",
@@ -248,8 +260,11 @@
       ]
     },
     "verified": true,
-    "downloads": 8900,
-    "rating": 4.4
+    "source": {
+      "github": "https://github.com/TomWright/dasel",
+      "github_stars_url": "https://api.github.com/repos/TomWright/dasel",
+      "github_issues_url": "https://github.com/TomWright/dasel/issues"
+    }
   },
   {
     "name": "gron",
@@ -293,8 +308,11 @@
       ]
     },
     "verified": true,
-    "downloads": 12100,
-    "rating": 4.5
+    "source": {
+      "github": "https://github.com/tomnomnom/gron",
+      "github_stars_url": "https://api.github.com/repos/tomnomnom/gron",
+      "github_issues_url": "https://github.com/tomnomnom/gron/issues"
+    }
   },
   {
     "name": "ripgrep",
@@ -343,8 +361,11 @@
       ]
     },
     "verified": true,
-    "downloads": 52000,
-    "rating": 4.9
+    "source": {
+      "github": "https://github.com/BurntSushi/ripgrep",
+      "github_stars_url": "https://api.github.com/repos/BurntSushi/ripgrep",
+      "github_issues_url": "https://github.com/BurntSushi/ripgrep/issues"
+    }
   },
   {
     "name": "fd",
@@ -390,8 +411,11 @@
       ]
     },
     "verified": true,
-    "downloads": 41000,
-    "rating": 4.9
+    "source": {
+      "github": "https://github.com/sharkdp/fd",
+      "github_stars_url": "https://api.github.com/repos/sharkdp/fd",
+      "github_issues_url": "https://github.com/sharkdp/fd/issues"
+    }
   },
   {
     "name": "fzf",
@@ -434,8 +458,11 @@
       ]
     },
     "verified": true,
-    "downloads": 65000,
-    "rating": 4.9
+    "source": {
+      "github": "https://github.com/junegunn/fzf",
+      "github_stars_url": "https://api.github.com/repos/junegunn/fzf",
+      "github_issues_url": "https://github.com/junegunn/fzf/issues"
+    }
   },
   {
     "name": "bat",
@@ -482,8 +509,11 @@
       ]
     },
     "verified": true,
-    "downloads": 48000,
-    "rating": 4.8
+    "source": {
+      "github": "https://github.com/sharkdp/bat",
+      "github_stars_url": "https://api.github.com/repos/sharkdp/bat",
+      "github_issues_url": "https://github.com/sharkdp/bat/issues"
+    }
   },
   {
     "name": "eza",
@@ -529,8 +559,11 @@
       ]
     },
     "verified": true,
-    "downloads": 29000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/eza-community/eza",
+      "github_stars_url": "https://api.github.com/repos/eza-community/eza",
+      "github_issues_url": "https://github.com/eza-community/eza/issues"
+    }
   },
   {
     "name": "tree",
@@ -571,8 +604,11 @@
       ]
     },
     "verified": true,
-    "downloads": 55000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/Old-Man-Programmer/tree",
+      "github_stars_url": "https://api.github.com/repos/Old-Man-Programmer/tree",
+      "github_issues_url": "https://github.com/Old-Man-Programmer/tree/issues"
+    }
   },
   {
     "name": "ncdu",
@@ -614,8 +650,7 @@
       ]
     },
     "verified": true,
-    "downloads": 31000,
-    "rating": 4.7
+    "source": null
   },
   {
     "name": "dust",
@@ -660,8 +695,11 @@
       ]
     },
     "verified": true,
-    "downloads": 14500,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/bootandy/dust",
+      "github_stars_url": "https://api.github.com/repos/bootandy/dust",
+      "github_issues_url": "https://github.com/bootandy/dust/issues"
+    }
   },
   {
     "name": "httpie",
@@ -707,8 +745,11 @@
       ]
     },
     "verified": true,
-    "downloads": 38000,
-    "rating": 4.8
+    "source": {
+      "github": "https://github.com/httpie/cli",
+      "github_stars_url": "https://api.github.com/repos/httpie/cli",
+      "github_issues_url": "https://github.com/httpie/cli/issues"
+    }
   },
   {
     "name": "curl",
@@ -751,8 +792,11 @@
       ]
     },
     "verified": true,
-    "downloads": 120000,
-    "rating": 4.9
+    "source": {
+      "github": "https://github.com/curl/curl",
+      "github_stars_url": "https://api.github.com/repos/curl/curl",
+      "github_issues_url": "https://github.com/curl/curl/issues"
+    }
   },
   {
     "name": "wget",
@@ -795,8 +839,7 @@
       ]
     },
     "verified": true,
-    "downloads": 85000,
-    "rating": 4.7
+    "source": null
   },
   {
     "name": "aria2",
@@ -842,8 +885,11 @@
       ]
     },
     "verified": true,
-    "downloads": 22000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/aria2/aria2",
+      "github_stars_url": "https://api.github.com/repos/aria2/aria2",
+      "github_issues_url": "https://github.com/aria2/aria2/issues"
+    }
   },
   {
     "name": "dog",
@@ -886,8 +932,11 @@
       ]
     },
     "verified": true,
-    "downloads": 9500,
-    "rating": 4.4
+    "source": {
+      "github": "https://github.com/ogham/dog",
+      "github_stars_url": "https://api.github.com/repos/ogham/dog",
+      "github_issues_url": "https://github.com/ogham/dog/issues"
+    }
   },
   {
     "name": "gh",
@@ -932,8 +981,11 @@
       ]
     },
     "verified": true,
-    "downloads": 72000,
-    "rating": 4.8
+    "source": {
+      "github": "https://github.com/cli/cli",
+      "github_stars_url": "https://api.github.com/repos/cli/cli",
+      "github_issues_url": "https://github.com/cli/cli/issues"
+    }
   },
   {
     "name": "lazygit",
@@ -976,8 +1028,11 @@
       ]
     },
     "verified": true,
-    "downloads": 35000,
-    "rating": 4.8
+    "source": {
+      "github": "https://github.com/jesseduffield/lazygit",
+      "github_stars_url": "https://api.github.com/repos/jesseduffield/lazygit",
+      "github_issues_url": "https://github.com/jesseduffield/lazygit/issues"
+    }
   },
   {
     "name": "delta",
@@ -1024,8 +1079,11 @@
       ]
     },
     "verified": true,
-    "downloads": 27000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/dandavison/delta",
+      "github_stars_url": "https://api.github.com/repos/dandavison/delta",
+      "github_issues_url": "https://github.com/dandavison/delta/issues"
+    }
   },
   {
     "name": "tokei",
@@ -1071,8 +1129,11 @@
       ]
     },
     "verified": true,
-    "downloads": 19000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/XAMPPRocky/tokei",
+      "github_stars_url": "https://api.github.com/repos/XAMPPRocky/tokei",
+      "github_issues_url": "https://github.com/XAMPPRocky/tokei/issues"
+    }
   },
   {
     "name": "hyperfine",
@@ -1119,8 +1180,11 @@
       ]
     },
     "verified": true,
-    "downloads": 23000,
-    "rating": 4.8
+    "source": {
+      "github": "https://github.com/sharkdp/hyperfine",
+      "github_stars_url": "https://api.github.com/repos/sharkdp/hyperfine",
+      "github_issues_url": "https://github.com/sharkdp/hyperfine/issues"
+    }
   },
   {
     "name": "ffmpeg",
@@ -1178,8 +1242,11 @@
       ]
     },
     "verified": true,
-    "downloads": 67000,
-    "rating": 4.8
+    "source": {
+      "github": "https://github.com/FFmpeg/FFmpeg",
+      "github_stars_url": "https://api.github.com/repos/FFmpeg/FFmpeg",
+      "github_issues_url": "https://github.com/FFmpeg/FFmpeg/issues"
+    }
   },
   {
     "name": "imagemagick",
@@ -1234,8 +1301,11 @@
       ]
     },
     "verified": true,
-    "downloads": 58000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/ImageMagick/ImageMagick",
+      "github_stars_url": "https://api.github.com/repos/ImageMagick/ImageMagick",
+      "github_issues_url": "https://github.com/ImageMagick/ImageMagick/issues"
+    }
   },
   {
     "name": "yt-dlp",
@@ -1283,8 +1353,11 @@
       ]
     },
     "verified": true,
-    "downloads": 45000,
-    "rating": 4.8
+    "source": {
+      "github": "https://github.com/yt-dlp/yt-dlp",
+      "github_stars_url": "https://api.github.com/repos/yt-dlp/yt-dlp",
+      "github_issues_url": "https://github.com/yt-dlp/yt-dlp/issues"
+    }
   },
   {
     "name": "pandoc",
@@ -1340,8 +1413,11 @@
       ]
     },
     "verified": true,
-    "downloads": 41000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/jgm/pandoc",
+      "github_stars_url": "https://api.github.com/repos/jgm/pandoc",
+      "github_issues_url": "https://github.com/jgm/pandoc/issues"
+    }
   },
   {
     "name": "tmux",
@@ -1383,8 +1459,11 @@
       ]
     },
     "verified": true,
-    "downloads": 62000,
-    "rating": 4.8
+    "source": {
+      "github": "https://github.com/tmux/tmux",
+      "github_stars_url": "https://api.github.com/repos/tmux/tmux",
+      "github_issues_url": "https://github.com/tmux/tmux/issues"
+    }
   },
   {
     "name": "tldr",
@@ -1426,8 +1505,11 @@
       ]
     },
     "verified": true,
-    "downloads": 42000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/tldr-pages/tldr",
+      "github_stars_url": "https://api.github.com/repos/tldr-pages/tldr",
+      "github_issues_url": "https://github.com/tldr-pages/tldr/issues"
+    }
   },
   {
     "name": "zoxide",
@@ -1474,8 +1556,11 @@
       ]
     },
     "verified": true,
-    "downloads": 28000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/ajeetdsouza/zoxide",
+      "github_stars_url": "https://api.github.com/repos/ajeetdsouza/zoxide",
+      "github_issues_url": "https://github.com/ajeetdsouza/zoxide/issues"
+    }
   },
   {
     "name": "starship",
@@ -1522,8 +1607,11 @@
       ]
     },
     "verified": true,
-    "downloads": 38000,
-    "rating": 4.8
+    "source": {
+      "github": "https://github.com/starship/starship",
+      "github_stars_url": "https://api.github.com/repos/starship/starship",
+      "github_issues_url": "https://github.com/starship/starship/issues"
+    }
   },
   {
     "name": "htop",
@@ -1565,8 +1653,11 @@
       ]
     },
     "verified": true,
-    "downloads": 71000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/htop-dev/htop",
+      "github_stars_url": "https://api.github.com/repos/htop-dev/htop",
+      "github_issues_url": "https://github.com/htop-dev/htop/issues"
+    }
   },
   {
     "name": "btop",
@@ -1609,8 +1700,11 @@
       ]
     },
     "verified": true,
-    "downloads": 25000,
-    "rating": 4.8
+    "source": {
+      "github": "https://github.com/aristocratos/btop",
+      "github_stars_url": "https://api.github.com/repos/aristocratos/btop",
+      "github_issues_url": "https://github.com/aristocratos/btop/issues"
+    }
   },
   {
     "name": "procs",
@@ -1655,8 +1749,11 @@
       ]
     },
     "verified": true,
-    "downloads": 11000,
-    "rating": 4.5
+    "source": {
+      "github": "https://github.com/dalance/procs",
+      "github_stars_url": "https://api.github.com/repos/dalance/procs",
+      "github_issues_url": "https://github.com/dalance/procs/issues"
+    }
   },
   {
     "name": "bandwhich",
@@ -1702,8 +1799,11 @@
       ]
     },
     "verified": true,
-    "downloads": 8200,
-    "rating": 4.4
+    "source": {
+      "github": "https://github.com/imsnif/bandwhich",
+      "github_stars_url": "https://api.github.com/repos/imsnif/bandwhich",
+      "github_issues_url": "https://github.com/imsnif/bandwhich/issues"
+    }
   },
   {
     "name": "mycli",
@@ -1747,8 +1847,11 @@
       ]
     },
     "verified": true,
-    "downloads": 18500,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/dbcli/mycli",
+      "github_stars_url": "https://api.github.com/repos/dbcli/mycli",
+      "github_issues_url": "https://github.com/dbcli/mycli/issues"
+    }
   },
   {
     "name": "pgcli",
@@ -1792,8 +1895,11 @@
       ]
     },
     "verified": true,
-    "downloads": 22000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/dbcli/pgcli",
+      "github_stars_url": "https://api.github.com/repos/dbcli/pgcli",
+      "github_issues_url": "https://github.com/dbcli/pgcli/issues"
+    }
   },
   {
     "name": "iredis",
@@ -1837,8 +1943,11 @@
       ]
     },
     "verified": true,
-    "downloads": 8500,
-    "rating": 4.5
+    "source": {
+      "github": "https://github.com/laixintao/iredis",
+      "github_stars_url": "https://api.github.com/repos/laixintao/iredis",
+      "github_issues_url": "https://github.com/laixintao/iredis/issues"
+    }
   },
   {
     "name": "usql",
@@ -1886,8 +1995,11 @@
       ]
     },
     "verified": true,
-    "downloads": 7200,
-    "rating": 4.5
+    "source": {
+      "github": "https://github.com/xo/usql",
+      "github_stars_url": "https://api.github.com/repos/xo/usql",
+      "github_issues_url": "https://github.com/xo/usql/issues"
+    }
   },
   {
     "name": "litecli",
@@ -1932,8 +2044,11 @@
       ]
     },
     "verified": true,
-    "downloads": 9800,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/dbcli/litecli",
+      "github_stars_url": "https://api.github.com/repos/dbcli/litecli",
+      "github_issues_url": "https://github.com/dbcli/litecli/issues"
+    }
   },
   {
     "name": "just",
@@ -1982,8 +2097,11 @@
       ]
     },
     "verified": true,
-    "downloads": 24000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/casey/just",
+      "github_stars_url": "https://api.github.com/repos/casey/just",
+      "github_issues_url": "https://github.com/casey/just/issues"
+    }
   },
   {
     "name": "grex",
@@ -2030,8 +2148,11 @@
       ]
     },
     "verified": true,
-    "downloads": 9500,
-    "rating": 4.5
+    "source": {
+      "github": "https://github.com/pemistahl/grex",
+      "github_stars_url": "https://api.github.com/repos/pemistahl/grex",
+      "github_issues_url": "https://github.com/pemistahl/grex/issues"
+    }
   },
   {
     "name": "micro",
@@ -2076,8 +2197,11 @@
       ]
     },
     "verified": true,
-    "downloads": 18000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/zyedidia/micro",
+      "github_stars_url": "https://api.github.com/repos/zyedidia/micro",
+      "github_issues_url": "https://github.com/zyedidia/micro/issues"
+    }
   },
   {
     "name": "helix",
@@ -2125,8 +2249,11 @@
       ]
     },
     "verified": true,
-    "downloads": 21000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/helix-editor/helix",
+      "github_stars_url": "https://api.github.com/repos/helix-editor/helix",
+      "github_issues_url": "https://github.com/helix-editor/helix/issues"
+    }
   },
   {
     "name": "neovim",
@@ -2172,8 +2299,11 @@
       ]
     },
     "verified": true,
-    "downloads": 78000,
-    "rating": 4.9
+    "source": {
+      "github": "https://github.com/neovim/neovim",
+      "github_stars_url": "https://api.github.com/repos/neovim/neovim",
+      "github_issues_url": "https://github.com/neovim/neovim/issues"
+    }
   },
   {
     "name": "git-extras",
@@ -2215,8 +2345,11 @@
       ]
     },
     "verified": true,
-    "downloads": 15000,
-    "rating": 4.5
+    "source": {
+      "github": "https://github.com/tj/git-extras",
+      "github_stars_url": "https://api.github.com/repos/tj/git-extras",
+      "github_issues_url": "https://github.com/tj/git-extras/issues"
+    }
   },
   {
     "name": "gitui",
@@ -2262,8 +2395,11 @@
       ]
     },
     "verified": true,
-    "downloads": 16000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/extrawurst/gitui",
+      "github_stars_url": "https://api.github.com/repos/extrawurst/gitui",
+      "github_issues_url": "https://github.com/extrawurst/gitui/issues"
+    }
   },
   {
     "name": "cookiecutter",
@@ -2308,8 +2444,11 @@
       ]
     },
     "verified": true,
-    "downloads": 26000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/cookiecutter/cookiecutter",
+      "github_stars_url": "https://api.github.com/repos/cookiecutter/cookiecutter",
+      "github_issues_url": "https://github.com/cookiecutter/cookiecutter/issues"
+    }
   },
   {
     "name": "bats-core",
@@ -2354,8 +2493,11 @@
       ]
     },
     "verified": true,
-    "downloads": 12000,
-    "rating": 4.5
+    "source": {
+      "github": "https://github.com/bats-core/bats-core",
+      "github_stars_url": "https://api.github.com/repos/bats-core/bats-core",
+      "github_issues_url": "https://github.com/bats-core/bats-core/issues"
+    }
   },
   {
     "name": "shellcheck",
@@ -2400,8 +2542,11 @@
       ]
     },
     "verified": true,
-    "downloads": 35000,
-    "rating": 4.8
+    "source": {
+      "github": "https://github.com/koalaman/shellcheck",
+      "github_stars_url": "https://api.github.com/repos/koalaman/shellcheck",
+      "github_issues_url": "https://github.com/koalaman/shellcheck/issues"
+    }
   },
   {
     "name": "shfmt",
@@ -2446,8 +2591,11 @@
       ]
     },
     "verified": true,
-    "downloads": 19000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/mvdan/sh",
+      "github_stars_url": "https://api.github.com/repos/mvdan/sh",
+      "github_issues_url": "https://github.com/mvdan/sh/issues"
+    }
   },
   {
     "name": "ruff",
@@ -2493,8 +2641,11 @@
       ]
     },
     "verified": true,
-    "downloads": 52000,
-    "rating": 4.9
+    "source": {
+      "github": "https://github.com/astral-sh/ruff",
+      "github_stars_url": "https://api.github.com/repos/astral-sh/ruff",
+      "github_issues_url": "https://github.com/astral-sh/ruff/issues"
+    }
   },
   {
     "name": "black",
@@ -2538,8 +2689,11 @@
       ]
     },
     "verified": true,
-    "downloads": 68000,
-    "rating": 4.8
+    "source": {
+      "github": "https://github.com/psf/black",
+      "github_stars_url": "https://api.github.com/repos/psf/black",
+      "github_issues_url": "https://github.com/psf/black/issues"
+    }
   },
   {
     "name": "mypy",
@@ -2582,8 +2736,11 @@
       ]
     },
     "verified": true,
-    "downloads": 55000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/python/mypy",
+      "github_stars_url": "https://api.github.com/repos/python/mypy",
+      "github_issues_url": "https://github.com/python/mypy/issues"
+    }
   },
   {
     "name": "uv",
@@ -2630,8 +2787,11 @@
       ]
     },
     "verified": true,
-    "downloads": 48000,
-    "rating": 4.9
+    "source": {
+      "github": "https://github.com/astral-sh/uv",
+      "github_stars_url": "https://api.github.com/repos/astral-sh/uv",
+      "github_issues_url": "https://github.com/astral-sh/uv/issues"
+    }
   },
   {
     "name": "pipx",
@@ -2674,8 +2834,11 @@
       ]
     },
     "verified": true,
-    "downloads": 32000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/pypa/pipx",
+      "github_stars_url": "https://api.github.com/repos/pypa/pipx",
+      "github_issues_url": "https://github.com/pypa/pipx/issues"
+    }
   },
   {
     "name": "poetry",
@@ -2721,8 +2884,11 @@
       ]
     },
     "verified": true,
-    "downloads": 58000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/python-poetry/poetry",
+      "github_stars_url": "https://api.github.com/repos/python-poetry/poetry",
+      "github_issues_url": "https://github.com/python-poetry/poetry/issues"
+    }
   },
   {
     "name": "prettier",
@@ -2768,8 +2934,11 @@
       ]
     },
     "verified": true,
-    "downloads": 95000,
-    "rating": 4.8
+    "source": {
+      "github": "https://github.com/prettier/prettier",
+      "github_stars_url": "https://api.github.com/repos/prettier/prettier",
+      "github_issues_url": "https://github.com/prettier/prettier/issues"
+    }
   },
   {
     "name": "eslint",
@@ -2814,8 +2983,11 @@
       ]
     },
     "verified": true,
-    "downloads": 110000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/eslint/eslint",
+      "github_stars_url": "https://api.github.com/repos/eslint/eslint",
+      "github_issues_url": "https://github.com/eslint/eslint/issues"
+    }
   },
   {
     "name": "tsx",
@@ -2861,8 +3033,11 @@
       ]
     },
     "verified": true,
-    "downloads": 38000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/privatenumber/tsx",
+      "github_stars_url": "https://api.github.com/repos/privatenumber/tsx",
+      "github_issues_url": "https://github.com/privatenumber/tsx/issues"
+    }
   },
   {
     "name": "npm-check-updates",
@@ -2907,8 +3082,11 @@
       ]
     },
     "verified": true,
-    "downloads": 42000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/raineorshine/npm-check-updates",
+      "github_stars_url": "https://api.github.com/repos/raineorshine/npm-check-updates",
+      "github_issues_url": "https://github.com/raineorshine/npm-check-updates/issues"
+    }
   },
   {
     "name": "lazydocker",
@@ -2950,8 +3128,11 @@
       ]
     },
     "verified": true,
-    "downloads": 28000,
-    "rating": 4.8
+    "source": {
+      "github": "https://github.com/jesseduffield/lazydocker",
+      "github_stars_url": "https://api.github.com/repos/jesseduffield/lazydocker",
+      "github_issues_url": "https://github.com/jesseduffield/lazydocker/issues"
+    }
   },
   {
     "name": "ctop",
@@ -2993,8 +3174,11 @@
       ]
     },
     "verified": true,
-    "downloads": 14000,
-    "rating": 4.5
+    "source": {
+      "github": "https://github.com/bcicen/ctop",
+      "github_stars_url": "https://api.github.com/repos/bcicen/ctop",
+      "github_issues_url": "https://github.com/bcicen/ctop/issues"
+    }
   },
   {
     "name": "k9s",
@@ -3038,8 +3222,11 @@
       ]
     },
     "verified": true,
-    "downloads": 38000,
-    "rating": 4.8
+    "source": {
+      "github": "https://github.com/derailed/k9s",
+      "github_stars_url": "https://api.github.com/repos/derailed/k9s",
+      "github_issues_url": "https://github.com/derailed/k9s/issues"
+    }
   },
   {
     "name": "dive",
@@ -3081,8 +3268,11 @@
       ]
     },
     "verified": true,
-    "downloads": 25000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/wagoodman/dive",
+      "github_stars_url": "https://api.github.com/repos/wagoodman/dive",
+      "github_issues_url": "https://github.com/wagoodman/dive/issues"
+    }
   },
   {
     "name": "act",
@@ -3127,8 +3317,11 @@
       ]
     },
     "verified": true,
-    "downloads": 22000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/nektos/act",
+      "github_stars_url": "https://api.github.com/repos/nektos/act",
+      "github_issues_url": "https://github.com/nektos/act/issues"
+    }
   },
   {
     "name": "awscli",
@@ -3174,8 +3367,11 @@
       ]
     },
     "verified": true,
-    "downloads": 92000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/aws/aws-cli",
+      "github_stars_url": "https://api.github.com/repos/aws/aws-cli",
+      "github_issues_url": "https://github.com/aws/aws-cli/issues"
+    }
   },
   {
     "name": "terraform",
@@ -3223,8 +3419,11 @@
       ]
     },
     "verified": true,
-    "downloads": 75000,
-    "rating": 4.8
+    "source": {
+      "github": "https://github.com/hashicorp/terraform",
+      "github_stars_url": "https://api.github.com/repos/hashicorp/terraform",
+      "github_issues_url": "https://github.com/hashicorp/terraform/issues"
+    }
   },
   {
     "name": "lsd",
@@ -3269,8 +3468,11 @@
       ]
     },
     "verified": true,
-    "downloads": 22000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/lsd-rs/lsd",
+      "github_stars_url": "https://api.github.com/repos/lsd-rs/lsd",
+      "github_issues_url": "https://github.com/lsd-rs/lsd/issues"
+    }
   },
   {
     "name": "broot",
@@ -3315,8 +3517,11 @@
       ]
     },
     "verified": true,
-    "downloads": 14000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/Canop/broot",
+      "github_stars_url": "https://api.github.com/repos/Canop/broot",
+      "github_issues_url": "https://github.com/Canop/broot/issues"
+    }
   },
   {
     "name": "ranger",
@@ -3359,8 +3564,11 @@
       ]
     },
     "verified": true,
-    "downloads": 25000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/ranger/ranger",
+      "github_stars_url": "https://api.github.com/repos/ranger/ranger",
+      "github_issues_url": "https://github.com/ranger/ranger/issues"
+    }
   },
   {
     "name": "nnn",
@@ -3403,8 +3611,11 @@
       ]
     },
     "verified": true,
-    "downloads": 18000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/jarun/nnn",
+      "github_stars_url": "https://api.github.com/repos/jarun/nnn",
+      "github_issues_url": "https://github.com/jarun/nnn/issues"
+    }
   },
   {
     "name": "trash-cli",
@@ -3447,8 +3658,11 @@
       ]
     },
     "verified": true,
-    "downloads": 15000,
-    "rating": 4.5
+    "source": {
+      "github": "https://github.com/sindresorhus/trash-cli",
+      "github_stars_url": "https://api.github.com/repos/sindresorhus/trash-cli",
+      "github_issues_url": "https://github.com/sindresorhus/trash-cli/issues"
+    }
   },
   {
     "name": "ngrok",
@@ -3491,8 +3705,11 @@
       ]
     },
     "verified": true,
-    "downloads": 52000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/ngrok/ngrok",
+      "github_stars_url": "https://api.github.com/repos/ngrok/ngrok",
+      "github_issues_url": "https://github.com/ngrok/ngrok/issues"
+    }
   },
   {
     "name": "mosh",
@@ -3534,8 +3751,11 @@
       ]
     },
     "verified": true,
-    "downloads": 28000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/mobile-shell/mosh",
+      "github_stars_url": "https://api.github.com/repos/mobile-shell/mosh",
+      "github_issues_url": "https://github.com/mobile-shell/mosh/issues"
+    }
   },
   {
     "name": "nmap",
@@ -3579,8 +3799,11 @@
       ]
     },
     "verified": true,
-    "downloads": 65000,
-    "rating": 4.8
+    "source": {
+      "github": "https://github.com/nmap/nmap",
+      "github_stars_url": "https://api.github.com/repos/nmap/nmap",
+      "github_issues_url": "https://github.com/nmap/nmap/issues"
+    }
   },
   {
     "name": "speedtest-cli",
@@ -3623,8 +3846,11 @@
       ]
     },
     "verified": true,
-    "downloads": 35000,
-    "rating": 4.5
+    "source": {
+      "github": "https://github.com/sivel/speedtest-cli",
+      "github_stars_url": "https://api.github.com/repos/sivel/speedtest-cli",
+      "github_issues_url": "https://github.com/sivel/speedtest-cli/issues"
+    }
   },
   {
     "name": "sd",
@@ -3672,8 +3898,11 @@
       ]
     },
     "verified": true,
-    "downloads": 11000,
-    "rating": 4.5
+    "source": {
+      "github": "https://github.com/chmln/sd",
+      "github_stars_url": "https://api.github.com/repos/chmln/sd",
+      "github_issues_url": "https://github.com/chmln/sd/issues"
+    }
   },
   {
     "name": "choose",
@@ -3720,8 +3949,11 @@
       ]
     },
     "verified": true,
-    "downloads": 5200,
-    "rating": 4.4
+    "source": {
+      "github": "https://github.com/theryangeary/choose",
+      "github_stars_url": "https://api.github.com/repos/theryangeary/choose",
+      "github_issues_url": "https://github.com/theryangeary/choose/issues"
+    }
   },
   {
     "name": "sad",
@@ -3770,8 +4002,11 @@
       ]
     },
     "verified": true,
-    "downloads": 6800,
-    "rating": 4.4
+    "source": {
+      "github": "https://github.com/ms-jpq/sad",
+      "github_stars_url": "https://api.github.com/repos/ms-jpq/sad",
+      "github_issues_url": "https://github.com/ms-jpq/sad/issues"
+    }
   },
   {
     "name": "svgo",
@@ -3816,8 +4051,11 @@
       ]
     },
     "verified": true,
-    "downloads": 28000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/svg/svgo",
+      "github_stars_url": "https://api.github.com/repos/svg/svgo",
+      "github_issues_url": "https://github.com/svg/svgo/issues"
+    }
   },
   {
     "name": "gifsicle",
@@ -3862,8 +4100,11 @@
       ]
     },
     "verified": true,
-    "downloads": 15000,
-    "rating": 4.5
+    "source": {
+      "github": "https://github.com/kohler/gifsicle",
+      "github_stars_url": "https://api.github.com/repos/kohler/gifsicle",
+      "github_issues_url": "https://github.com/kohler/gifsicle/issues"
+    }
   },
   {
     "name": "asciinema",
@@ -3906,8 +4147,11 @@
       ]
     },
     "verified": true,
-    "downloads": 22000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/asciinema/asciinema",
+      "github_stars_url": "https://api.github.com/repos/asciinema/asciinema",
+      "github_issues_url": "https://github.com/asciinema/asciinema/issues"
+    }
   },
   {
     "name": "pastel",
@@ -3955,8 +4199,11 @@
       ]
     },
     "verified": true,
-    "downloads": 7500,
-    "rating": 4.4
+    "source": {
+      "github": "https://github.com/sharkdp/pastel",
+      "github_stars_url": "https://api.github.com/repos/sharkdp/pastel",
+      "github_issues_url": "https://github.com/sharkdp/pastel/issues"
+    }
   },
   {
     "name": "cmatrix",
@@ -3996,8 +4243,11 @@
       ]
     },
     "verified": true,
-    "downloads": 18000,
-    "rating": 4.3
+    "source": {
+      "github": "https://github.com/abishekvashok/cmatrix",
+      "github_stars_url": "https://api.github.com/repos/abishekvashok/cmatrix",
+      "github_issues_url": "https://github.com/abishekvashok/cmatrix/issues"
+    }
   },
   {
     "name": "taskwarrior",
@@ -4043,8 +4293,11 @@
       ]
     },
     "verified": true,
-    "downloads": 19000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/GothenburgBitFactory/taskwarrior",
+      "github_stars_url": "https://api.github.com/repos/GothenburgBitFactory/taskwarrior",
+      "github_issues_url": "https://github.com/GothenburgBitFactory/taskwarrior/issues"
+    }
   },
   {
     "name": "watson",
@@ -4088,8 +4341,11 @@
       ]
     },
     "verified": true,
-    "downloads": 8500,
-    "rating": 4.5
+    "source": {
+      "github": "https://github.com/TailorDev/Watson",
+      "github_stars_url": "https://api.github.com/repos/TailorDev/Watson",
+      "github_issues_url": "https://github.com/TailorDev/Watson/issues"
+    }
   },
   {
     "name": "nb",
@@ -4136,8 +4392,11 @@
       ]
     },
     "verified": true,
-    "downloads": 9200,
-    "rating": 4.5
+    "source": {
+      "github": "https://github.com/xwmx/nb",
+      "github_stars_url": "https://api.github.com/repos/xwmx/nb",
+      "github_issues_url": "https://github.com/xwmx/nb/issues"
+    }
   },
   {
     "name": "calcurse",
@@ -4183,8 +4442,11 @@
       ]
     },
     "verified": true,
-    "downloads": 7000,
-    "rating": 4.4
+    "source": {
+      "github": "https://github.com/lfos/calcurse",
+      "github_stars_url": "https://api.github.com/repos/lfos/calcurse",
+      "github_issues_url": "https://github.com/lfos/calcurse/issues"
+    }
   },
   {
     "name": "glow",
@@ -4228,8 +4490,11 @@
       ]
     },
     "verified": true,
-    "downloads": 21000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/charmbracelet/glow",
+      "github_stars_url": "https://api.github.com/repos/charmbracelet/glow",
+      "github_issues_url": "https://github.com/charmbracelet/glow/issues"
+    }
   },
   {
     "name": "semantic-release",
@@ -4275,8 +4540,11 @@
       ]
     },
     "verified": true,
-    "downloads": 52000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/semantic-release/semantic-release",
+      "github_stars_url": "https://api.github.com/repos/semantic-release/semantic-release",
+      "github_issues_url": "https://github.com/semantic-release/semantic-release/issues"
+    }
   },
   {
     "name": "release-it",
@@ -4322,8 +4590,11 @@
       ]
     },
     "verified": true,
-    "downloads": 32000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/release-it/release-it",
+      "github_stars_url": "https://api.github.com/repos/release-it/release-it",
+      "github_issues_url": "https://github.com/release-it/release-it/issues"
+    }
   },
   {
     "name": "commitizen",
@@ -4366,8 +4637,11 @@
       ]
     },
     "verified": true,
-    "downloads": 24000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/commitizen-tools/commitizen",
+      "github_stars_url": "https://api.github.com/repos/commitizen-tools/commitizen",
+      "github_issues_url": "https://github.com/commitizen-tools/commitizen/issues"
+    }
   },
   {
     "name": "openssl",
@@ -4415,8 +4689,11 @@
       ]
     },
     "verified": true,
-    "downloads": 85000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/openssl/openssl",
+      "github_stars_url": "https://api.github.com/repos/openssl/openssl",
+      "github_issues_url": "https://github.com/openssl/openssl/issues"
+    }
   },
   {
     "name": "jless",
@@ -4464,8 +4741,11 @@
       ]
     },
     "verified": true,
-    "downloads": 10000,
-    "rating": 4.5
+    "source": {
+      "github": "https://github.com/PaulJuliusMartinez/jless",
+      "github_stars_url": "https://api.github.com/repos/PaulJuliusMartinez/jless",
+      "github_issues_url": "https://github.com/PaulJuliusMartinez/jless/issues"
+    }
   },
   {
     "name": "fx",
@@ -4510,8 +4790,11 @@
       ]
     },
     "verified": true,
-    "downloads": 12000,
-    "rating": 4.5
+    "source": {
+      "github": "https://github.com/antonmedv/fx",
+      "github_stars_url": "https://api.github.com/repos/antonmedv/fx",
+      "github_issues_url": "https://github.com/antonmedv/fx/issues"
+    }
   },
   {
     "name": "age",
@@ -4560,8 +4843,11 @@
       ]
     },
     "verified": true,
-    "downloads": 15000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/FiloSottile/age",
+      "github_stars_url": "https://api.github.com/repos/FiloSottile/age",
+      "github_issues_url": "https://github.com/FiloSottile/age/issues"
+    }
   },
   {
     "name": "mkcert",
@@ -4604,8 +4890,11 @@
       ]
     },
     "verified": true,
-    "downloads": 28000,
-    "rating": 4.7
+    "source": {
+      "github": "https://github.com/FiloSottile/mkcert",
+      "github_stars_url": "https://api.github.com/repos/FiloSottile/mkcert",
+      "github_issues_url": "https://github.com/FiloSottile/mkcert/issues"
+    }
   },
   {
     "name": "entr",
@@ -4650,8 +4939,11 @@
       ]
     },
     "verified": true,
-    "downloads": 18000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/eradman/entr",
+      "github_stars_url": "https://api.github.com/repos/eradman/entr",
+      "github_issues_url": "https://github.com/eradman/entr/issues"
+    }
   },
   {
     "name": "watchexec",
@@ -4697,8 +4989,11 @@
       ]
     },
     "verified": true,
-    "downloads": 16000,
-    "rating": 4.6
+    "source": {
+      "github": "https://github.com/watchexec/watchexec",
+      "github_stars_url": "https://api.github.com/repos/watchexec/watchexec",
+      "github_issues_url": "https://github.com/watchexec/watchexec/issues"
+    }
   },
   {
     "name": "pv",
@@ -4742,8 +5037,11 @@
       ]
     },
     "verified": true,
-    "downloads": 22000,
-    "rating": 4.5
+    "source": {
+      "github": "https://github.com/a-j-wood/pv",
+      "github_stars_url": "https://api.github.com/repos/a-j-wood/pv",
+      "github_issues_url": "https://github.com/a-j-wood/pv/issues"
+    }
   },
   {
     "name": "lolcat",
@@ -4785,8 +5083,11 @@
       ]
     },
     "verified": true,
-    "downloads": 20000,
-    "rating": 4.3
+    "source": {
+      "github": "https://github.com/busyloop/lolcat",
+      "github_stars_url": "https://api.github.com/repos/busyloop/lolcat",
+      "github_issues_url": "https://github.com/busyloop/lolcat/issues"
+    }
   },
   {
     "name": "fortune",
@@ -4826,7 +5127,10 @@
       ]
     },
     "verified": true,
-    "downloads": 25000,
-    "rating": 4.2
+    "source": {
+      "github": "https://github.com/shlomif/fortune-mod",
+      "github_stars_url": "https://api.github.com/repos/shlomif/fortune-mod",
+      "github_issues_url": "https://github.com/shlomif/fortune-mod/issues"
+    }
   }
 ]
