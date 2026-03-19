@@ -5,12 +5,17 @@ import os
 import tempfile
 from unittest.mock import patch
 
+import click
 from click.testing import CliRunner
 
 from clihub.cli import cli
 
 
-runner = CliRunner(mix_stderr=False)
+# Click 8.2+ removed mix_stderr (stderr is always separate)
+_runner_kwargs: dict = {}
+if click.__version__ < "8.2":
+    _runner_kwargs["mix_stderr"] = False
+runner = CliRunner(**_runner_kwargs)
 
 
 def invoke(*args, json_mode=False):
