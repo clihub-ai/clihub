@@ -4,7 +4,6 @@
     <img src="assets/readme-banner-transparent.png" alt="clihub" width="400">
   </a>
   <br>
-  <br>
   <strong>App Store is for humans. CliHub is for agents.</strong>
   <br>
   <sub>Discover, install, and manage 100+ CLI tools. Built for AI agents.</sub>
