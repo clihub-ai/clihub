@@ -4,12 +4,13 @@
     <img src="assets/readme-banner-transparent.png" alt="clihub" width="400">
   </a>
   <br>
-  <a href="https://clihub.net"><code style="color: #00ff88">clihub.net</code></a>
-  <br>
   <br>
   <strong>Discover, install, and manage 100+ CLI tools. Built for AI agents.</strong>
   <br>
   <sub>App Store is for humans. CliHub is for agents.</sub>
+  <br>
+  <br>
+  <a href="https://clihub.net"><img alt="Website" src="https://img.shields.io/badge/🌐_clihub.net-visit-00ff88?style=for-the-badge&labelColor=1a1a2e"></a>
   <br>
   <br>
   <a href="https://pypi.org/project/clihub-ai"><img alt="PyPI" src="https://img.shields.io/pypi/v/clihub-ai?style=flat-square&color=00ff88&labelColor=1a1a2e"></a>
