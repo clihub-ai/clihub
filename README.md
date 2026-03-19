@@ -19,21 +19,19 @@
   <a href="https://github.com/clihub-ai/clihub/actions"><img alt="Tests" src="https://img.shields.io/github/actions/workflow/status/clihub-ai/clihub/ci.yml?style=flat-square&labelColor=1a1a2e&label=tests"></a>
 </p>
 
-```bash
-# Agent discovers tools by searching the registry
-$ clihub search "resize images batch"
-2 tools found · sorted by relevance
-● imagemagick   Create, edit, compose digital images   ★ 4.7   58k
-● ffmpeg        The Swiss Army knife of multimedia     ★ 4.8   67k
+```python
+# pip install clihub-ai
 
-# One command to install, agent-ready immediately
-$ clihub install imagemagick
-✓ Installed imagemagick (v7.1.1) via brew
-ℹ Permissions: local-read, local-write
+import subprocess, json
 
-# The protocol is --help. That's it.
-$ magick --help
-Usage: magick [options] input output
+# Step 1: Agent reads the full tool catalog (104 tools, ~87KB)
+catalog = json.loads(subprocess.run(["clihub", "list", "--json"], capture_output=True, text=True).stdout)
+
+# Step 2: Agent picks the right tool and installs it
+subprocess.run(["clihub", "install", "jq"])
+
+# Step 3: Agent uses it — zero tokens wasted on schemas
+result = subprocess.run(["jq", ".users[] | .name", "data.json"], capture_output=True, text=True)
 ```
 
 ---
