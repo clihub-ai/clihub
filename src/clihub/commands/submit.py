@@ -87,6 +87,6 @@ def submit(ctx: click.Context, manifest: str, validate_only: bool) -> None:
     console.print("\n[bold]Add this to src/clihub/data/registry.json:[/bold]\n")
     console.print(json_str)
     console.print("\n[dim]Or submit a PR:[/dim]")
-    console.print("  1. Fork github.com/clihub-ai/clihub")
+    console.print("  1. Fork github.com/ZiYang-xie/clihub")
     console.print("  2. Add the JSON above to src/clihub/data/registry.json")
     console.print(f"  3. PR title: \"Add {tool.name} to registry\"")

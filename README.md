@@ -13,9 +13,9 @@
   <br>
   <br>
   <a href="https://pypi.org/project/clihub-ai"><img alt="PyPI" src="https://img.shields.io/pypi/v/clihub-ai?style=flat-square&color=00ff88&labelColor=1a1a2e"></a>
-  <a href="https://github.com/clihub-ai/clihub/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue?style=flat-square&labelColor=1a1a2e"></a>
+  <a href="https://github.com/ZiYang-xie/clihub/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue?style=flat-square&labelColor=1a1a2e"></a>
   <a href="https://www.python.org/downloads/"><img alt="Python 3.10+" src="https://img.shields.io/badge/python-3.10+-blue?style=flat-square&labelColor=1a1a2e"></a>
-  <a href="https://github.com/clihub-ai/clihub/actions"><img alt="Tests" src="https://img.shields.io/github/actions/workflow/status/clihub-ai/clihub/ci.yml?style=flat-square&labelColor=1a1a2e&label=tests"></a>
+  <a href="https://github.com/ZiYang-xie/clihub/actions"><img alt="Tests" src="https://img.shields.io/github/actions/workflow/status/ZiYang-xie/clihub/ci.yml?style=flat-square&labelColor=1a1a2e&label=tests"></a>
 </p>
 
 ---
@@ -184,14 +184,14 @@ agent_hints:
     - "mytool input.txt --output result.json"
 ```
 
-Then [open a PR](https://github.com/clihub-ai/clihub). 🎉
+Then [open a PR](https://github.com/ZiYang-xie/clihub). 🎉
 
 <br>
 
 ## 🧑‍💻 Development
 
 ```bash
-git clone https://github.com/clihub-ai/clihub.git
+git clone https://github.com/ZiYang-xie/clihub.git
 cd clihub
 pip install -e ".[dev]"
 pytest                      # unit tests
@@ -200,11 +200,11 @@ ruff check src/ tests/      # lint
 
 ## 🤝 Contributing
 
-The easiest way to contribute: `clihub convert <tool>`, fill in the TODOs, [open a PR](https://github.com/clihub-ai/clihub/issues).
+The easiest way to contribute: `clihub convert <tool>`, fill in the TODOs, [open a PR](https://github.com/ZiYang-xie/clihub/issues).
 
 ## 📄 License
 
-MIT &copy; [CliHub](https://clihub.net)
+MIT &copy; [Ziyang Xie](https://github.com/ZiYang-xie)
 
 ---
 
@@ -213,8 +213,8 @@ MIT &copy; [CliHub](https://clihub.net)
 If CliHub helps your agent get things done, give it a star — it helps others find it too.
 
 <p align="center">
-  <a href="https://star-history.com/#clihub-ai/clihub&Date">
-    <img src="https://api.star-history.com/svg?repos=clihub-ai/clihub&type=Date" alt="Star History Chart" width="700">
+  <a href="https://star-history.com/#ZiYang-xie/clihub&Date">
+    <img src="https://api.star-history.com/svg?repos=ZiYang-xie/clihub&type=Date" alt="Star History Chart" width="700">
   </a>
 </p>
 
@@ -223,5 +223,5 @@ If CliHub helps your agent get things done, give it a star — it helps others f
 <p align="center">
   <a href="https://clihub.net"><strong>clihub.net</strong></a> &middot;
   <a href="https://pypi.org/project/clihub-ai">PyPI</a> &middot;
-  <a href="https://github.com/clihub-ai/clihub/issues">Issues</a>
+  <a href="https://github.com/ZiYang-xie/clihub/issues">Issues</a>
 </p>
