@@ -30,15 +30,15 @@ But the user is changing. AI agents are becoming the primary way software gets d
 
 That's [CliHub](https://clihub.net). The App Store redesigned from the ground up for a world where the user is an LLM.
 
-|  | 🖥️ Traditional App Store | 🤖 CliHub |
-|---|---|---|
-| 👤 **Built for** | Humans browsing a GUI | AI agents calling a CLI |
-| 🔍 **Discovery** | Screenshots, ratings, reviews | `clihub list --json` — structured metadata |
-| 📦 **Install** | Click a button | `clihub install jq` — one command |
-| 🧠 **Intelligence** | Store ranks and recommends | Agent reads catalog and decides |
-| 💸 **Context cost** | N/A | **0 tokens** until `--help` |
-| 🔗 **Composability** | Apps are siloed | Unix pipes: `curl \| jq \| grep` |
-| 🌍 **Ecosystem** | Walled garden | Open — thousands of CLI tools, built over 50 years |
+|  | 🖥️ Traditional App Store | 🔌 MCP | 🤖 CliHub |
+|---|---|---|---|
+| 👤 **Built for** | Humans browsing a GUI | Agents via JSON-RPC | AI agents calling a CLI |
+| 🔍 **Discovery** | Screenshots, ratings, reviews | Schemas dumped into every prompt | `clihub list --json` — on demand |
+| 📦 **Install** | Click a button | Configure server + restart | `clihub install jq` — one command |
+| 🧠 **Intelligence** | Store ranks and recommends | Agent reads schema | Agent reads catalog and decides |
+| 💸 **Context cost** | N/A | 8,000+ tokens per server | **0 tokens** until `--help` |
+| 🔗 **Composability** | Apps are siloed | One tool per call | Unix pipes: `curl \| jq \| grep` |
+| 🌍 **Ecosystem** | Walled garden | Hundreds of servers | Open — thousands of tools, 50 years |
 
 > 💡 LLMs are already trained on `jq`, `ffmpeg`, `curl`, and `grep`. They don't need a new schema — they need a way to **find** and **install** the right tool. That's all CliHub does.
 
