@@ -30,7 +30,7 @@ But the user is changing. AI agents are becoming the primary way software gets d
 
 That's [CliHub](https://clihub.net). The App Store redesigned from the ground up for a world where the user is an LLM.
 
-|  | 🖥️ Traditional App Store | 🔌 MCP | 🤖 CliHub |
+|  | 🖥️ App Store | 🔌 MCP | 🤖 CliHub |
 |---|---|---|---|
 | 👤 **Built for** | Humans browsing a GUI | Agents via JSON-RPC | AI agents calling a CLI |
 | 🔍 **Discovery** | Screenshots, ratings, reviews | Schemas dumped into every prompt | `clihub list --json` — on demand |
