@@ -13,6 +13,14 @@
   <a href="https://github.com/clihub-ai/clihub/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue?style=flat-square&labelColor=1a1a2e"></a>
   <a href="https://www.python.org/downloads/"><img alt="Python 3.10+" src="https://img.shields.io/badge/python-3.10+-blue?style=flat-square&labelColor=1a1a2e"></a>
   <a href="https://github.com/clihub-ai/clihub/actions"><img alt="Tests" src="https://img.shields.io/github/actions/workflow/status/clihub-ai/clihub/ci.yml?style=flat-square&labelColor=1a1a2e&label=tests"></a>
+  <br>
+  <br>
+  <a href="https://clihub.net">🌐 Website</a> &middot;
+  <a href="#-the-insight">The Insight</a> &middot;
+  <a href="#-get-started">Get Started</a> &middot;
+  <a href="#-agent-integration">Agent Integration</a> &middot;
+  <a href="#-tool-catalog">Tool Catalog</a> &middot;
+  <a href="#-add-your-tool">Add Your Tool</a>
 </p>
 
 ```python
@@ -32,32 +40,27 @@ result = subprocess.run(["jq", ".users[] | .name", "data.json"], capture_output=
 
 ---
 
-<p align="center">
-  <a href="https://clihub.net">🌐 Website</a> &middot;
-  <a href="#-the-problem">The Problem</a> &middot;
-  <a href="#-get-started">Get Started</a> &middot;
-  <a href="#-agent-integration">Agent Integration</a> &middot;
-  <a href="#-tool-catalog">Tool Catalog</a> &middot;
-  <a href="#-add-your-tool">Add Your Tool</a>
-</p>
+## 💡 The Insight
 
-## 🤖 The Problem
+App stores were built for humans. **Buttons, screenshots, star ratings** — everything optimized for eyes and thumbs. That made sense when the user was a person browsing on a screen.
 
-Your AI agent needs to resize an image. It knows *how* — it's seen millions of shell examples in training. But it doesn't know what's installed on this machine, or what tool to use.
+But the user is changing. AI agents are becoming the primary way software gets discovered, installed, and orchestrated. And agents don't browse — they **query**. They don't click — they **pipe**. They don't read screenshots — they read **structured metadata**.
 
-**[CliHub](https://clihub.net) is the missing piece.** A curated registry of 104 CLI tools with structured metadata — descriptions, install methods, and agent-readable hints. Your agent queries the registry, picks the right tool, installs it, and runs it. Two commands. Zero config.
+**The App Store needed a new interface.** Not a GUI — a CLI. Not for humans — for agents.
 
-### Why CLI tools over MCP?
+That's [CliHub](https://clihub.net). The App Store redesigned from the ground up for a world where the user is an LLM.
 
-MCP servers inject thousands of tokens into every prompt — even when unused. CLI tools cost **zero tokens** until the agent actually runs one. And LLMs already know how to use `jq`, `ffmpeg`, `curl`, and `grep` — no schema needed.
-
-|  | MCP Server | CLI via CliHub |
+|  | 🖥️ Traditional App Store | 🤖 CliHub |
 |---|---|---|
-| 💸 **Idle cost** | 8,000+ tokens per prompt | **0 tokens** |
-| 🔍 **Discovery** | Schemas dumped into every prompt | On demand via `clihub list --json` |
-| 🧠 **LLM familiarity** | Must learn custom schemas | Already trained on shell commands |
-| 🔗 **Composability** | One tool per call | Unix pipes: `curl \| jq \| grep` |
-| 🌍 **Ecosystem** | Hundreds of servers | **Thousands of tools**, built over 50 years |
+| 👤 **Built for** | Humans browsing a GUI | AI agents calling a CLI |
+| 🔍 **Discovery** | Screenshots, ratings, reviews | `clihub list --json` — structured metadata |
+| 📦 **Install** | Click a button | `clihub install jq` — one command |
+| 🧠 **Intelligence** | Store ranks and recommends | Agent reads catalog and decides |
+| 💸 **Context cost** | N/A | **0 tokens** until `--help` |
+| 🔗 **Composability** | Apps are siloed | Unix pipes: `curl \| jq \| grep` |
+| 🌍 **Ecosystem** | Walled garden | Open — thousands of CLI tools, built over 50 years |
+
+> 💡 LLMs are already trained on `jq`, `ffmpeg`, `curl`, and `grep`. They don't need a new schema — they need a way to **find** and **install** the right tool. That's all CliHub does.
 
 <br>
 
