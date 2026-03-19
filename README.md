@@ -4,18 +4,18 @@
     <img src="assets/readme-banner-transparent.png" alt="clihub" width="400">
   </a>
   <br>
+  <a href="https://clihub.net"><code style="color: #00ff88">clihub.net</code></a>
+  <br>
   <br>
   <strong>Discover, install, and manage 100+ CLI tools. Built for AI agents.</strong>
   <br>
   <br>
-  <a href="https://clihub.net"><img alt="Website" src="https://img.shields.io/badge/clihub.net-00ff88?style=flat-square&labelColor=1a1a2e&logo=safari&logoColor=white"></a>
   <a href="https://pypi.org/project/clihub-ai"><img alt="PyPI" src="https://img.shields.io/pypi/v/clihub-ai?style=flat-square&color=00ff88&labelColor=1a1a2e"></a>
   <a href="https://github.com/clihub-ai/clihub/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue?style=flat-square&labelColor=1a1a2e"></a>
   <a href="https://www.python.org/downloads/"><img alt="Python 3.10+" src="https://img.shields.io/badge/python-3.10+-blue?style=flat-square&labelColor=1a1a2e"></a>
   <a href="https://github.com/clihub-ai/clihub/actions"><img alt="Tests" src="https://img.shields.io/github/actions/workflow/status/clihub-ai/clihub/ci.yml?style=flat-square&labelColor=1a1a2e&label=tests"></a>
   <br>
   <br>
-  <a href="https://clihub.net">🌐 Website</a> &middot;
   <a href="#-the-insight">The Insight</a> &middot;
   <a href="#-get-started">Get Started</a> &middot;
   <a href="#-agent-integration">Agent Integration</a> &middot;
