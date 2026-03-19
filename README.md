@@ -9,6 +9,8 @@
   <br>
   <strong>Discover, install, and manage 100+ CLI tools. Built for AI agents.</strong>
   <br>
+  <sub>App Store is for humans. CliHub is for agents.</sub>
+  <br>
   <br>
   <a href="https://pypi.org/project/clihub-ai"><img alt="PyPI" src="https://img.shields.io/pypi/v/clihub-ai?style=flat-square&color=00ff88&labelColor=1a1a2e"></a>
   <a href="https://github.com/clihub-ai/clihub/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue?style=flat-square&labelColor=1a1a2e"></a>
