@@ -228,6 +228,18 @@ MIT &copy; [CliHub](https://clihub.net)
 
 ---
 
+## ⭐ Star History
+
+If CliHub helps your agent get things done, give it a star — it helps others find it too.
+
+<p align="center">
+  <a href="https://star-history.com/#clihub-ai/clihub&Date">
+    <img src="https://api.star-history.com/svg?repos=clihub-ai/clihub&type=Date" alt="Star History Chart" width="700">
+  </a>
+</p>
+
+---
+
 <p align="center">
   <a href="https://clihub.net"><strong>clihub.net</strong></a> &middot;
   <a href="https://pypi.org/project/clihub-ai">PyPI</a> &middot;
