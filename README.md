@@ -19,21 +19,6 @@
   <a href="https://github.com/clihub-ai/clihub/actions"><img alt="Tests" src="https://img.shields.io/github/actions/workflow/status/clihub-ai/clihub/ci.yml?style=flat-square&labelColor=1a1a2e&label=tests"></a>
 </p>
 
-```python
-# pip install clihub-ai
-
-import subprocess, json
-
-# Step 1: Agent reads the full tool catalog (104 tools, ~87KB)
-catalog = json.loads(subprocess.run(["clihub", "list", "--json"], capture_output=True, text=True).stdout)
-
-# Step 2: Agent picks the right tool and installs it
-subprocess.run(["clihub", "install", "jq"])
-
-# Step 3: Agent uses it — zero tokens wasted on schemas
-result = subprocess.run(["jq", ".users[] | .name", "data.json"], capture_output=True, text=True)
-```
-
 ```bash
 # Agent discovers tools by searching the registry
 $ clihub search "resize images batch"
