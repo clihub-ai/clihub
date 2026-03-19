@@ -2,7 +2,9 @@ import click
 
 from clihub.registry.local import get_tool
 from clihub.installer.resolver import resolve_installer
-from clihub.output import print_success, print_error, print_warning, console, json_option
+import json as json_lib
+
+from clihub.output import print_success, print_error, console, is_json, json_option
 
 
 @click.command()
@@ -41,7 +43,14 @@ def install(ctx: click.Context, tool_name: str, via: str | None) -> None:
 
     binary = tool.install.binary_name or tool.name
     if installer.check_installed(binary):
-        print_warning(f"{tool.name} is already installed.", ctx)
+        if is_json(ctx):
+            click.echo(json_lib.dumps({
+                "status": "success",
+                "message": f"{tool.name} is already installed.",
+                "already_installed": True,
+            }))
+        else:
+            console.print(f"[green]✓[/green] {tool.name} is already installed.")
         return
 
     console.print(

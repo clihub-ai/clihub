@@ -34,6 +34,9 @@ def doctor(ctx: click.Context) -> None:
 
     \b
     Checks: Python, pip, npm, brew, cargo, docker, git, config dir.
+
+    \b
+    Exit codes: 0 = success (always).
     """
     results: list[dict] = []
     for label, check_fn, detail in CHECKS:

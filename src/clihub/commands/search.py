@@ -23,6 +23,9 @@ def search(ctx: click.Context, query: str, category: str | None, limit: int) -> 
       clihub search jq --json
       clihub search resize --category media
       clihub search pdf --limit 5
+
+    \b
+    Exit codes: 0 = found results, 2 = no results.
     """
     results = search_tools(query, category=category, limit=limit)
 

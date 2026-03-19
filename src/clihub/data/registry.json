@@ -7,10 +7,25 @@
     "homepage": "https://jqlang.github.io/jq/",
     "repository": "https://github.com/jqlang/jq",
     "license": "MIT",
-    "categories": ["data", "json"],
-    "tags": ["json", "filter", "transform", "query", "parse"],
-    "install": {"method": "brew", "package": "jq", "binary_name": "jq"},
-    "permissions": ["local-read"],
+    "categories": [
+      "data",
+      "json"
+    ],
+    "tags": [
+      "json",
+      "filter",
+      "transform",
+      "query",
+      "parse"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "jq",
+      "binary_name": "jq"
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Parse, filter, or transform JSON data from files or piped input",
       "example_usage": [
@@ -18,8 +33,13 @@
         "jq -r '.items[].name' inventory.json",
         "curl -s https://api.example.com/data | jq '.results | length'"
       ],
-      "input_formats": ["json"],
-      "output_formats": ["json", "text"]
+      "input_formats": [
+        "json"
+      ],
+      "output_formats": [
+        "json",
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 89200,
@@ -33,10 +53,26 @@
     "homepage": "https://mikefarah.gitbook.io/yq/",
     "repository": "https://github.com/mikefarah/yq",
     "license": "MIT",
-    "categories": ["data", "yaml"],
-    "tags": ["yaml", "json", "xml", "csv", "toml", "transform"],
-    "install": {"method": "brew", "package": "yq", "binary_name": "yq"},
-    "permissions": ["local-read"],
+    "categories": [
+      "data",
+      "yaml"
+    ],
+    "tags": [
+      "yaml",
+      "json",
+      "xml",
+      "csv",
+      "toml",
+      "transform"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "yq",
+      "binary_name": "yq"
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Parse, filter, or transform YAML, XML, CSV, or TOML files",
       "example_usage": [
@@ -44,8 +80,20 @@
         "yq -i '.version = \"2.0\"' config.yaml",
         "yq -o=json config.yaml"
       ],
-      "input_formats": ["yaml", "json", "xml", "csv", "toml"],
-      "output_formats": ["yaml", "json", "xml", "csv", "toml"]
+      "input_formats": [
+        "yaml",
+        "json",
+        "xml",
+        "csv",
+        "toml"
+      ],
+      "output_formats": [
+        "yaml",
+        "json",
+        "xml",
+        "csv",
+        "toml"
+      ]
     },
     "verified": true,
     "downloads": 34500,
@@ -59,10 +107,25 @@
     "homepage": "https://csvkit.readthedocs.io/",
     "repository": "https://github.com/wireservice/csvkit",
     "license": "MIT",
-    "categories": ["data", "csv"],
-    "tags": ["csv", "data", "convert", "sql", "excel"],
-    "install": {"method": "pip", "package": "csvkit", "binary_name": "csvlook"},
-    "permissions": ["local-read"],
+    "categories": [
+      "data",
+      "csv"
+    ],
+    "tags": [
+      "csv",
+      "data",
+      "convert",
+      "sql",
+      "excel"
+    ],
+    "install": {
+      "method": "pip",
+      "package": "csvkit",
+      "binary_name": "csvlook"
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Convert, analyze, or query CSV files from the command line",
       "example_usage": [
@@ -70,8 +133,17 @@
         "csvstat data.csv",
         "csvsql --query 'SELECT name, COUNT(*) FROM data GROUP BY name' data.csv"
       ],
-      "input_formats": ["csv", "xls", "xlsx", "json"],
-      "output_formats": ["csv", "json", "text"]
+      "input_formats": [
+        "csv",
+        "xls",
+        "xlsx",
+        "json"
+      ],
+      "output_formats": [
+        "csv",
+        "json",
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 18300,
@@ -85,10 +157,25 @@
     "homepage": "https://github.com/BurntSushi/xsv",
     "repository": "https://github.com/BurntSushi/xsv",
     "license": "MIT",
-    "categories": ["data", "csv"],
-    "tags": ["csv", "fast", "search", "statistics", "rust"],
-    "install": {"method": "cargo", "package": "xsv", "binary_name": "xsv"},
-    "permissions": ["local-read"],
+    "categories": [
+      "data",
+      "csv"
+    ],
+    "tags": [
+      "csv",
+      "fast",
+      "search",
+      "statistics",
+      "rust"
+    ],
+    "install": {
+      "method": "cargo",
+      "package": "xsv",
+      "binary_name": "xsv"
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "High-performance CSV processing: search, slice, join, aggregate",
       "example_usage": [
@@ -96,8 +183,13 @@
         "xsv search -s name 'John' data.csv",
         "xsv select name,age data.csv | xsv sort -s age"
       ],
-      "input_formats": ["csv"],
-      "output_formats": ["csv", "text"]
+      "input_formats": [
+        "csv"
+      ],
+      "output_formats": [
+        "csv",
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 15200,
@@ -111,10 +203,28 @@
     "homepage": "https://daseldocs.tomwright.me/",
     "repository": "https://github.com/TomWright/dasel",
     "license": "MIT",
-    "categories": ["data", "utilities"],
-    "tags": ["json", "yaml", "toml", "xml", "csv", "query", "modify"],
-    "install": {"method": "brew", "package": "dasel", "binary_name": "dasel"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "data",
+      "utilities"
+    ],
+    "tags": [
+      "json",
+      "yaml",
+      "toml",
+      "xml",
+      "csv",
+      "query",
+      "modify"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "dasel",
+      "binary_name": "dasel"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Query or modify structured data files in-place across multiple formats",
       "example_usage": [
@@ -122,8 +232,20 @@
         "dasel put -f config.yaml '.port' -v 8080",
         "echo '{\"name\": \"Tom\"}' | dasel -r json '.name'"
       ],
-      "input_formats": ["json", "yaml", "toml", "xml", "csv"],
-      "output_formats": ["json", "yaml", "toml", "xml", "csv"]
+      "input_formats": [
+        "json",
+        "yaml",
+        "toml",
+        "xml",
+        "csv"
+      ],
+      "output_formats": [
+        "json",
+        "yaml",
+        "toml",
+        "xml",
+        "csv"
+      ]
     },
     "verified": true,
     "downloads": 8900,
@@ -137,10 +259,24 @@
     "homepage": "https://github.com/tomnomnom/gron",
     "repository": "https://github.com/tomnomnom/gron",
     "license": "MIT",
-    "categories": ["data", "json"],
-    "tags": ["json", "grep", "flatten", "search"],
-    "install": {"method": "brew", "package": "gron", "binary_name": "gron"},
-    "permissions": ["local-read"],
+    "categories": [
+      "data",
+      "json"
+    ],
+    "tags": [
+      "json",
+      "grep",
+      "flatten",
+      "search"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "gron",
+      "binary_name": "gron"
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Make JSON greppable by flattening it into assignment statements",
       "example_usage": [
@@ -148,8 +284,13 @@
         "curl -s https://api.example.com | gron | grep 'name'",
         "gron data.json | grep 'users' | gron --ungron"
       ],
-      "input_formats": ["json"],
-      "output_formats": ["text", "json"]
+      "input_formats": [
+        "json"
+      ],
+      "output_formats": [
+        "text",
+        "json"
+      ]
     },
     "verified": true,
     "downloads": 12100,
@@ -163,10 +304,29 @@
     "homepage": "https://github.com/BurntSushi/ripgrep",
     "repository": "https://github.com/BurntSushi/ripgrep",
     "license": "MIT",
-    "categories": ["search", "dev-tools"],
-    "tags": ["search", "grep", "regex", "fast", "code", "rust"],
-    "install": {"method": "brew", "package": "ripgrep", "binary_name": "rg"},
-    "permissions": ["local-read"],
+    "categories": [
+      "search",
+      "dev-tools"
+    ],
+    "tags": [
+      "search",
+      "grep",
+      "regex",
+      "fast",
+      "code",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "ripgrep",
+      "binary_name": "rg",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Search file contents recursively with regex, much faster than grep",
       "example_usage": [
@@ -174,8 +334,13 @@
         "rg 'function\\s+\\w+' --type js -l",
         "rg -i 'error' /var/log/ --glob '*.log'"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text", "json"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text",
+        "json"
+      ]
     },
     "verified": true,
     "downloads": 52000,
@@ -189,15 +354,40 @@
     "homepage": "https://github.com/sharkdp/fd",
     "repository": "https://github.com/sharkdp/fd",
     "license": "MIT",
-    "categories": ["search", "files"],
-    "tags": ["find", "search", "files", "fast", "regex", "rust"],
-    "install": {"method": "brew", "package": "fd", "binary_name": "fd"},
-    "permissions": ["local-read"],
+    "categories": [
+      "search",
+      "files"
+    ],
+    "tags": [
+      "find",
+      "search",
+      "files",
+      "fast",
+      "regex",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "fd",
+      "binary_name": "fd",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Find files and directories by name or pattern, faster than find",
-      "example_usage": ["fd '\\.py$'", "fd -e json -e yaml config", "fd -t d node_modules --exec rm -rf {}"],
+      "example_usage": [
+        "fd '\\.py$'",
+        "fd -e json -e yaml config",
+        "fd -t d node_modules --exec rm -rf {}"
+      ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 41000,
@@ -211,15 +401,37 @@
     "homepage": "https://junegunn.github.io/fzf/",
     "repository": "https://github.com/junegunn/fzf",
     "license": "MIT",
-    "categories": ["search", "productivity"],
-    "tags": ["fuzzy", "filter", "interactive", "search"],
-    "install": {"method": "brew", "package": "fzf", "binary_name": "fzf"},
-    "permissions": ["local-read"],
+    "categories": [
+      "search",
+      "productivity"
+    ],
+    "tags": [
+      "fuzzy",
+      "filter",
+      "interactive",
+      "search"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "fzf",
+      "binary_name": "fzf"
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Interactively filter and select from any list of items",
-      "example_usage": ["find . -type f | fzf", "git branch | fzf | xargs git checkout", "cat ~/.bash_history | fzf"],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "example_usage": [
+        "find . -type f | fzf",
+        "git branch | fzf | xargs git checkout",
+        "cat ~/.bash_history | fzf"
+      ],
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 65000,
@@ -233,15 +445,41 @@
     "homepage": "https://github.com/sharkdp/bat",
     "repository": "https://github.com/sharkdp/bat",
     "license": "Apache-2.0",
-    "categories": ["files", "dev-tools"],
-    "tags": ["cat", "syntax-highlighting", "git", "pager", "rust"],
-    "install": {"method": "brew", "package": "bat", "binary_name": "bat"},
-    "permissions": ["local-read"],
+    "categories": [
+      "files",
+      "dev-tools"
+    ],
+    "tags": [
+      "cat",
+      "syntax-highlighting",
+      "git",
+      "pager",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "bat",
+      "binary_name": "bat",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Display file contents with syntax highlighting",
-      "example_usage": ["bat src/main.py", "bat --diff file1.py file2.py", "bat -l json data.json"],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "example_usage": [
+        "bat src/main.py",
+        "bat --diff file1.py file2.py",
+        "bat -l json data.json"
+      ],
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 48000,
@@ -255,15 +493,40 @@
     "homepage": "https://eza.rocks/",
     "repository": "https://github.com/eza-community/eza",
     "license": "MIT",
-    "categories": ["files", "productivity"],
-    "tags": ["ls", "files", "tree", "git", "icons", "rust"],
-    "install": {"method": "brew", "package": "eza", "binary_name": "eza"},
-    "permissions": ["local-read"],
+    "categories": [
+      "files",
+      "productivity"
+    ],
+    "tags": [
+      "ls",
+      "files",
+      "tree",
+      "git",
+      "icons",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "eza",
+      "binary_name": "eza",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "List files with details, icons, git status, and tree view",
-      "example_usage": ["eza --long --git", "eza --tree --level=2", "eza -la --icons"],
+      "example_usage": [
+        "eza --long --git",
+        "eza --tree --level=2",
+        "eza -la --icons"
+      ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 29000,
@@ -277,15 +540,35 @@
     "homepage": "https://oldmanprogrammer.net/source.php?dir=projects/tree",
     "repository": "https://github.com/Old-Man-Programmer/tree",
     "license": "GPL-2.0",
-    "categories": ["files", "utilities"],
-    "tags": ["directory", "tree", "files", "structure"],
-    "install": {"method": "brew", "package": "tree", "binary_name": "tree"},
-    "permissions": ["local-read"],
+    "categories": [
+      "files",
+      "utilities"
+    ],
+    "tags": [
+      "directory",
+      "tree",
+      "files",
+      "structure"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "tree",
+      "binary_name": "tree"
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Visualize directory structure as an indented tree",
-      "example_usage": ["tree -L 2", "tree -I 'node_modules|.git'", "tree --dirsfirst -a"],
+      "example_usage": [
+        "tree -L 2",
+        "tree -I 'node_modules|.git'",
+        "tree --dirsfirst -a"
+      ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 55000,
@@ -299,15 +582,36 @@
     "homepage": "https://dev.yorhel.nl/ncdu",
     "repository": "https://code.blicky.net/yorhel/ncdu",
     "license": "MIT",
-    "categories": ["system", "files"],
-    "tags": ["disk", "usage", "space", "ncurses", "interactive"],
-    "install": {"method": "brew", "package": "ncdu", "binary_name": "ncdu"},
-    "permissions": ["local-read"],
+    "categories": [
+      "system",
+      "files"
+    ],
+    "tags": [
+      "disk",
+      "usage",
+      "space",
+      "ncurses",
+      "interactive"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "ncdu",
+      "binary_name": "ncdu"
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Analyze disk usage interactively to find large files and directories",
-      "example_usage": ["ncdu /", "ncdu --exclude .git .", "ncdu -o report.json . && ncdu -f report.json"],
+      "example_usage": [
+        "ncdu /",
+        "ncdu --exclude .git .",
+        "ncdu -o report.json . && ncdu -f report.json"
+      ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 31000,
@@ -321,15 +625,39 @@
     "homepage": "https://github.com/bootandy/dust",
     "repository": "https://github.com/bootandy/dust",
     "license": "Apache-2.0",
-    "categories": ["system", "files"],
-    "tags": ["disk", "usage", "du", "visualization", "rust"],
-    "install": {"method": "brew", "package": "dust", "binary_name": "dust"},
-    "permissions": ["local-read"],
+    "categories": [
+      "system",
+      "files"
+    ],
+    "tags": [
+      "disk",
+      "usage",
+      "du",
+      "visualization",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "dust",
+      "binary_name": "dust",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Quickly see which directories use the most disk space with visual bars",
-      "example_usage": ["dust", "dust -n 20 /home", "dust -d 2 ."],
+      "example_usage": [
+        "dust",
+        "dust -n 20 /home",
+        "dust -d 2 ."
+      ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 14500,
@@ -343,10 +671,25 @@
     "homepage": "https://httpie.io/",
     "repository": "https://github.com/httpie/cli",
     "license": "BSD-3-Clause",
-    "categories": ["network", "api"],
-    "tags": ["http", "api", "rest", "curl", "json"],
-    "install": {"method": "pip", "package": "httpie", "binary_name": "http"},
-    "permissions": ["network"],
+    "categories": [
+      "network",
+      "api"
+    ],
+    "tags": [
+      "http",
+      "api",
+      "rest",
+      "curl",
+      "json"
+    ],
+    "install": {
+      "method": "pip",
+      "package": "httpie",
+      "binary_name": "http"
+    },
+    "permissions": [
+      "network"
+    ],
     "agent_hints": {
       "when_to_use": "Make HTTP requests with a human-friendly syntax, good for API testing",
       "example_usage": [
@@ -354,8 +697,14 @@
         "http POST https://api.example.com/users name=John age:=30",
         "http --json https://api.example.com/data"
       ],
-      "input_formats": ["json", "form"],
-      "output_formats": ["json", "text"]
+      "input_formats": [
+        "json",
+        "form"
+      ],
+      "output_formats": [
+        "json",
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 38000,
@@ -369,10 +718,25 @@
     "homepage": "https://curl.se/",
     "repository": "https://github.com/curl/curl",
     "license": "MIT",
-    "categories": ["network", "utilities"],
-    "tags": ["http", "download", "upload", "api", "transfer"],
-    "install": {"method": "brew", "package": "curl", "binary_name": "curl"},
-    "permissions": ["network"],
+    "categories": [
+      "network",
+      "utilities"
+    ],
+    "tags": [
+      "http",
+      "download",
+      "upload",
+      "api",
+      "transfer"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "curl",
+      "binary_name": "curl"
+    },
+    "permissions": [
+      "network"
+    ],
     "agent_hints": {
       "when_to_use": "Transfer data to/from URLs, make HTTP requests, download files",
       "example_usage": [
@@ -381,7 +745,10 @@
         "curl -L -o file.zip https://example.com/file.zip"
       ],
       "input_formats": [],
-      "output_formats": ["text", "binary"]
+      "output_formats": [
+        "text",
+        "binary"
+      ]
     },
     "verified": true,
     "downloads": 120000,
@@ -395,15 +762,37 @@
     "homepage": "https://www.gnu.org/software/wget/",
     "repository": "https://git.savannah.gnu.org/git/wget.git",
     "license": "GPL-3.0",
-    "categories": ["network", "utilities"],
-    "tags": ["download", "http", "ftp", "recursive", "mirror"],
-    "install": {"method": "brew", "package": "wget", "binary_name": "wget"},
-    "permissions": ["network", "local-write"],
+    "categories": [
+      "network",
+      "utilities"
+    ],
+    "tags": [
+      "download",
+      "http",
+      "ftp",
+      "recursive",
+      "mirror"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "wget",
+      "binary_name": "wget"
+    },
+    "permissions": [
+      "network",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Download files from the web, mirror websites, resume interrupted downloads",
-      "example_usage": ["wget https://example.com/file.tar.gz", "wget -r -l 2 https://example.com/docs/", "wget -c https://example.com/large-file.iso"],
+      "example_usage": [
+        "wget https://example.com/file.tar.gz",
+        "wget -r -l 2 https://example.com/docs/",
+        "wget -c https://example.com/large-file.iso"
+      ],
       "input_formats": [],
-      "output_formats": ["binary"]
+      "output_formats": [
+        "binary"
+      ]
     },
     "verified": true,
     "downloads": 85000,
@@ -417,15 +806,40 @@
     "homepage": "https://aria2.github.io/",
     "repository": "https://github.com/aria2/aria2",
     "license": "GPL-2.0",
-    "categories": ["network", "utilities"],
-    "tags": ["download", "torrent", "multi-source", "parallel", "fast"],
-    "install": {"method": "brew", "package": "aria2", "binary_name": "aria2c"},
-    "permissions": ["network", "local-write"],
+    "categories": [
+      "network",
+      "utilities"
+    ],
+    "tags": [
+      "download",
+      "torrent",
+      "multi-source",
+      "parallel",
+      "fast"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "aria2",
+      "binary_name": "aria2c"
+    },
+    "permissions": [
+      "network",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Download files with multiple connections for faster speed, or download torrents",
-      "example_usage": ["aria2c -x 16 https://example.com/large-file.iso", "aria2c -i urls.txt", "aria2c --bt-metadata-only --bt-save-metadata file.torrent"],
-      "input_formats": ["text", "torrent"],
-      "output_formats": ["binary"]
+      "example_usage": [
+        "aria2c -x 16 https://example.com/large-file.iso",
+        "aria2c -i urls.txt",
+        "aria2c --bt-metadata-only --bt-save-metadata file.torrent"
+      ],
+      "input_formats": [
+        "text",
+        "torrent"
+      ],
+      "output_formats": [
+        "binary"
+      ]
     },
     "verified": true,
     "downloads": 22000,
@@ -439,15 +853,37 @@
     "homepage": "https://dns.lookup.dog/",
     "repository": "https://github.com/ogham/dog",
     "license": "EUPL-1.2",
-    "categories": ["network", "dns"],
-    "tags": ["dns", "dig", "lookup", "doh", "rust"],
-    "install": {"method": "brew", "package": "dog", "binary_name": "dog"},
-    "permissions": ["network"],
+    "categories": [
+      "network",
+      "dns"
+    ],
+    "tags": [
+      "dns",
+      "dig",
+      "lookup",
+      "doh",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "dog",
+      "binary_name": "dog"
+    },
+    "permissions": [
+      "network"
+    ],
     "agent_hints": {
       "when_to_use": "Look up DNS records with colorful output and DoH/DoT support",
-      "example_usage": ["dog example.com A", "dog example.com MX AAAA", "dog example.com --https @cloudflare"],
+      "example_usage": [
+        "dog example.com A",
+        "dog example.com MX AAAA",
+        "dog example.com --https @cloudflare"
+      ],
       "input_formats": [],
-      "output_formats": ["text", "json"]
+      "output_formats": [
+        "text",
+        "json"
+      ]
     },
     "verified": true,
     "downloads": 9500,
@@ -461,15 +897,39 @@
     "homepage": "https://cli.github.com/",
     "repository": "https://github.com/cli/cli",
     "license": "MIT",
-    "categories": ["dev-tools", "git"],
-    "tags": ["github", "git", "pr", "issues", "releases", "ci"],
-    "install": {"method": "brew", "package": "gh", "binary_name": "gh"},
-    "permissions": ["network", "local-read"],
+    "categories": [
+      "dev-tools",
+      "git"
+    ],
+    "tags": [
+      "github",
+      "git",
+      "pr",
+      "issues",
+      "releases",
+      "ci"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "gh",
+      "binary_name": "gh"
+    },
+    "permissions": [
+      "network",
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Interact with GitHub: create PRs, manage issues, view CI status, manage releases",
-      "example_usage": ["gh pr create --title 'Fix bug' --body 'Description'", "gh issue list --label bug", "gh run list --limit 5"],
+      "example_usage": [
+        "gh pr create --title 'Fix bug' --body 'Description'",
+        "gh issue list --label bug",
+        "gh run list --limit 5"
+      ],
       "input_formats": [],
-      "output_formats": ["text", "json"]
+      "output_formats": [
+        "text",
+        "json"
+      ]
     },
     "verified": true,
     "downloads": 72000,
@@ -483,15 +943,37 @@
     "homepage": "https://github.com/jesseduffield/lazygit",
     "repository": "https://github.com/jesseduffield/lazygit",
     "license": "MIT",
-    "categories": ["dev-tools", "git"],
-    "tags": ["git", "tui", "interactive", "staging", "rebase"],
-    "install": {"method": "brew", "package": "lazygit", "binary_name": "lazygit"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "dev-tools",
+      "git"
+    ],
+    "tags": [
+      "git",
+      "tui",
+      "interactive",
+      "staging",
+      "rebase"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "lazygit",
+      "binary_name": "lazygit"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Interactive terminal UI for git operations like staging, committing, rebasing",
-      "example_usage": ["lazygit", "lazygit -p /path/to/repo", "lazygit log"],
+      "example_usage": [
+        "lazygit",
+        "lazygit -p /path/to/repo",
+        "lazygit log"
+      ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 35000,
@@ -505,15 +987,41 @@
     "homepage": "https://dandavison.github.io/delta/",
     "repository": "https://github.com/dandavison/delta",
     "license": "MIT",
-    "categories": ["dev-tools", "git"],
-    "tags": ["git", "diff", "pager", "syntax-highlighting", "rust"],
-    "install": {"method": "brew", "package": "git-delta", "binary_name": "delta"},
-    "permissions": ["local-read"],
+    "categories": [
+      "dev-tools",
+      "git"
+    ],
+    "tags": [
+      "git",
+      "diff",
+      "pager",
+      "syntax-highlighting",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "git-delta",
+      "binary_name": "delta",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "View git diffs with syntax highlighting and side-by-side comparison",
-      "example_usage": ["git diff | delta", "delta file1.py file2.py", "git log -p | delta"],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "example_usage": [
+        "git diff | delta",
+        "delta file1.py file2.py",
+        "git log -p | delta"
+      ],
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 27000,
@@ -527,15 +1035,40 @@
     "homepage": "https://github.com/XAMPPRocky/tokei",
     "repository": "https://github.com/XAMPPRocky/tokei",
     "license": "Apache-2.0",
-    "categories": ["dev-tools", "utilities"],
-    "tags": ["loc", "lines-of-code", "statistics", "languages", "rust"],
-    "install": {"method": "brew", "package": "tokei", "binary_name": "tokei"},
-    "permissions": ["local-read"],
+    "categories": [
+      "dev-tools",
+      "utilities"
+    ],
+    "tags": [
+      "loc",
+      "lines-of-code",
+      "statistics",
+      "languages",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "tokei",
+      "binary_name": "tokei",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Count lines of code, comments, and blanks across a codebase",
-      "example_usage": ["tokei .", "tokei src/ --type Python Rust", "tokei --output json ."],
+      "example_usage": [
+        "tokei .",
+        "tokei src/ --type Python Rust",
+        "tokei --output json ."
+      ],
       "input_formats": [],
-      "output_formats": ["text", "json"]
+      "output_formats": [
+        "text",
+        "json"
+      ]
     },
     "verified": true,
     "downloads": 19000,
@@ -549,15 +1082,41 @@
     "homepage": "https://github.com/sharkdp/hyperfine",
     "repository": "https://github.com/sharkdp/hyperfine",
     "license": "Apache-2.0",
-    "categories": ["dev-tools", "utilities"],
-    "tags": ["benchmark", "performance", "timing", "comparison", "rust"],
-    "install": {"method": "brew", "package": "hyperfine", "binary_name": "hyperfine"},
-    "permissions": ["local-read"],
+    "categories": [
+      "dev-tools",
+      "utilities"
+    ],
+    "tags": [
+      "benchmark",
+      "performance",
+      "timing",
+      "comparison",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "hyperfine",
+      "binary_name": "hyperfine",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Benchmark and compare the execution time of commands",
-      "example_usage": ["hyperfine 'sleep 0.3'", "hyperfine 'fd -e py' 'find . -name \"*.py\"'", "hyperfine --warmup 3 --export-json results.json './my-program'"],
+      "example_usage": [
+        "hyperfine 'sleep 0.3'",
+        "hyperfine 'fd -e py' 'find . -name \"*.py\"'",
+        "hyperfine --warmup 3 --export-json results.json './my-program'"
+      ],
       "input_formats": [],
-      "output_formats": ["text", "json", "csv"]
+      "output_formats": [
+        "text",
+        "json",
+        "csv"
+      ]
     },
     "verified": true,
     "downloads": 23000,
@@ -571,10 +1130,28 @@
     "homepage": "https://ffmpeg.org/",
     "repository": "https://github.com/FFmpeg/FFmpeg",
     "license": "LGPL-2.1",
-    "categories": ["media", "video", "audio"],
-    "tags": ["video", "audio", "convert", "stream", "encode", "decode"],
-    "install": {"method": "brew", "package": "ffmpeg", "binary_name": "ffmpeg"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "media",
+      "video",
+      "audio"
+    ],
+    "tags": [
+      "video",
+      "audio",
+      "convert",
+      "stream",
+      "encode",
+      "decode"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "ffmpeg",
+      "binary_name": "ffmpeg"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Convert, process, or stream audio and video files",
       "example_usage": [
@@ -582,8 +1159,23 @@
         "ffmpeg -i video.mp4 -ss 00:01:00 -t 00:00:30 clip.mp4",
         "ffmpeg -i input.wav -ab 192k output.mp3"
       ],
-      "input_formats": ["mp4", "avi", "mkv", "mov", "wav", "mp3", "flac"],
-      "output_formats": ["mp4", "avi", "mkv", "wav", "mp3", "gif"]
+      "input_formats": [
+        "mp4",
+        "avi",
+        "mkv",
+        "mov",
+        "wav",
+        "mp3",
+        "flac"
+      ],
+      "output_formats": [
+        "mp4",
+        "avi",
+        "mkv",
+        "wav",
+        "mp3",
+        "gif"
+      ]
     },
     "verified": true,
     "downloads": 67000,
@@ -597,10 +1189,26 @@
     "homepage": "https://imagemagick.org/",
     "repository": "https://github.com/ImageMagick/ImageMagick",
     "license": "Apache-2.0",
-    "categories": ["media", "image"],
-    "tags": ["image", "convert", "resize", "crop", "transform"],
-    "install": {"method": "brew", "package": "imagemagick", "binary_name": "magick"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "media",
+      "image"
+    ],
+    "tags": [
+      "image",
+      "convert",
+      "resize",
+      "crop",
+      "transform"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "imagemagick",
+      "binary_name": "magick"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Resize, convert, crop, or transform images from the command line",
       "example_usage": [
@@ -608,8 +1216,22 @@
         "magick convert input.jpg -quality 80 output.webp",
         "magick montage *.jpg -geometry +2+2 mosaic.png"
       ],
-      "input_formats": ["png", "jpg", "gif", "bmp", "tiff", "webp", "svg"],
-      "output_formats": ["png", "jpg", "gif", "webp", "pdf"]
+      "input_formats": [
+        "png",
+        "jpg",
+        "gif",
+        "bmp",
+        "tiff",
+        "webp",
+        "svg"
+      ],
+      "output_formats": [
+        "png",
+        "jpg",
+        "gif",
+        "webp",
+        "pdf"
+      ]
     },
     "verified": true,
     "downloads": 58000,
@@ -623,10 +1245,26 @@
     "homepage": "https://github.com/yt-dlp/yt-dlp",
     "repository": "https://github.com/yt-dlp/yt-dlp",
     "license": "Unlicense",
-    "categories": ["media", "network"],
-    "tags": ["video", "download", "youtube", "audio", "streaming"],
-    "install": {"method": "pip", "package": "yt-dlp", "binary_name": "yt-dlp"},
-    "permissions": ["network", "local-write"],
+    "categories": [
+      "media",
+      "network"
+    ],
+    "tags": [
+      "video",
+      "download",
+      "youtube",
+      "audio",
+      "streaming"
+    ],
+    "install": {
+      "method": "pip",
+      "package": "yt-dlp",
+      "binary_name": "yt-dlp"
+    },
+    "permissions": [
+      "network",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Download videos or audio from YouTube and 1000+ other sites",
       "example_usage": [
@@ -634,8 +1272,15 @@
         "yt-dlp -x --audio-format mp3 https://www.youtube.com/watch?v=...",
         "yt-dlp --list-formats https://www.youtube.com/watch?v=..."
       ],
-      "input_formats": ["url"],
-      "output_formats": ["mp4", "webm", "mp3", "m4a"]
+      "input_formats": [
+        "url"
+      ],
+      "output_formats": [
+        "mp4",
+        "webm",
+        "mp3",
+        "m4a"
+      ]
     },
     "verified": true,
     "downloads": 45000,
@@ -649,15 +1294,50 @@
     "homepage": "https://pandoc.org/",
     "repository": "https://github.com/jgm/pandoc",
     "license": "GPL-2.0",
-    "categories": ["documents", "convert"],
-    "tags": ["markdown", "latex", "html", "docx", "pdf", "convert"],
-    "install": {"method": "brew", "package": "pandoc", "binary_name": "pandoc"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "documents",
+      "convert"
+    ],
+    "tags": [
+      "markdown",
+      "latex",
+      "html",
+      "docx",
+      "pdf",
+      "convert"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "pandoc",
+      "binary_name": "pandoc"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Convert documents between formats: Markdown, HTML, LaTeX, DOCX, PDF",
-      "example_usage": ["pandoc README.md -o README.html", "pandoc input.docx -t markdown -o output.md", "pandoc paper.md --pdf-engine=xelatex -o paper.pdf"],
-      "input_formats": ["markdown", "html", "latex", "docx", "rst", "org"],
-      "output_formats": ["html", "pdf", "docx", "latex", "epub", "markdown"]
+      "example_usage": [
+        "pandoc README.md -o README.html",
+        "pandoc input.docx -t markdown -o output.md",
+        "pandoc paper.md --pdf-engine=xelatex -o paper.pdf"
+      ],
+      "input_formats": [
+        "markdown",
+        "html",
+        "latex",
+        "docx",
+        "rst",
+        "org"
+      ],
+      "output_formats": [
+        "html",
+        "pdf",
+        "docx",
+        "latex",
+        "epub",
+        "markdown"
+      ]
     },
     "verified": true,
     "downloads": 41000,
@@ -671,15 +1351,36 @@
     "homepage": "https://tmux.github.io/",
     "repository": "https://github.com/tmux/tmux",
     "license": "ISC",
-    "categories": ["productivity", "system"],
-    "tags": ["terminal", "multiplexer", "session", "split", "detach"],
-    "install": {"method": "brew", "package": "tmux", "binary_name": "tmux"},
-    "permissions": ["system"],
+    "categories": [
+      "productivity",
+      "system"
+    ],
+    "tags": [
+      "terminal",
+      "multiplexer",
+      "session",
+      "split",
+      "detach"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "tmux",
+      "binary_name": "tmux"
+    },
+    "permissions": [
+      "system"
+    ],
     "agent_hints": {
       "when_to_use": "Manage multiple terminal sessions, split panes, detach and reattach",
-      "example_usage": ["tmux new -s work", "tmux attach -t work", "tmux split-window -h"],
+      "example_usage": [
+        "tmux new -s work",
+        "tmux attach -t work",
+        "tmux split-window -h"
+      ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 62000,
@@ -693,15 +1394,36 @@
     "homepage": "https://tldr.sh/",
     "repository": "https://github.com/tldr-pages/tldr",
     "license": "MIT",
-    "categories": ["productivity", "utilities"],
-    "tags": ["man", "help", "documentation", "reference", "cheatsheet"],
-    "install": {"method": "pip", "package": "tldr", "binary_name": "tldr"},
-    "permissions": ["network"],
+    "categories": [
+      "productivity",
+      "utilities"
+    ],
+    "tags": [
+      "man",
+      "help",
+      "documentation",
+      "reference",
+      "cheatsheet"
+    ],
+    "install": {
+      "method": "pip",
+      "package": "tldr",
+      "binary_name": "tldr"
+    },
+    "permissions": [
+      "network"
+    ],
     "agent_hints": {
       "when_to_use": "Get quick, practical examples for command-line tools instead of reading full man pages",
-      "example_usage": ["tldr tar", "tldr git-rebase", "tldr ffmpeg"],
+      "example_usage": [
+        "tldr tar",
+        "tldr git-rebase",
+        "tldr ffmpeg"
+      ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 42000,
@@ -715,15 +1437,41 @@
     "homepage": "https://github.com/ajeetdsouza/zoxide",
     "repository": "https://github.com/ajeetdsouza/zoxide",
     "license": "MIT",
-    "categories": ["productivity", "files"],
-    "tags": ["cd", "directory", "jump", "navigate", "frecency", "rust"],
-    "install": {"method": "brew", "package": "zoxide", "binary_name": "zoxide"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "productivity",
+      "files"
+    ],
+    "tags": [
+      "cd",
+      "directory",
+      "jump",
+      "navigate",
+      "frecency",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "zoxide",
+      "binary_name": "zoxide",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Quickly jump to frequently used directories without typing full paths",
-      "example_usage": ["z projects", "zi", "zoxide query -l"],
+      "example_usage": [
+        "z projects",
+        "zi",
+        "zoxide query -l"
+      ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 28000,
@@ -737,15 +1485,41 @@
     "homepage": "https://starship.rs/",
     "repository": "https://github.com/starship/starship",
     "license": "ISC",
-    "categories": ["productivity", "shell"],
-    "tags": ["prompt", "shell", "customization", "cross-platform", "rust"],
-    "install": {"method": "brew", "package": "starship", "binary_name": "starship"},
-    "permissions": ["local-read"],
+    "categories": [
+      "productivity",
+      "shell"
+    ],
+    "tags": [
+      "prompt",
+      "shell",
+      "customization",
+      "cross-platform",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "starship",
+      "binary_name": "starship",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Customize your shell prompt with git status, language versions, and more",
-      "example_usage": ["eval \"$(starship init bash)\"", "starship preset nerd-font-symbols -o ~/.config/starship.toml", "starship explain"],
-      "input_formats": ["toml"],
-      "output_formats": ["text"]
+      "example_usage": [
+        "eval \"$(starship init bash)\"",
+        "starship preset nerd-font-symbols -o ~/.config/starship.toml",
+        "starship explain"
+      ],
+      "input_formats": [
+        "toml"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 38000,
@@ -759,15 +1533,36 @@
     "homepage": "https://htop.dev/",
     "repository": "https://github.com/htop-dev/htop",
     "license": "GPL-2.0",
-    "categories": ["system", "monitoring"],
-    "tags": ["process", "monitor", "cpu", "memory", "interactive"],
-    "install": {"method": "brew", "package": "htop", "binary_name": "htop"},
-    "permissions": ["system"],
+    "categories": [
+      "system",
+      "monitoring"
+    ],
+    "tags": [
+      "process",
+      "monitor",
+      "cpu",
+      "memory",
+      "interactive"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "htop",
+      "binary_name": "htop"
+    },
+    "permissions": [
+      "system"
+    ],
     "agent_hints": {
       "when_to_use": "Monitor system processes, CPU, and memory usage interactively",
-      "example_usage": ["htop", "htop -u $(whoami)", "htop -p $(pgrep python | tr '\\n' ',')"],
+      "example_usage": [
+        "htop",
+        "htop -u $(whoami)",
+        "htop -p $(pgrep python | tr '\\n' ',')"
+      ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 71000,
@@ -781,15 +1576,37 @@
     "homepage": "https://github.com/aristocratos/btop",
     "repository": "https://github.com/aristocratos/btop",
     "license": "Apache-2.0",
-    "categories": ["system", "monitoring"],
-    "tags": ["monitor", "cpu", "memory", "network", "tui", "beautiful"],
-    "install": {"method": "brew", "package": "btop", "binary_name": "btop"},
-    "permissions": ["system"],
+    "categories": [
+      "system",
+      "monitoring"
+    ],
+    "tags": [
+      "monitor",
+      "cpu",
+      "memory",
+      "network",
+      "tui",
+      "beautiful"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "btop",
+      "binary_name": "btop"
+    },
+    "permissions": [
+      "system"
+    ],
     "agent_hints": {
       "when_to_use": "Monitor system resources with a beautiful terminal interface",
-      "example_usage": ["btop", "btop --utf-force", "btop -t"],
+      "example_usage": [
+        "btop",
+        "btop --utf-force",
+        "btop -t"
+      ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 25000,
@@ -803,15 +1620,39 @@
     "homepage": "https://github.com/dalance/procs",
     "repository": "https://github.com/dalance/procs",
     "license": "MIT",
-    "categories": ["system", "monitoring"],
-    "tags": ["ps", "process", "list", "tree", "rust"],
-    "install": {"method": "brew", "package": "procs", "binary_name": "procs"},
-    "permissions": ["system"],
+    "categories": [
+      "system",
+      "monitoring"
+    ],
+    "tags": [
+      "ps",
+      "process",
+      "list",
+      "tree",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "procs",
+      "binary_name": "procs",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "system"
+    ],
     "agent_hints": {
       "when_to_use": "List and search running processes with colorful output and tree view",
-      "example_usage": ["procs", "procs --tree", "procs python"],
+      "example_usage": [
+        "procs",
+        "procs --tree",
+        "procs python"
+      ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 11000,
@@ -825,15 +1666,40 @@
     "homepage": "https://github.com/imsnif/bandwhich",
     "repository": "https://github.com/imsnif/bandwhich",
     "license": "MIT",
-    "categories": ["system", "network"],
-    "tags": ["bandwidth", "network", "monitor", "traffic", "rust"],
-    "install": {"method": "brew", "package": "bandwhich", "binary_name": "bandwhich"},
-    "permissions": ["system", "network"],
+    "categories": [
+      "system",
+      "network"
+    ],
+    "tags": [
+      "bandwidth",
+      "network",
+      "monitor",
+      "traffic",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "bandwhich",
+      "binary_name": "bandwhich",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "system",
+      "network"
+    ],
     "agent_hints": {
       "when_to_use": "Monitor which processes and connections are using network bandwidth",
-      "example_usage": ["sudo bandwhich", "bandwhich --raw", "bandwhich -i en0"],
+      "example_usage": [
+        "sudo bandwhich",
+        "bandwhich --raw",
+        "bandwhich -i en0"
+      ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 8200,
@@ -847,10 +1713,25 @@
     "homepage": "https://www.mycli.net/",
     "repository": "https://github.com/dbcli/mycli",
     "license": "BSD-3-Clause",
-    "categories": ["database", "dev-tools"],
-    "tags": ["mysql", "mariadb", "sql", "autocomplete", "client"],
-    "install": {"method": "pip", "package": "mycli", "binary_name": "mycli"},
-    "permissions": ["network"],
+    "categories": [
+      "database",
+      "dev-tools"
+    ],
+    "tags": [
+      "mysql",
+      "mariadb",
+      "sql",
+      "autocomplete",
+      "client"
+    ],
+    "install": {
+      "method": "pip",
+      "package": "mycli",
+      "binary_name": "mycli"
+    },
+    "permissions": [
+      "network"
+    ],
     "agent_hints": {
       "when_to_use": "Connect to MySQL or MariaDB databases with autocomplete and syntax highlighting",
       "example_usage": [
@@ -858,8 +1739,12 @@
         "mycli mysql://user:pass@host/db",
         "mycli -e 'SELECT * FROM users LIMIT 10' -D mydb"
       ],
-      "input_formats": ["sql"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "sql"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 18500,
@@ -873,10 +1758,25 @@
     "homepage": "https://www.pgcli.com/",
     "repository": "https://github.com/dbcli/pgcli",
     "license": "BSD-3-Clause",
-    "categories": ["database", "dev-tools"],
-    "tags": ["postgres", "postgresql", "sql", "autocomplete", "client"],
-    "install": {"method": "pip", "package": "pgcli", "binary_name": "pgcli"},
-    "permissions": ["network"],
+    "categories": [
+      "database",
+      "dev-tools"
+    ],
+    "tags": [
+      "postgres",
+      "postgresql",
+      "sql",
+      "autocomplete",
+      "client"
+    ],
+    "install": {
+      "method": "pip",
+      "package": "pgcli",
+      "binary_name": "pgcli"
+    },
+    "permissions": [
+      "network"
+    ],
     "agent_hints": {
       "when_to_use": "Connect to PostgreSQL databases with autocomplete and syntax highlighting",
       "example_usage": [
@@ -884,8 +1784,12 @@
         "pgcli postgresql://user:pass@host/db",
         "pgcli -e 'SELECT COUNT(*) FROM orders' -d mydb"
       ],
-      "input_formats": ["sql"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "sql"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 22000,
@@ -899,10 +1803,25 @@
     "homepage": "https://iredis.xbin.io/",
     "repository": "https://github.com/laixintao/iredis",
     "license": "BSD-3-Clause",
-    "categories": ["database", "dev-tools"],
-    "tags": ["redis", "cache", "autocomplete", "client", "interactive"],
-    "install": {"method": "pip", "package": "iredis", "binary_name": "iredis"},
-    "permissions": ["network"],
+    "categories": [
+      "database",
+      "dev-tools"
+    ],
+    "tags": [
+      "redis",
+      "cache",
+      "autocomplete",
+      "client",
+      "interactive"
+    ],
+    "install": {
+      "method": "pip",
+      "package": "iredis",
+      "binary_name": "iredis"
+    },
+    "permissions": [
+      "network"
+    ],
     "agent_hints": {
       "when_to_use": "Connect to Redis with autocomplete, syntax highlighting, and help for commands",
       "example_usage": [
@@ -910,8 +1829,12 @@
         "iredis --url redis://user:pass@host:6379/0",
         "iredis -h localhost -n 1 --raw"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 8500,
@@ -925,10 +1848,27 @@
     "homepage": "https://github.com/xo/usql",
     "repository": "https://github.com/xo/usql",
     "license": "MIT",
-    "categories": ["database", "dev-tools"],
-    "tags": ["sql", "database", "universal", "postgres", "mysql", "sqlite"],
-    "install": {"method": "brew", "package": "usql", "binary_name": "usql"},
-    "permissions": ["network", "local-read"],
+    "categories": [
+      "database",
+      "dev-tools"
+    ],
+    "tags": [
+      "sql",
+      "database",
+      "universal",
+      "postgres",
+      "mysql",
+      "sqlite"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "usql",
+      "binary_name": "usql"
+    },
+    "permissions": [
+      "network",
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Connect to any SQL database with a single tool — Postgres, MySQL, SQLite, and more",
       "example_usage": [
@@ -936,8 +1876,14 @@
         "usql sqlite:///path/to/data.db",
         "usql mysql://root@localhost/test -c 'SELECT * FROM users'"
       ],
-      "input_formats": ["sql"],
-      "output_formats": ["text", "csv", "json"]
+      "input_formats": [
+        "sql"
+      ],
+      "output_formats": [
+        "text",
+        "csv",
+        "json"
+      ]
     },
     "verified": true,
     "downloads": 7200,
@@ -951,10 +1897,26 @@
     "homepage": "https://litecli.com/",
     "repository": "https://github.com/dbcli/litecli",
     "license": "BSD-3-Clause",
-    "categories": ["database", "dev-tools"],
-    "tags": ["sqlite", "sql", "autocomplete", "client", "interactive"],
-    "install": {"method": "pip", "package": "litecli", "binary_name": "litecli"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "database",
+      "dev-tools"
+    ],
+    "tags": [
+      "sqlite",
+      "sql",
+      "autocomplete",
+      "client",
+      "interactive"
+    ],
+    "install": {
+      "method": "pip",
+      "package": "litecli",
+      "binary_name": "litecli"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Query and manage SQLite databases with autocomplete and syntax highlighting",
       "example_usage": [
@@ -962,8 +1924,12 @@
         "litecli -e 'SELECT * FROM users' mydb.sqlite",
         "litecli :memory:"
       ],
-      "input_formats": ["sql"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "sql"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 9800,
@@ -977,10 +1943,30 @@
     "homepage": "https://just.systems/",
     "repository": "https://github.com/casey/just",
     "license": "CC0-1.0",
-    "categories": ["dev-tools", "productivity"],
-    "tags": ["make", "task-runner", "automation", "build", "rust"],
-    "install": {"method": "brew", "package": "just", "binary_name": "just"},
-    "permissions": ["local-read", "local-write", "system"],
+    "categories": [
+      "dev-tools",
+      "productivity"
+    ],
+    "tags": [
+      "make",
+      "task-runner",
+      "automation",
+      "build",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "just",
+      "binary_name": "just",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read",
+      "local-write",
+      "system"
+    ],
     "agent_hints": {
       "when_to_use": "Define and run project-specific commands via a justfile, like a modern Makefile",
       "example_usage": [
@@ -988,8 +1974,12 @@
         "just build",
         "just test --verbose"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 24000,
@@ -1003,10 +1993,28 @@
     "homepage": "https://github.com/pemistahl/grex",
     "repository": "https://github.com/pemistahl/grex",
     "license": "Apache-2.0",
-    "categories": ["dev-tools", "utilities"],
-    "tags": ["regex", "generate", "pattern", "text", "rust"],
-    "install": {"method": "brew", "package": "grex", "binary_name": "grex"},
-    "permissions": ["local-read"],
+    "categories": [
+      "dev-tools",
+      "utilities"
+    ],
+    "tags": [
+      "regex",
+      "generate",
+      "pattern",
+      "text",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "grex",
+      "binary_name": "grex",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Generate a regex pattern automatically from example strings",
       "example_usage": [
@@ -1014,8 +2022,12 @@
         "grex -d '2023-01-15' '2024-06-30' '2025-12-01'",
         "grex --repetitions 'abc123' 'def456'"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 9500,
@@ -1029,10 +2041,26 @@
     "homepage": "https://micro-editor.github.io/",
     "repository": "https://github.com/zyedidia/micro",
     "license": "MIT",
-    "categories": ["dev-tools", "productivity"],
-    "tags": ["editor", "terminal", "text", "intuitive", "simple"],
-    "install": {"method": "brew", "package": "micro", "binary_name": "micro"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "dev-tools",
+      "productivity"
+    ],
+    "tags": [
+      "editor",
+      "terminal",
+      "text",
+      "intuitive",
+      "simple"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "micro",
+      "binary_name": "micro"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Edit files in the terminal with familiar keybindings (Ctrl+S, Ctrl+C, etc.)",
       "example_usage": [
@@ -1040,8 +2068,12 @@
         "micro -ruler false config.yaml",
         "micro +15 src/main.py"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 18000,
@@ -1055,10 +2087,29 @@
     "homepage": "https://helix-editor.com/",
     "repository": "https://github.com/helix-editor/helix",
     "license": "MPL-2.0",
-    "categories": ["dev-tools", "productivity"],
-    "tags": ["editor", "modal", "lsp", "terminal", "rust"],
-    "install": {"method": "brew", "package": "helix", "binary_name": "hx"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "dev-tools",
+      "productivity"
+    ],
+    "tags": [
+      "editor",
+      "modal",
+      "lsp",
+      "terminal",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "helix",
+      "binary_name": "hx",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Edit code in the terminal with Kakoune-style modal editing and built-in LSP",
       "example_usage": [
@@ -1066,8 +2117,12 @@
         "hx src/",
         "hx --health python"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 21000,
@@ -1081,10 +2136,27 @@
     "homepage": "https://neovim.io/",
     "repository": "https://github.com/neovim/neovim",
     "license": "Apache-2.0",
-    "categories": ["dev-tools", "productivity"],
-    "tags": ["editor", "vim", "lua", "extensible", "lsp", "terminal"],
-    "install": {"method": "brew", "package": "neovim", "binary_name": "nvim"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "dev-tools",
+      "productivity"
+    ],
+    "tags": [
+      "editor",
+      "vim",
+      "lua",
+      "extensible",
+      "lsp",
+      "terminal"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "neovim",
+      "binary_name": "nvim"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Edit code with Vim-style keybindings and Lua-based plugin ecosystem",
       "example_usage": [
@@ -1092,8 +2164,12 @@
         "nvim +42 src/main.rs",
         "nvim -d file1.txt file2.txt"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 78000,
@@ -1107,10 +2183,25 @@
     "homepage": "https://github.com/tj/git-extras",
     "repository": "https://github.com/tj/git-extras",
     "license": "MIT",
-    "categories": ["dev-tools", "git"],
-    "tags": ["git", "commands", "summary", "changelog", "extras"],
-    "install": {"method": "brew", "package": "git-extras", "binary_name": "git-extras"},
-    "permissions": ["local-read"],
+    "categories": [
+      "dev-tools",
+      "git"
+    ],
+    "tags": [
+      "git",
+      "commands",
+      "summary",
+      "changelog",
+      "extras"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "git-extras",
+      "binary_name": "git-extras"
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Use extra git commands for summaries, changelogs, author stats, and more",
       "example_usage": [
@@ -1119,7 +2210,9 @@
         "git effort --above 10"
       ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 15000,
@@ -1133,10 +2226,29 @@
     "homepage": "https://github.com/extrawurst/gitui",
     "repository": "https://github.com/extrawurst/gitui",
     "license": "MIT",
-    "categories": ["dev-tools", "git"],
-    "tags": ["git", "tui", "interactive", "fast", "rust"],
-    "install": {"method": "brew", "package": "gitui", "binary_name": "gitui"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "dev-tools",
+      "git"
+    ],
+    "tags": [
+      "git",
+      "tui",
+      "interactive",
+      "fast",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "gitui",
+      "binary_name": "gitui",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Fast terminal UI for git — stage, commit, branch, and browse history",
       "example_usage": [
@@ -1145,7 +2257,9 @@
         "gitui --logging"
       ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 16000,
@@ -1159,10 +2273,26 @@
     "homepage": "https://www.cookiecutter.io/",
     "repository": "https://github.com/cookiecutter/cookiecutter",
     "license": "BSD-3-Clause",
-    "categories": ["dev-tools", "productivity"],
-    "tags": ["template", "scaffold", "project", "generator", "python"],
-    "install": {"method": "pip", "package": "cookiecutter", "binary_name": "cookiecutter"},
-    "permissions": ["network", "local-write"],
+    "categories": [
+      "dev-tools",
+      "productivity"
+    ],
+    "tags": [
+      "template",
+      "scaffold",
+      "project",
+      "generator",
+      "python"
+    ],
+    "install": {
+      "method": "pip",
+      "package": "cookiecutter",
+      "binary_name": "cookiecutter"
+    },
+    "permissions": [
+      "network",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Scaffold a new project from a template — Python packages, Flask apps, etc.",
       "example_usage": [
@@ -1170,8 +2300,12 @@
         "cookiecutter https://github.com/cookiecutter/cookiecutter-django",
         "cookiecutter --no-input gh:user/template project_name=myapp"
       ],
-      "input_formats": ["json"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "json"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 26000,
@@ -1185,10 +2319,26 @@
     "homepage": "https://bats-core.readthedocs.io/",
     "repository": "https://github.com/bats-core/bats-core",
     "license": "MIT",
-    "categories": ["dev-tools", "shell"],
-    "tags": ["bash", "testing", "tap", "shell", "automation"],
-    "install": {"method": "brew", "package": "bats-core", "binary_name": "bats"},
-    "permissions": ["local-read", "system"],
+    "categories": [
+      "dev-tools",
+      "shell"
+    ],
+    "tags": [
+      "bash",
+      "testing",
+      "tap",
+      "shell",
+      "automation"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "bats-core",
+      "binary_name": "bats"
+    },
+    "permissions": [
+      "local-read",
+      "system"
+    ],
     "agent_hints": {
       "when_to_use": "Write and run automated tests for Bash scripts and shell commands",
       "example_usage": [
@@ -1196,8 +2346,12 @@
         "bats test/my_script.bats",
         "bats --tap test/ | tee results.tap"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 12000,
@@ -1211,10 +2365,25 @@
     "homepage": "https://www.shellcheck.net/",
     "repository": "https://github.com/koalaman/shellcheck",
     "license": "GPL-3.0",
-    "categories": ["dev-tools", "shell"],
-    "tags": ["shell", "bash", "lint", "static-analysis", "haskell"],
-    "install": {"method": "brew", "package": "shellcheck", "binary_name": "shellcheck"},
-    "permissions": ["local-read"],
+    "categories": [
+      "dev-tools",
+      "shell"
+    ],
+    "tags": [
+      "shell",
+      "bash",
+      "lint",
+      "static-analysis",
+      "haskell"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "shellcheck",
+      "binary_name": "shellcheck"
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Lint shell scripts to find bugs, syntax issues, and bad practices",
       "example_usage": [
@@ -1222,8 +2391,13 @@
         "shellcheck -x -e SC2086 deploy.sh",
         "shellcheck --format=json script.sh"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text", "json"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text",
+        "json"
+      ]
     },
     "verified": true,
     "downloads": 35000,
@@ -1237,10 +2411,26 @@
     "homepage": "https://github.com/mvdan/sh",
     "repository": "https://github.com/mvdan/sh",
     "license": "BSD-3-Clause",
-    "categories": ["dev-tools", "shell"],
-    "tags": ["shell", "bash", "formatter", "format", "posix"],
-    "install": {"method": "brew", "package": "shfmt", "binary_name": "shfmt"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "dev-tools",
+      "shell"
+    ],
+    "tags": [
+      "shell",
+      "bash",
+      "formatter",
+      "format",
+      "posix"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "shfmt",
+      "binary_name": "shfmt"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Auto-format shell scripts to a consistent style",
       "example_usage": [
@@ -1248,8 +2438,12 @@
         "shfmt -d script.sh",
         "shfmt -i 2 -ci -w *.sh"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 19000,
@@ -1263,10 +2457,26 @@
     "homepage": "https://docs.astral.sh/ruff/",
     "repository": "https://github.com/astral-sh/ruff",
     "license": "MIT",
-    "categories": ["python", "dev-tools"],
-    "tags": ["python", "linter", "formatter", "fast", "rust"],
-    "install": {"method": "pip", "package": "ruff", "binary_name": "ruff"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "python",
+      "dev-tools"
+    ],
+    "tags": [
+      "python",
+      "linter",
+      "formatter",
+      "fast",
+      "rust"
+    ],
+    "install": {
+      "method": "pip",
+      "package": "ruff",
+      "binary_name": "ruff"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Lint and format Python code extremely fast — replaces flake8, isort, black, and more",
       "example_usage": [
@@ -1274,8 +2484,13 @@
         "ruff format src/",
         "ruff check --fix src/"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text", "json"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text",
+        "json"
+      ]
     },
     "verified": true,
     "downloads": 52000,
@@ -1289,10 +2504,25 @@
     "homepage": "https://black.readthedocs.io/",
     "repository": "https://github.com/psf/black",
     "license": "MIT",
-    "categories": ["python", "dev-tools"],
-    "tags": ["python", "formatter", "code-style", "opinionated"],
-    "install": {"method": "pip", "package": "black", "binary_name": "black"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "python",
+      "dev-tools"
+    ],
+    "tags": [
+      "python",
+      "formatter",
+      "code-style",
+      "opinionated"
+    ],
+    "install": {
+      "method": "pip",
+      "package": "black",
+      "binary_name": "black"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Auto-format Python code to a consistent style with zero configuration",
       "example_usage": [
@@ -1300,8 +2530,12 @@
         "black --check --diff src/",
         "black --line-length 100 myfile.py"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 68000,
@@ -1315,10 +2549,24 @@
     "homepage": "https://mypy-lang.org/",
     "repository": "https://github.com/python/mypy",
     "license": "MIT",
-    "categories": ["python", "dev-tools"],
-    "tags": ["python", "type-checking", "static-analysis", "types"],
-    "install": {"method": "pip", "package": "mypy", "binary_name": "mypy"},
-    "permissions": ["local-read"],
+    "categories": [
+      "python",
+      "dev-tools"
+    ],
+    "tags": [
+      "python",
+      "type-checking",
+      "static-analysis",
+      "types"
+    ],
+    "install": {
+      "method": "pip",
+      "package": "mypy",
+      "binary_name": "mypy"
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Check Python code for type errors using type annotations",
       "example_usage": [
@@ -1326,8 +2574,12 @@
         "mypy --strict main.py",
         "mypy --ignore-missing-imports project/"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 55000,
@@ -1341,10 +2593,28 @@
     "homepage": "https://docs.astral.sh/uv/",
     "repository": "https://github.com/astral-sh/uv",
     "license": "Apache-2.0",
-    "categories": ["python", "dev-tools"],
-    "tags": ["python", "package-manager", "pip", "fast", "rust", "venv"],
-    "install": {"method": "brew", "package": "uv", "binary_name": "uv"},
-    "permissions": ["network", "local-read", "local-write"],
+    "categories": [
+      "python",
+      "dev-tools"
+    ],
+    "tags": [
+      "python",
+      "package-manager",
+      "pip",
+      "fast",
+      "rust",
+      "venv"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "uv",
+      "binary_name": "uv"
+    },
+    "permissions": [
+      "network",
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Install Python packages extremely fast, manage virtualenvs, or run Python scripts",
       "example_usage": [
@@ -1352,8 +2622,12 @@
         "uv venv && source .venv/bin/activate",
         "uv run python script.py"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 48000,
@@ -1367,10 +2641,26 @@
     "homepage": "https://pipx.pypa.io/",
     "repository": "https://github.com/pypa/pipx",
     "license": "MIT",
-    "categories": ["python", "dev-tools"],
-    "tags": ["python", "cli", "install", "isolated", "venv"],
-    "install": {"method": "pip", "package": "pipx", "binary_name": "pipx"},
-    "permissions": ["network", "local-write"],
+    "categories": [
+      "python",
+      "dev-tools"
+    ],
+    "tags": [
+      "python",
+      "cli",
+      "install",
+      "isolated",
+      "venv"
+    ],
+    "install": {
+      "method": "pip",
+      "package": "pipx",
+      "binary_name": "pipx"
+    },
+    "permissions": [
+      "network",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Install Python CLI tools globally in isolated environments to avoid conflicts",
       "example_usage": [
@@ -1379,7 +2669,9 @@
         "pipx list"
       ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 32000,
@@ -1393,10 +2685,27 @@
     "homepage": "https://python-poetry.org/",
     "repository": "https://github.com/python-poetry/poetry",
     "license": "MIT",
-    "categories": ["python", "dev-tools"],
-    "tags": ["python", "dependency", "packaging", "virtualenv", "lock"],
-    "install": {"method": "pip", "package": "poetry", "binary_name": "poetry"},
-    "permissions": ["network", "local-read", "local-write"],
+    "categories": [
+      "python",
+      "dev-tools"
+    ],
+    "tags": [
+      "python",
+      "dependency",
+      "packaging",
+      "virtualenv",
+      "lock"
+    ],
+    "install": {
+      "method": "pip",
+      "package": "poetry",
+      "binary_name": "poetry"
+    },
+    "permissions": [
+      "network",
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Manage Python project dependencies, build packages, and publish to PyPI",
       "example_usage": [
@@ -1404,8 +2713,12 @@
         "poetry add requests",
         "poetry install && poetry run pytest"
       ],
-      "input_formats": ["toml"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "toml"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 58000,
@@ -1419,10 +2732,27 @@
     "homepage": "https://prettier.io/",
     "repository": "https://github.com/prettier/prettier",
     "license": "MIT",
-    "categories": ["javascript", "dev-tools"],
-    "tags": ["formatter", "javascript", "typescript", "css", "html", "json"],
-    "install": {"method": "npm", "package": "prettier", "binary_name": "prettier"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "javascript",
+      "dev-tools"
+    ],
+    "tags": [
+      "formatter",
+      "javascript",
+      "typescript",
+      "css",
+      "html",
+      "json"
+    ],
+    "install": {
+      "method": "npm",
+      "package": "prettier",
+      "binary_name": "prettier"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Auto-format JavaScript, TypeScript, CSS, HTML, JSON, and Markdown files",
       "example_usage": [
@@ -1430,8 +2760,12 @@
         "prettier --check '**/*.{js,ts,css}'",
         "prettier --single-quote --trailing-comma all --write ."
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 95000,
@@ -1445,10 +2779,25 @@
     "homepage": "https://eslint.org/",
     "repository": "https://github.com/eslint/eslint",
     "license": "MIT",
-    "categories": ["javascript", "dev-tools"],
-    "tags": ["linter", "javascript", "typescript", "code-quality", "pluggable"],
-    "install": {"method": "npm", "package": "eslint", "binary_name": "eslint"},
-    "permissions": ["local-read"],
+    "categories": [
+      "javascript",
+      "dev-tools"
+    ],
+    "tags": [
+      "linter",
+      "javascript",
+      "typescript",
+      "code-quality",
+      "pluggable"
+    ],
+    "install": {
+      "method": "npm",
+      "package": "eslint",
+      "binary_name": "eslint"
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Lint JavaScript and TypeScript code to find problems and enforce code style",
       "example_usage": [
@@ -1456,8 +2805,13 @@
         "eslint --fix src/**/*.js",
         "eslint --format json src/"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text", "json"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text",
+        "json"
+      ]
     },
     "verified": true,
     "downloads": 110000,
@@ -1471,10 +2825,27 @@
     "homepage": "https://tsx.is/",
     "repository": "https://github.com/privatenumber/tsx",
     "license": "MIT",
-    "categories": ["javascript", "dev-tools"],
-    "tags": ["typescript", "node", "execute", "runner", "esm"],
-    "install": {"method": "npm", "package": "tsx", "binary_name": "tsx"},
-    "permissions": ["local-read", "local-write", "network"],
+    "categories": [
+      "javascript",
+      "dev-tools"
+    ],
+    "tags": [
+      "typescript",
+      "node",
+      "execute",
+      "runner",
+      "esm"
+    ],
+    "install": {
+      "method": "npm",
+      "package": "tsx",
+      "binary_name": "tsx"
+    },
+    "permissions": [
+      "local-read",
+      "local-write",
+      "network"
+    ],
     "agent_hints": {
       "when_to_use": "Run TypeScript files directly without a build step, like ts-node but faster",
       "example_usage": [
@@ -1482,8 +2853,12 @@
         "tsx watch server.ts",
         "tsx --env-file .env script.ts"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 38000,
@@ -1497,10 +2872,26 @@
     "homepage": "https://github.com/raineorshine/npm-check-updates",
     "repository": "https://github.com/raineorshine/npm-check-updates",
     "license": "Apache-2.0",
-    "categories": ["javascript", "dev-tools"],
-    "tags": ["npm", "dependencies", "update", "outdated", "package"],
-    "install": {"method": "npm", "package": "npm-check-updates", "binary_name": "ncu"},
-    "permissions": ["network", "local-read"],
+    "categories": [
+      "javascript",
+      "dev-tools"
+    ],
+    "tags": [
+      "npm",
+      "dependencies",
+      "update",
+      "outdated",
+      "package"
+    ],
+    "install": {
+      "method": "npm",
+      "package": "npm-check-updates",
+      "binary_name": "ncu"
+    },
+    "permissions": [
+      "network",
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Check for newer versions of npm dependencies and update package.json",
       "example_usage": [
@@ -1508,8 +2899,12 @@
         "ncu -u",
         "ncu --target minor"
       ],
-      "input_formats": ["json"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "json"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 42000,
@@ -1523,10 +2918,25 @@
     "homepage": "https://github.com/jesseduffield/lazydocker",
     "repository": "https://github.com/jesseduffield/lazydocker",
     "license": "MIT",
-    "categories": ["docker", "devops"],
-    "tags": ["docker", "docker-compose", "tui", "containers", "interactive"],
-    "install": {"method": "brew", "package": "lazydocker", "binary_name": "lazydocker"},
-    "permissions": ["system"],
+    "categories": [
+      "docker",
+      "devops"
+    ],
+    "tags": [
+      "docker",
+      "docker-compose",
+      "tui",
+      "containers",
+      "interactive"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "lazydocker",
+      "binary_name": "lazydocker"
+    },
+    "permissions": [
+      "system"
+    ],
     "agent_hints": {
       "when_to_use": "Manage Docker containers, images, and volumes with an interactive TUI",
       "example_usage": [
@@ -1535,7 +2945,9 @@
         "DOCKER_HOST=ssh://user@host lazydocker"
       ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 28000,
@@ -1549,10 +2961,25 @@
     "homepage": "https://ctop.sh/",
     "repository": "https://github.com/bcicen/ctop",
     "license": "MIT",
-    "categories": ["docker", "monitoring"],
-    "tags": ["docker", "containers", "monitor", "metrics", "top"],
-    "install": {"method": "brew", "package": "ctop", "binary_name": "ctop"},
-    "permissions": ["system"],
+    "categories": [
+      "docker",
+      "monitoring"
+    ],
+    "tags": [
+      "docker",
+      "containers",
+      "monitor",
+      "metrics",
+      "top"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "ctop",
+      "binary_name": "ctop"
+    },
+    "permissions": [
+      "system"
+    ],
     "agent_hints": {
       "when_to_use": "Monitor Docker container CPU, memory, network, and I/O in real-time",
       "example_usage": [
@@ -1561,7 +2988,9 @@
         "ctop -s cpu"
       ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 14000,
@@ -1575,10 +3004,27 @@
     "homepage": "https://k9scli.io/",
     "repository": "https://github.com/derailed/k9s",
     "license": "Apache-2.0",
-    "categories": ["devops", "monitoring"],
-    "tags": ["kubernetes", "k8s", "tui", "pods", "cluster", "management"],
-    "install": {"method": "brew", "package": "k9s", "binary_name": "k9s"},
-    "permissions": ["network", "system"],
+    "categories": [
+      "devops",
+      "monitoring"
+    ],
+    "tags": [
+      "kubernetes",
+      "k8s",
+      "tui",
+      "pods",
+      "cluster",
+      "management"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "k9s",
+      "binary_name": "k9s"
+    },
+    "permissions": [
+      "network",
+      "system"
+    ],
     "agent_hints": {
       "when_to_use": "Manage and monitor Kubernetes clusters with an interactive terminal UI",
       "example_usage": [
@@ -1587,7 +3033,9 @@
         "k9s --context my-cluster"
       ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 38000,
@@ -1601,10 +3049,25 @@
     "homepage": "https://github.com/wagoodman/dive",
     "repository": "https://github.com/wagoodman/dive",
     "license": "MIT",
-    "categories": ["docker", "dev-tools"],
-    "tags": ["docker", "image", "layers", "optimize", "size"],
-    "install": {"method": "brew", "package": "dive", "binary_name": "dive"},
-    "permissions": ["system"],
+    "categories": [
+      "docker",
+      "dev-tools"
+    ],
+    "tags": [
+      "docker",
+      "image",
+      "layers",
+      "optimize",
+      "size"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "dive",
+      "binary_name": "dive"
+    },
+    "permissions": [
+      "system"
+    ],
     "agent_hints": {
       "when_to_use": "Analyze Docker image layers to find wasted space and optimize image size",
       "example_usage": [
@@ -1613,7 +3076,9 @@
         "CI=true dive my-image:latest"
       ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 25000,
@@ -1627,10 +3092,26 @@
     "homepage": "https://nektosact.com/",
     "repository": "https://github.com/nektos/act",
     "license": "MIT",
-    "categories": ["devops", "dev-tools"],
-    "tags": ["github-actions", "ci", "local", "docker", "testing"],
-    "install": {"method": "brew", "package": "act", "binary_name": "act"},
-    "permissions": ["system", "local-read"],
+    "categories": [
+      "devops",
+      "dev-tools"
+    ],
+    "tags": [
+      "github-actions",
+      "ci",
+      "local",
+      "docker",
+      "testing"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "act",
+      "binary_name": "act"
+    },
+    "permissions": [
+      "system",
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Test and run GitHub Actions workflows locally before pushing",
       "example_usage": [
@@ -1638,8 +3119,12 @@
         "act -j build",
         "act push --secret-file .secrets"
       ],
-      "input_formats": ["yaml"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "yaml"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 22000,
@@ -1653,10 +3138,26 @@
     "homepage": "https://aws.amazon.com/cli/",
     "repository": "https://github.com/aws/aws-cli",
     "license": "Apache-2.0",
-    "categories": ["cloud", "devops"],
-    "tags": ["aws", "cloud", "s3", "ec2", "lambda", "infrastructure"],
-    "install": {"method": "pip", "package": "awscli", "binary_name": "aws"},
-    "permissions": ["network"],
+    "categories": [
+      "cloud",
+      "devops"
+    ],
+    "tags": [
+      "aws",
+      "cloud",
+      "s3",
+      "ec2",
+      "lambda",
+      "infrastructure"
+    ],
+    "install": {
+      "method": "pip",
+      "package": "awscli",
+      "binary_name": "aws"
+    },
+    "permissions": [
+      "network"
+    ],
     "agent_hints": {
       "when_to_use": "Manage AWS resources — S3 buckets, EC2 instances, Lambda functions, and more",
       "example_usage": [
@@ -1664,8 +3165,13 @@
         "aws ec2 describe-instances --output table",
         "aws lambda invoke --function-name my-func output.json"
       ],
-      "input_formats": ["json"],
-      "output_formats": ["json", "text"]
+      "input_formats": [
+        "json"
+      ],
+      "output_formats": [
+        "json",
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 92000,
@@ -1679,10 +3185,27 @@
     "homepage": "https://www.terraform.io/",
     "repository": "https://github.com/hashicorp/terraform",
     "license": "BUSL-1.1",
-    "categories": ["cloud", "devops"],
-    "tags": ["infrastructure", "iac", "cloud", "provisioning", "hcl"],
-    "install": {"method": "brew", "package": "terraform", "binary_name": "terraform"},
-    "permissions": ["network", "local-read", "local-write"],
+    "categories": [
+      "cloud",
+      "devops"
+    ],
+    "tags": [
+      "infrastructure",
+      "iac",
+      "cloud",
+      "provisioning",
+      "hcl"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "terraform",
+      "binary_name": "terraform"
+    },
+    "permissions": [
+      "network",
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Define and provision cloud infrastructure using declarative configuration files",
       "example_usage": [
@@ -1690,8 +3213,14 @@
         "terraform plan",
         "terraform apply -auto-approve"
       ],
-      "input_formats": ["hcl", "json"],
-      "output_formats": ["text", "json"]
+      "input_formats": [
+        "hcl",
+        "json"
+      ],
+      "output_formats": [
+        "text",
+        "json"
+      ]
     },
     "verified": true,
     "downloads": 75000,
@@ -1705,10 +3234,28 @@
     "homepage": "https://github.com/lsd-rs/lsd",
     "repository": "https://github.com/lsd-rs/lsd",
     "license": "Apache-2.0",
-    "categories": ["files", "productivity"],
-    "tags": ["ls", "icons", "colors", "git", "rust"],
-    "install": {"method": "brew", "package": "lsd", "binary_name": "lsd"},
-    "permissions": ["local-read"],
+    "categories": [
+      "files",
+      "productivity"
+    ],
+    "tags": [
+      "ls",
+      "icons",
+      "colors",
+      "git",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "lsd",
+      "binary_name": "lsd",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "List files with icons, colors, and git status — a modern ls replacement",
       "example_usage": [
@@ -1717,7 +3264,9 @@
         "lsd --group-dirs first"
       ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 22000,
@@ -1731,10 +3280,28 @@
     "homepage": "https://dystroy.org/broot/",
     "repository": "https://github.com/Canop/broot",
     "license": "MIT",
-    "categories": ["files", "search"],
-    "tags": ["tree", "fuzzy", "navigate", "preview", "rust"],
-    "install": {"method": "brew", "package": "broot", "binary_name": "broot"},
-    "permissions": ["local-read"],
+    "categories": [
+      "files",
+      "search"
+    ],
+    "tags": [
+      "tree",
+      "fuzzy",
+      "navigate",
+      "preview",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "broot",
+      "binary_name": "broot",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Navigate large directory trees interactively with fuzzy search and preview",
       "example_usage": [
@@ -1743,7 +3310,9 @@
         "broot --sizes"
       ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 14000,
@@ -1757,10 +3326,26 @@
     "homepage": "https://ranger.github.io/",
     "repository": "https://github.com/ranger/ranger",
     "license": "GPL-3.0",
-    "categories": ["files", "productivity"],
-    "tags": ["file-manager", "vi", "preview", "terminal", "python"],
-    "install": {"method": "pip", "package": "ranger-fm", "binary_name": "ranger"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "files",
+      "productivity"
+    ],
+    "tags": [
+      "file-manager",
+      "vi",
+      "preview",
+      "terminal",
+      "python"
+    ],
+    "install": {
+      "method": "pip",
+      "package": "ranger-fm",
+      "binary_name": "ranger"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Browse and manage files in a terminal file manager with vi-style navigation",
       "example_usage": [
@@ -1769,7 +3354,9 @@
         "ranger --choosefile=/tmp/picked"
       ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 25000,
@@ -1783,10 +3370,26 @@
     "homepage": "https://github.com/jarun/nnn",
     "repository": "https://github.com/jarun/nnn",
     "license": "BSD-2-Clause",
-    "categories": ["files", "productivity"],
-    "tags": ["file-manager", "fast", "minimal", "terminal", "c"],
-    "install": {"method": "brew", "package": "nnn", "binary_name": "nnn"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "files",
+      "productivity"
+    ],
+    "tags": [
+      "file-manager",
+      "fast",
+      "minimal",
+      "terminal",
+      "c"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "nnn",
+      "binary_name": "nnn"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Navigate and manage files in a blazing fast, minimal terminal file manager",
       "example_usage": [
@@ -1795,7 +3398,9 @@
         "nnn -e"
       ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 18000,
@@ -1809,10 +3414,26 @@
     "homepage": "https://github.com/sindresorhus/trash-cli",
     "repository": "https://github.com/sindresorhus/trash-cli",
     "license": "MIT",
-    "categories": ["files", "utilities"],
-    "tags": ["trash", "delete", "safe", "recycle", "rm"],
-    "install": {"method": "npm", "package": "trash-cli", "binary_name": "trash"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "files",
+      "utilities"
+    ],
+    "tags": [
+      "trash",
+      "delete",
+      "safe",
+      "recycle",
+      "rm"
+    ],
+    "install": {
+      "method": "npm",
+      "package": "trash-cli",
+      "binary_name": "trash"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Safely delete files by moving them to the system trash instead of using rm",
       "example_usage": [
@@ -1821,7 +3442,9 @@
         "trash old-dir/"
       ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 15000,
@@ -1835,10 +3458,26 @@
     "homepage": "https://ngrok.com/",
     "repository": "https://github.com/ngrok/ngrok",
     "license": "Proprietary",
-    "categories": ["network", "dev-tools"],
-    "tags": ["tunnel", "localhost", "expose", "webhook", "https"],
-    "install": {"method": "brew", "package": "ngrok", "binary_name": "ngrok"},
-    "permissions": ["network", "system"],
+    "categories": [
+      "network",
+      "dev-tools"
+    ],
+    "tags": [
+      "tunnel",
+      "localhost",
+      "expose",
+      "webhook",
+      "https"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "ngrok",
+      "binary_name": "ngrok"
+    },
+    "permissions": [
+      "network",
+      "system"
+    ],
     "agent_hints": {
       "when_to_use": "Expose a local web server to the internet for testing, demos, or webhooks",
       "example_usage": [
@@ -1847,7 +3486,9 @@
         "ngrok tcp 22"
       ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 52000,
@@ -1861,10 +3502,25 @@
     "homepage": "https://mosh.org/",
     "repository": "https://github.com/mobile-shell/mosh",
     "license": "GPL-3.0",
-    "categories": ["network", "productivity"],
-    "tags": ["ssh", "mobile", "persistent", "remote", "udp"],
-    "install": {"method": "brew", "package": "mosh", "binary_name": "mosh"},
-    "permissions": ["network"],
+    "categories": [
+      "network",
+      "productivity"
+    ],
+    "tags": [
+      "ssh",
+      "mobile",
+      "persistent",
+      "remote",
+      "udp"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "mosh",
+      "binary_name": "mosh"
+    },
+    "permissions": [
+      "network"
+    ],
     "agent_hints": {
       "when_to_use": "Connect to remote servers with persistent SSH that survives network changes",
       "example_usage": [
@@ -1873,7 +3529,9 @@
         "mosh user@host -- tmux attach"
       ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 28000,
@@ -1887,10 +3545,26 @@
     "homepage": "https://nmap.org/",
     "repository": "https://github.com/nmap/nmap",
     "license": "NPSL",
-    "categories": ["network", "security"],
-    "tags": ["scan", "ports", "security", "discovery", "audit"],
-    "install": {"method": "brew", "package": "nmap", "binary_name": "nmap"},
-    "permissions": ["network", "system"],
+    "categories": [
+      "network",
+      "security"
+    ],
+    "tags": [
+      "scan",
+      "ports",
+      "security",
+      "discovery",
+      "audit"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "nmap",
+      "binary_name": "nmap"
+    },
+    "permissions": [
+      "network",
+      "system"
+    ],
     "agent_hints": {
       "when_to_use": "Scan networks to discover hosts, open ports, and running services",
       "example_usage": [
@@ -1899,7 +3573,10 @@
         "nmap -A -T4 target.com"
       ],
       "input_formats": [],
-      "output_formats": ["text", "xml"]
+      "output_formats": [
+        "text",
+        "xml"
+      ]
     },
     "verified": true,
     "downloads": 65000,
@@ -1913,10 +3590,25 @@
     "homepage": "https://github.com/sivel/speedtest-cli",
     "repository": "https://github.com/sivel/speedtest-cli",
     "license": "Apache-2.0",
-    "categories": ["network", "utilities"],
-    "tags": ["speed", "bandwidth", "internet", "test", "latency"],
-    "install": {"method": "pip", "package": "speedtest-cli", "binary_name": "speedtest-cli"},
-    "permissions": ["network"],
+    "categories": [
+      "network",
+      "utilities"
+    ],
+    "tags": [
+      "speed",
+      "bandwidth",
+      "internet",
+      "test",
+      "latency"
+    ],
+    "install": {
+      "method": "pip",
+      "package": "speedtest-cli",
+      "binary_name": "speedtest-cli"
+    },
+    "permissions": [
+      "network"
+    ],
     "agent_hints": {
       "when_to_use": "Test internet download and upload speed from the terminal",
       "example_usage": [
@@ -1925,7 +3617,10 @@
         "speedtest-cli --json"
       ],
       "input_formats": [],
-      "output_formats": ["text", "json"]
+      "output_formats": [
+        "text",
+        "json"
+      ]
     },
     "verified": true,
     "downloads": 35000,
@@ -1939,10 +3634,29 @@
     "homepage": "https://github.com/chmln/sd",
     "repository": "https://github.com/chmln/sd",
     "license": "MIT",
-    "categories": ["text-processing", "utilities"],
-    "tags": ["sed", "replace", "find", "regex", "rust"],
-    "install": {"method": "brew", "package": "sd", "binary_name": "sd"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "text-processing",
+      "utilities"
+    ],
+    "tags": [
+      "sed",
+      "replace",
+      "find",
+      "regex",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "sd",
+      "binary_name": "sd",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Find and replace text in files or piped input — easier syntax than sed",
       "example_usage": [
@@ -1950,8 +3664,12 @@
         "echo 'hello world' | sd 'world' 'there'",
         "sd -F 'exact.match' 'replacement' *.py"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 11000,
@@ -1965,10 +3683,28 @@
     "homepage": "https://github.com/theryangeary/choose",
     "repository": "https://github.com/theryangeary/choose",
     "license": "GPL-3.0",
-    "categories": ["text-processing", "utilities"],
-    "tags": ["cut", "awk", "fields", "columns", "rust"],
-    "install": {"method": "brew", "package": "choose-rust", "binary_name": "choose"},
-    "permissions": ["local-read"],
+    "categories": [
+      "text-processing",
+      "utilities"
+    ],
+    "tags": [
+      "cut",
+      "awk",
+      "fields",
+      "columns",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "choose-rust",
+      "binary_name": "choose",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Select fields or columns from text input — simpler than cut or awk",
       "example_usage": [
@@ -1976,8 +3712,12 @@
         "ls -l | choose 4 8",
         "cat data.csv | choose -f ',' 0 2"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 5200,
@@ -1991,10 +3731,30 @@
     "homepage": "https://github.com/ms-jpq/sad",
     "repository": "https://github.com/ms-jpq/sad",
     "license": "MIT",
-    "categories": ["text-processing", "dev-tools"],
-    "tags": ["search", "replace", "batch", "diff", "preview", "rust"],
-    "install": {"method": "brew", "package": "sad", "binary_name": "sad"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "text-processing",
+      "dev-tools"
+    ],
+    "tags": [
+      "search",
+      "replace",
+      "batch",
+      "diff",
+      "preview",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "sad",
+      "binary_name": "sad",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Batch find-and-replace across files with a diff preview before applying",
       "example_usage": [
@@ -2002,8 +3762,12 @@
         "rg -l 'TODO' | sad 'TODO' 'DONE'",
         "fd -e js | sad --exact 'var ' 'const '"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 6800,
@@ -2017,10 +3781,26 @@
     "homepage": "https://svgo.dev/",
     "repository": "https://github.com/svg/svgo",
     "license": "MIT",
-    "categories": ["media", "image"],
-    "tags": ["svg", "optimize", "compress", "web", "icons"],
-    "install": {"method": "npm", "package": "svgo", "binary_name": "svgo"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "media",
+      "image"
+    ],
+    "tags": [
+      "svg",
+      "optimize",
+      "compress",
+      "web",
+      "icons"
+    ],
+    "install": {
+      "method": "npm",
+      "package": "svgo",
+      "binary_name": "svgo"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Optimize and minify SVG files to reduce file size",
       "example_usage": [
@@ -2028,8 +3808,12 @@
         "svgo -f ./icons/ -o ./icons-optimized/",
         "svgo --multipass icon.svg -o icon.min.svg"
       ],
-      "input_formats": ["svg"],
-      "output_formats": ["svg"]
+      "input_formats": [
+        "svg"
+      ],
+      "output_formats": [
+        "svg"
+      ]
     },
     "verified": true,
     "downloads": 28000,
@@ -2043,10 +3827,26 @@
     "homepage": "https://www.lcdf.org/gifsicle/",
     "repository": "https://github.com/kohler/gifsicle",
     "license": "GPL-2.0",
-    "categories": ["media", "image"],
-    "tags": ["gif", "optimize", "animation", "resize", "compress"],
-    "install": {"method": "brew", "package": "gifsicle", "binary_name": "gifsicle"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "media",
+      "image"
+    ],
+    "tags": [
+      "gif",
+      "optimize",
+      "animation",
+      "resize",
+      "compress"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "gifsicle",
+      "binary_name": "gifsicle"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Optimize, resize, or manipulate GIF animations from the command line",
       "example_usage": [
@@ -2054,8 +3854,12 @@
         "gifsicle --resize 320x240 input.gif -o small.gif",
         "gifsicle --delay=10 frame*.gif > animation.gif"
       ],
-      "input_formats": ["gif"],
-      "output_formats": ["gif"]
+      "input_formats": [
+        "gif"
+      ],
+      "output_formats": [
+        "gif"
+      ]
     },
     "verified": true,
     "downloads": 15000,
@@ -2069,10 +3873,26 @@
     "homepage": "https://asciinema.org/",
     "repository": "https://github.com/asciinema/asciinema",
     "license": "GPL-3.0",
-    "categories": ["productivity", "media"],
-    "tags": ["terminal", "record", "screencast", "share", "demo"],
-    "install": {"method": "pip", "package": "asciinema", "binary_name": "asciinema"},
-    "permissions": ["system", "network"],
+    "categories": [
+      "productivity",
+      "media"
+    ],
+    "tags": [
+      "terminal",
+      "record",
+      "screencast",
+      "share",
+      "demo"
+    ],
+    "install": {
+      "method": "pip",
+      "package": "asciinema",
+      "binary_name": "asciinema"
+    },
+    "permissions": [
+      "system",
+      "network"
+    ],
     "agent_hints": {
       "when_to_use": "Record terminal sessions to share as lightweight text-based screencasts",
       "example_usage": [
@@ -2081,7 +3901,9 @@
         "asciinema upload demo.cast"
       ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 22000,
@@ -2095,10 +3917,29 @@
     "homepage": "https://github.com/sharkdp/pastel",
     "repository": "https://github.com/sharkdp/pastel",
     "license": "Apache-2.0",
-    "categories": ["dev-tools", "utilities"],
-    "tags": ["color", "hex", "rgb", "hsl", "convert", "rust"],
-    "install": {"method": "brew", "package": "pastel", "binary_name": "pastel"},
-    "permissions": ["local-read"],
+    "categories": [
+      "dev-tools",
+      "utilities"
+    ],
+    "tags": [
+      "color",
+      "hex",
+      "rgb",
+      "hsl",
+      "convert",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "pastel",
+      "binary_name": "pastel",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Generate, convert, and explore colors — hex, RGB, HSL, and more",
       "example_usage": [
@@ -2106,8 +3947,12 @@
         "pastel mix red blue",
         "pastel format hex 'rgb(255, 100, 0)'"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 7500,
@@ -2121,9 +3966,22 @@
     "homepage": "https://github.com/abishekvashok/cmatrix",
     "repository": "https://github.com/abishekvashok/cmatrix",
     "license": "GPL-3.0",
-    "categories": ["fun", "utilities"],
-    "tags": ["matrix", "animation", "terminal", "screensaver", "fun"],
-    "install": {"method": "brew", "package": "cmatrix", "binary_name": "cmatrix"},
+    "categories": [
+      "fun",
+      "utilities"
+    ],
+    "tags": [
+      "matrix",
+      "animation",
+      "terminal",
+      "screensaver",
+      "fun"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "cmatrix",
+      "binary_name": "cmatrix"
+    },
     "permissions": [],
     "agent_hints": {
       "when_to_use": "Display a Matrix-style falling characters animation in the terminal",
@@ -2133,7 +3991,9 @@
         "cmatrix -s -b"
       ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 18000,
@@ -2147,10 +4007,26 @@
     "homepage": "https://taskwarrior.org/",
     "repository": "https://github.com/GothenburgBitFactory/taskwarrior",
     "license": "MIT",
-    "categories": ["productivity", "utilities"],
-    "tags": ["tasks", "todo", "management", "tracking", "gtd"],
-    "install": {"method": "brew", "package": "task", "binary_name": "task"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "productivity",
+      "utilities"
+    ],
+    "tags": [
+      "tasks",
+      "todo",
+      "management",
+      "tracking",
+      "gtd"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "task",
+      "binary_name": "task"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Manage tasks and TODOs from the command line with powerful filtering",
       "example_usage": [
@@ -2158,8 +4034,13 @@
         "task list project:work",
         "task 5 done"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text", "json"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text",
+        "json"
+      ]
     },
     "verified": true,
     "downloads": 19000,
@@ -2173,10 +4054,26 @@
     "homepage": "https://tailordev.github.io/Watson/",
     "repository": "https://github.com/TailorDev/Watson",
     "license": "MIT",
-    "categories": ["productivity", "utilities"],
-    "tags": ["time-tracking", "timer", "report", "projects", "work"],
-    "install": {"method": "pip", "package": "td-watson", "binary_name": "watson"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "productivity",
+      "utilities"
+    ],
+    "tags": [
+      "time-tracking",
+      "timer",
+      "report",
+      "projects",
+      "work"
+    ],
+    "install": {
+      "method": "pip",
+      "package": "td-watson",
+      "binary_name": "watson"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Track time spent on projects and tasks from the command line",
       "example_usage": [
@@ -2185,7 +4082,10 @@
         "watson report --week"
       ],
       "input_formats": [],
-      "output_formats": ["text", "json"]
+      "output_formats": [
+        "text",
+        "json"
+      ]
     },
     "verified": true,
     "downloads": 8500,
@@ -2199,10 +4099,27 @@
     "homepage": "https://xwmx.github.io/nb/",
     "repository": "https://github.com/xwmx/nb",
     "license": "AGPL-3.0",
-    "categories": ["productivity", "utilities"],
-    "tags": ["notes", "bookmarks", "knowledge", "markdown", "git"],
-    "install": {"method": "brew", "package": "nb", "binary_name": "nb"},
-    "permissions": ["local-read", "local-write", "network"],
+    "categories": [
+      "productivity",
+      "utilities"
+    ],
+    "tags": [
+      "notes",
+      "bookmarks",
+      "knowledge",
+      "markdown",
+      "git"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "nb",
+      "binary_name": "nb"
+    },
+    "permissions": [
+      "local-read",
+      "local-write",
+      "network"
+    ],
     "agent_hints": {
       "when_to_use": "Take notes, save bookmarks, and manage a knowledge base from the terminal",
       "example_usage": [
@@ -2210,8 +4127,13 @@
         "nb bookmark https://example.com",
         "nb search 'kubernetes'"
       ],
-      "input_formats": ["text", "markdown"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "text",
+        "markdown"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 9200,
@@ -2225,10 +4147,26 @@
     "homepage": "https://calcurse.org/",
     "repository": "https://github.com/lfos/calcurse",
     "license": "BSD-2-Clause",
-    "categories": ["productivity", "utilities"],
-    "tags": ["calendar", "scheduling", "appointments", "todo", "terminal"],
-    "install": {"method": "brew", "package": "calcurse", "binary_name": "calcurse"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "productivity",
+      "utilities"
+    ],
+    "tags": [
+      "calendar",
+      "scheduling",
+      "appointments",
+      "todo",
+      "terminal"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "calcurse",
+      "binary_name": "calcurse"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Manage calendar events, appointments, and TODOs in the terminal",
       "example_usage": [
@@ -2236,8 +4174,13 @@
         "calcurse -a",
         "calcurse --export > calendar.ics"
       ],
-      "input_formats": ["ical"],
-      "output_formats": ["text", "ical"]
+      "input_formats": [
+        "ical"
+      ],
+      "output_formats": [
+        "text",
+        "ical"
+      ]
     },
     "verified": true,
     "downloads": 7000,
@@ -2251,10 +4194,25 @@
     "homepage": "https://github.com/charmbracelet/glow",
     "repository": "https://github.com/charmbracelet/glow",
     "license": "MIT",
-    "categories": ["productivity", "documents"],
-    "tags": ["markdown", "render", "preview", "terminal", "charm"],
-    "install": {"method": "brew", "package": "glow", "binary_name": "glow"},
-    "permissions": ["local-read"],
+    "categories": [
+      "productivity",
+      "documents"
+    ],
+    "tags": [
+      "markdown",
+      "render",
+      "preview",
+      "terminal",
+      "charm"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "glow",
+      "binary_name": "glow"
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Read and preview Markdown files beautifully rendered in the terminal",
       "example_usage": [
@@ -2262,8 +4220,12 @@
         "glow -p README.md",
         "glow -s dark docs/"
       ],
-      "input_formats": ["markdown"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "markdown"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 21000,
@@ -2277,10 +4239,27 @@
     "homepage": "https://semantic-release.gitbook.io/",
     "repository": "https://github.com/semantic-release/semantic-release",
     "license": "MIT",
-    "categories": ["release", "devops"],
-    "tags": ["version", "release", "semver", "changelog", "ci"],
-    "install": {"method": "npm", "package": "semantic-release", "binary_name": "semantic-release"},
-    "permissions": ["network", "local-read", "local-write"],
+    "categories": [
+      "release",
+      "devops"
+    ],
+    "tags": [
+      "version",
+      "release",
+      "semver",
+      "changelog",
+      "ci"
+    ],
+    "install": {
+      "method": "npm",
+      "package": "semantic-release",
+      "binary_name": "semantic-release"
+    },
+    "permissions": [
+      "network",
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Automate versioning and changelog generation based on commit messages",
       "example_usage": [
@@ -2288,8 +4267,12 @@
         "npx semantic-release --dry-run",
         "npx semantic-release --branches main"
       ],
-      "input_formats": ["json"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "json"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 52000,
@@ -2303,10 +4286,27 @@
     "homepage": "https://github.com/release-it/release-it",
     "repository": "https://github.com/release-it/release-it",
     "license": "MIT",
-    "categories": ["release", "devops"],
-    "tags": ["version", "release", "npm", "changelog", "github"],
-    "install": {"method": "npm", "package": "release-it", "binary_name": "release-it"},
-    "permissions": ["network", "local-read", "local-write"],
+    "categories": [
+      "release",
+      "devops"
+    ],
+    "tags": [
+      "version",
+      "release",
+      "npm",
+      "changelog",
+      "github"
+    ],
+    "install": {
+      "method": "npm",
+      "package": "release-it",
+      "binary_name": "release-it"
+    },
+    "permissions": [
+      "network",
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Automate version bumps, git tags, GitHub releases, and npm publishing",
       "example_usage": [
@@ -2314,8 +4314,12 @@
         "npx release-it --dry-run",
         "npx release-it minor --ci"
       ],
-      "input_formats": ["json"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "json"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 32000,
@@ -2329,10 +4333,26 @@
     "homepage": "https://commitizen-tools.github.io/commitizen/",
     "repository": "https://github.com/commitizen-tools/commitizen",
     "license": "MIT",
-    "categories": ["release", "dev-tools"],
-    "tags": ["commit", "conventional", "changelog", "version", "git"],
-    "install": {"method": "pip", "package": "commitizen", "binary_name": "cz"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "release",
+      "dev-tools"
+    ],
+    "tags": [
+      "commit",
+      "conventional",
+      "changelog",
+      "version",
+      "git"
+    ],
+    "install": {
+      "method": "pip",
+      "package": "commitizen",
+      "binary_name": "cz"
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Create standardized commit messages and automate version bumping",
       "example_usage": [
@@ -2341,7 +4361,9 @@
         "cz changelog"
       ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 24000,
@@ -2355,10 +4377,27 @@
     "homepage": "https://www.openssl.org/",
     "repository": "https://github.com/openssl/openssl",
     "license": "Apache-2.0",
-    "categories": ["security", "utilities"],
-    "tags": ["tls", "ssl", "crypto", "certificates", "encryption"],
-    "install": {"method": "brew", "package": "openssl", "binary_name": "openssl"},
-    "permissions": ["local-read", "local-write", "network"],
+    "categories": [
+      "security",
+      "utilities"
+    ],
+    "tags": [
+      "tls",
+      "ssl",
+      "crypto",
+      "certificates",
+      "encryption"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "openssl",
+      "binary_name": "openssl"
+    },
+    "permissions": [
+      "local-read",
+      "local-write",
+      "network"
+    ],
     "agent_hints": {
       "when_to_use": "Generate certificates, encrypt/decrypt files, or inspect TLS connections",
       "example_usage": [
@@ -2366,8 +4405,14 @@
         "openssl s_client -connect example.com:443",
         "openssl enc -aes-256-cbc -salt -in file.txt -out file.enc"
       ],
-      "input_formats": ["text", "binary"],
-      "output_formats": ["text", "binary"]
+      "input_formats": [
+        "text",
+        "binary"
+      ],
+      "output_formats": [
+        "text",
+        "binary"
+      ]
     },
     "verified": true,
     "downloads": 85000,
@@ -2381,10 +4426,28 @@
     "homepage": "https://jless.io/",
     "repository": "https://github.com/PaulJuliusMartinez/jless",
     "license": "MIT",
-    "categories": ["data", "json"],
-    "tags": ["json", "viewer", "interactive", "navigate", "rust"],
-    "install": {"method": "brew", "package": "jless", "binary_name": "jless"},
-    "permissions": ["local-read"],
+    "categories": [
+      "data",
+      "json"
+    ],
+    "tags": [
+      "json",
+      "viewer",
+      "interactive",
+      "navigate",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "jless",
+      "binary_name": "jless",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Interactively browse and explore large JSON files in the terminal",
       "example_usage": [
@@ -2392,8 +4455,13 @@
         "curl -s https://api.example.com | jless",
         "jless --yaml config.yaml"
       ],
-      "input_formats": ["json", "yaml"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "json",
+        "yaml"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 10000,
@@ -2407,10 +4475,25 @@
     "homepage": "https://fx.wtf/",
     "repository": "https://github.com/antonmedv/fx",
     "license": "MIT",
-    "categories": ["data", "json"],
-    "tags": ["json", "viewer", "processor", "interactive", "javascript"],
-    "install": {"method": "brew", "package": "fx", "binary_name": "fx"},
-    "permissions": ["local-read"],
+    "categories": [
+      "data",
+      "json"
+    ],
+    "tags": [
+      "json",
+      "viewer",
+      "processor",
+      "interactive",
+      "javascript"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "fx",
+      "binary_name": "fx"
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "View and process JSON interactively or with JavaScript expressions",
       "example_usage": [
@@ -2418,8 +4501,13 @@
         "fx data.json '.users.length'",
         "curl -s https://api.example.com | fx '.items[0].name'"
       ],
-      "input_formats": ["json"],
-      "output_formats": ["json", "text"]
+      "input_formats": [
+        "json"
+      ],
+      "output_formats": [
+        "json",
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 12000,
@@ -2433,10 +4521,29 @@
     "homepage": "https://age-encryption.org/",
     "repository": "https://github.com/FiloSottile/age",
     "license": "BSD-3-Clause",
-    "categories": ["security", "utilities"],
-    "tags": ["encryption", "decrypt", "secure", "keys", "modern"],
-    "install": {"method": "brew", "package": "age", "binary_name": "age"},
-    "permissions": ["local-read", "local-write"],
+    "categories": [
+      "security",
+      "utilities"
+    ],
+    "tags": [
+      "encryption",
+      "decrypt",
+      "secure",
+      "keys",
+      "modern"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "age",
+      "binary_name": "age",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read",
+      "local-write"
+    ],
     "agent_hints": {
       "when_to_use": "Encrypt and decrypt files with a simple, modern tool — easier than GPG",
       "example_usage": [
@@ -2444,8 +4551,13 @@
         "age -d -i key.txt secret.txt.age -o secret.txt",
         "age-keygen -o key.txt"
       ],
-      "input_formats": ["binary", "text"],
-      "output_formats": ["binary"]
+      "input_formats": [
+        "binary",
+        "text"
+      ],
+      "output_formats": [
+        "binary"
+      ]
     },
     "verified": true,
     "downloads": 15000,
@@ -2459,10 +4571,26 @@
     "homepage": "https://github.com/FiloSottile/mkcert",
     "repository": "https://github.com/FiloSottile/mkcert",
     "license": "BSD-3-Clause",
-    "categories": ["security", "dev-tools"],
-    "tags": ["certificates", "https", "localhost", "tls", "development"],
-    "install": {"method": "brew", "package": "mkcert", "binary_name": "mkcert"},
-    "permissions": ["local-write", "system"],
+    "categories": [
+      "security",
+      "dev-tools"
+    ],
+    "tags": [
+      "certificates",
+      "https",
+      "localhost",
+      "tls",
+      "development"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "mkcert",
+      "binary_name": "mkcert"
+    },
+    "permissions": [
+      "local-write",
+      "system"
+    ],
     "agent_hints": {
       "when_to_use": "Create locally-trusted HTTPS certificates for development servers",
       "example_usage": [
@@ -2471,7 +4599,9 @@
         "mkcert myapp.local '*.myapp.local'"
       ],
       "input_formats": [],
-      "output_formats": ["binary"]
+      "output_formats": [
+        "binary"
+      ]
     },
     "verified": true,
     "downloads": 28000,
@@ -2485,10 +4615,26 @@
     "homepage": "https://eradman.com/entrproject/",
     "repository": "https://github.com/eradman/entr",
     "license": "ISC",
-    "categories": ["dev-tools", "utilities"],
-    "tags": ["watch", "files", "reload", "automation", "trigger"],
-    "install": {"method": "brew", "package": "entr", "binary_name": "entr"},
-    "permissions": ["local-read", "system"],
+    "categories": [
+      "dev-tools",
+      "utilities"
+    ],
+    "tags": [
+      "watch",
+      "files",
+      "reload",
+      "automation",
+      "trigger"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "entr",
+      "binary_name": "entr"
+    },
+    "permissions": [
+      "local-read",
+      "system"
+    ],
     "agent_hints": {
       "when_to_use": "Re-run commands automatically when source files change",
       "example_usage": [
@@ -2496,8 +4642,12 @@
         "find src/ -name '*.rs' | entr cargo build",
         "echo main.go | entr -r go run main.go"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 18000,
@@ -2511,10 +4661,29 @@
     "homepage": "https://watchexec.github.io/",
     "repository": "https://github.com/watchexec/watchexec",
     "license": "Apache-2.0",
-    "categories": ["dev-tools", "utilities"],
-    "tags": ["watch", "files", "reload", "execute", "rust"],
-    "install": {"method": "brew", "package": "watchexec", "binary_name": "watchexec"},
-    "permissions": ["local-read", "system"],
+    "categories": [
+      "dev-tools",
+      "utilities"
+    ],
+    "tags": [
+      "watch",
+      "files",
+      "reload",
+      "execute",
+      "rust"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "watchexec",
+      "binary_name": "watchexec",
+      "alt_methods": [
+        "cargo"
+      ]
+    },
+    "permissions": [
+      "local-read",
+      "system"
+    ],
     "agent_hints": {
       "when_to_use": "Watch for file changes and re-run commands — supports filtering by extension",
       "example_usage": [
@@ -2523,7 +4692,9 @@
         "watchexec -w src/ -w tests/ -- make test"
       ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 16000,
@@ -2537,10 +4708,25 @@
     "homepage": "https://www.ivarch.com/programs/pv.shtml",
     "repository": "https://github.com/a-j-wood/pv",
     "license": "Artistic-2.0",
-    "categories": ["utilities", "system"],
-    "tags": ["pipe", "progress", "monitor", "throughput", "transfer"],
-    "install": {"method": "brew", "package": "pv", "binary_name": "pv"},
-    "permissions": ["local-read"],
+    "categories": [
+      "utilities",
+      "system"
+    ],
+    "tags": [
+      "pipe",
+      "progress",
+      "monitor",
+      "throughput",
+      "transfer"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "pv",
+      "binary_name": "pv"
+    },
+    "permissions": [
+      "local-read"
+    ],
     "agent_hints": {
       "when_to_use": "Add a progress bar to long-running pipe operations",
       "example_usage": [
@@ -2548,8 +4734,12 @@
         "dd if=/dev/urandom bs=1M count=100 | pv > /dev/null",
         "pv backup.sql | mysql -u root mydb"
       ],
-      "input_formats": ["binary"],
-      "output_formats": ["binary"]
+      "input_formats": [
+        "binary"
+      ],
+      "output_formats": [
+        "binary"
+      ]
     },
     "verified": true,
     "downloads": 22000,
@@ -2563,9 +4753,22 @@
     "homepage": "https://github.com/busyloop/lolcat",
     "repository": "https://github.com/busyloop/lolcat",
     "license": "BSD-3-Clause",
-    "categories": ["fun", "utilities"],
-    "tags": ["rainbow", "color", "terminal", "fun", "pipe"],
-    "install": {"method": "brew", "package": "lolcat", "binary_name": "lolcat"},
+    "categories": [
+      "fun",
+      "utilities"
+    ],
+    "tags": [
+      "rainbow",
+      "color",
+      "terminal",
+      "fun",
+      "pipe"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "lolcat",
+      "binary_name": "lolcat"
+    },
     "permissions": [],
     "agent_hints": {
       "when_to_use": "Add rainbow colors to any terminal output for fun",
@@ -2574,8 +4777,12 @@
         "figlet 'Welcome' | lolcat",
         "cat README.md | lolcat"
       ],
-      "input_formats": ["text"],
-      "output_formats": ["text"]
+      "input_formats": [
+        "text"
+      ],
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 20000,
@@ -2589,9 +4796,22 @@
     "homepage": "https://github.com/shlomif/fortune-mod",
     "repository": "https://github.com/shlomif/fortune-mod",
     "license": "BSD-4-Clause",
-    "categories": ["fun", "utilities"],
-    "tags": ["quotes", "random", "fun", "terminal", "sayings"],
-    "install": {"method": "brew", "package": "fortune", "binary_name": "fortune"},
+    "categories": [
+      "fun",
+      "utilities"
+    ],
+    "tags": [
+      "quotes",
+      "random",
+      "fun",
+      "terminal",
+      "sayings"
+    ],
+    "install": {
+      "method": "brew",
+      "package": "fortune",
+      "binary_name": "fortune"
+    },
     "permissions": [],
     "agent_hints": {
       "when_to_use": "Display a random quote or fortune in the terminal",
@@ -2601,7 +4821,9 @@
         "fortune | lolcat"
       ],
       "input_formats": [],
-      "output_formats": ["text"]
+      "output_formats": [
+        "text"
+      ]
     },
     "verified": true,
     "downloads": 25000,

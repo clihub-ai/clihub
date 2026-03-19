@@ -32,6 +32,9 @@ def list_cmd(ctx: click.Context, category: str | None, installed: bool) -> None:
       clihub list                       # show category tree
       clihub list --category media      # tools in a category
       clihub list --installed           # installed tools
+
+    \b
+    Exit codes: 0 = success, 2 = category not found.
     """
     if installed:
         tools = load_registry()

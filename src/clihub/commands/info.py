@@ -41,6 +41,9 @@ def info(ctx: click.Context, tool_name: str) -> None:
     \b
     Human usage:
       clihub info jq                  # rich panel with examples
+
+    \b
+    Exit codes: 0 = found, 2 = not found.
     """
     tool = get_tool(tool_name)
     if tool is None:

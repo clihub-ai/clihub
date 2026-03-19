@@ -9,6 +9,10 @@ class InstallMethod(BaseModel):
     package: str = Field(description="Package name on the registry")
     binary_name: Optional[str] = Field(None, description="Binary name if different from package")
     binary_url: Optional[str] = Field(None, description="Direct download URL")
+    alt_methods: list[str] = Field(
+        default_factory=list,
+        description="Alternative install methods, e.g. ['cargo', 'npm'] — use with --via",
+    )
 
 
 class AgentHints(BaseModel):
